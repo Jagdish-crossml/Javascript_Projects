@@ -1,8 +1,16 @@
 {
-    "fields":[
-    {"xpath":"/html/body/div/form/input[1]",
-     "attribute_name": "fname"},
-    {"xpath":"/html/body/div/form/input[2]",
-     "attribute_name": "lname"}
+    "fields": [
+        {
+            "xpath": "/html/body/div/form/input[1]",
+            "attribute_name": "fname"
+        },
+        {
+            "xpath": "/html/body/div/form/input[2]",
+            "attribute_name": "lname"
+        },
+        {
+            "xpath": "/html/body/div/form/img",
+            "attribute_name": "picture"
+        }
     ]
 }

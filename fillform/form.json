@@ -1,7 +1,12 @@
 {
-    "fields":{
-    "fname":"jagdish",
-    "lname":"singh",
-    "picture":"https://miro.medium.com/max/690/1*1DwYCqKbuisEZT6wEa99ug.png"
-}
-}
+    "fields":[
+       {
+          "url":"http://127.0.0.1:5501/ext_form.html",
+          "fields":{
+             "fname":"jagdish",
+             "lname":"singh",
+             "picture":"https://miro.medium.com/max/690/1*1DwYCqKbuisEZT6wEa99ug.png"
+          }
+       }
+    ]
+ }
