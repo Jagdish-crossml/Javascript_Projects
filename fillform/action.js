@@ -5,26 +5,23 @@ function getElementByXpath(path) {
 
 async function process_forms() {
     const response = await fetch('http://localhost:8000/fields');
-    // console.log(response);
+
     const data = await response.json();
-    // console.log(data[0].url);
-    // console.log(data[0].fields.fname);
+
     image.src = data[0].fields.picture;
 
     const response2 = await fetch('http://localhost:8001/fields');
     const data2 = await response2.json();
-    //  debugger
+
     for (let index = 0; index < data2.length; index++) {
         const element = data2[index];
         var ele = getElementByXpath(element.xpath);
         // console.log('ele', ele);
         ele.value = data[element.attribute_name];
         fillforms(data);
-
-
     }
     chrome.storage.local.set({ 'data': data });
-    
+
     chrome.runtime.sendMessage({ greeting: 'hello', data: data }, function (response) {
         console.log(response.received);
     });
