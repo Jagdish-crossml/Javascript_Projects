@@ -18,13 +18,13 @@ async function process_forms() {
         var ele = getElementByXpath(element.xpath);
         // console.log('ele', ele);
         ele.value = data[element.attribute_name];
-        fillforms(data);
+        fillforms(data); 
     }
     chrome.storage.local.set({ 'data': data });
 
-    chrome.runtime.sendMessage({ greeting: 'hello', data: data }, function (response) {
-        console.log(response.received);
-    });
+    // chrome.runtime.sendMessage({ greeting: 'hello', data: data }, function (response) {
+    //     console.log(response.received);
+    // });
 }
 
 function fillforms(data) {

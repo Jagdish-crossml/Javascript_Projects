@@ -1,5 +1,6 @@
 document.getElementById('submitbtn').addEventListener('click', function () {
-
+    // chrome.tabs.executeScript({file:'./content.js'});
+    
     var username = document.getElementById('username').value;
 
     //Storage api to retrieve data stored locally   
@@ -19,10 +20,19 @@ document.getElementById('submitbtn').addEventListener('click', function () {
         });
     }
     call();
+    
 });
+// chrome.runtime.sendMessage({ greeting: 'hello jagdish' }, function (response) {
+//     console.log(response.received);
+// });
 //Message Passing between popup and action.js
-chrome.runtime.onMessage.addListener(function (response, sender, sendResponse) {
-    alert(JSON.stringify(response.data[0].fields.fname)),
-        alert(response.greeting), sendResponse({ received: 'thankyou' })
+// chrome.runtime.onMessage.addListener(function (response, sender, sendResponse) {
+//     alert(JSON.stringify(response.data[0].fields.fname)),
+//         alert(response.greeting), sendResponse({ received: 'thankyou' })
 
-})
+// });
+
+// chrome.runtime.onMessage.addListener(function(response,sender,sendResponse){
+//     alert(response.greeting),sendResponse({received:'welcome'})
+// });
+
