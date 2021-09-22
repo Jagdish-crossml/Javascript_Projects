@@ -1,0 +1,226 @@
+#topdiv {
+    position: absolute;
+    width: 52px;
+    height: 24px;
+    left: 1250px;
+    top: 142px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
+    border-radius: 8px 8px 0px 0px;
+}
+
+#arrow {
+    width: 15px;
+    height: 8.57px;
+    margin-left: 20px;
+    margin-top: 6px;
+}
+
+#rectangle1 {
+    position: absolute;
+    width: 376px;
+    height: 403px;
+    right: 2%;
+    bottom: 2%;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
+    border-radius: 10px 10px 0px 0px;
+}
+
+#rectangle2 {
+    position: absolute;
+    width: 376px;
+    height: 346px;
+    margin-top: 55px;
+    background: #F5F5F5;
+    border-radius: 0px;
+}
+
+#eimg {
+    width: 20px;
+    height: 20px;
+    float: left;
+    margin-left: 11px;
+    margin-top: 18px;
+}
+
+#uimg {
+    width: 26px;
+    height: 26px;
+    float: right;
+    margin-top: 13px;
+    margin-right: 33px;
+}
+
+#dimg {
+    width: 8px;
+    height: 4.94px;
+    float: right;
+    margin-right: -40px;
+    margin-top: 26px;
+}
+
+#toplabel {
+    position: absolute;
+    width: 127px;
+    height: 25px;
+    left: 35px;
+    top: 16px;
+    font-family: Manrope;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 25px;
+    /* identical to box height */
+    color: #16243C;
+}
+
+#loglabel {
+    position: absolute;
+    width: 262px;
+    height: 20px;
+    left: 18px;
+    top: 15px;
+    font-family: Manrope;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 20px;
+    color: #16243C;
+}
+
+#emlabel {
+    position: absolute;
+    width: 92px;
+    height: 19px;
+    left: 18px;
+    top: 51px;
+    font-family: Manrope;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 19px;
+    color: #545F77;
+}
+
+#email {
+    position: absolute;
+    width: 315px;
+    height: 45px;
+    left: 18px;
+    right: 43px;
+    top: 79px;
+    background: #FFFFFF;
+    border: 1px solid #2F73EA;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 8px rgba(44, 39, 56, 0.04);
+    border-radius: 4px;
+}
+
+#pwlabel {
+    position: absolute;
+    width: 92px;
+    height: 19px;
+    left: 18px;
+    top: 134px;
+    font-family: Manrope;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 19px;
+    color: #545F77;
+}
+
+#password {
+    position: absolute;
+    width: 315px;
+    height: 45px;
+    left: 18px;
+    right: 43px;
+    top: 162px;
+    background: #FFFFFF;
+    border: 1px solid #2F73EA;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 8px rgba(44, 39, 56, 0.04);
+    border-radius: 4px;
+}
+
+#newlabel {
+    position: absolute;
+    width: 139px;
+    height: 16px;
+    left: 18px;
+    top: 212px;
+    font-family: Manrope;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 16px;
+    color: #545F77;
+}
+
+#check {
+    position: absolute;
+    left: 18px;
+    top: 243px;
+    background: #FFFFFF;
+    border: 1.5px solid #2F73EA;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 8px rgba(44, 39, 56, 0.04);
+    border-radius: 4px;
+}
+
+#keeplabel {
+    position: absolute;
+    width: 188px;
+    height: 19px;
+    left: 48px;
+    top: 244px;
+    font-family: Manrope;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 19px;
+    color: #545F77;
+}
+
+#forgot {
+    position: absolute;
+    width: 99px;
+    height: 16px;
+    left: 234px;
+    top: 212px;
+    font-family: Manrope;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 16px;
+    text-align: right;
+    color: #2F73EA;
+}
+
+#loginbtn {
+    position: absolute;
+    width: 116px;
+    height: 36px;
+    left: 130px;
+    top: 289px;
+    background: #2F73EA;
+    border-radius: 6px;
+    font-family: Manrope;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 22px;
+    /* identical to box height */
+    align-items: center;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+#togglePassword {
+    position: absolute;
+    margin-top: 175px;
+    margin-left: 298px;
+    cursor: pointer;
+}

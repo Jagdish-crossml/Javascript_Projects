@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script
+      src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+.firstdivision{
+    width: 376px;
+height: 403px;
+    background: #FFFFFF;
+box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
+border-radius: 10px 10px 0px 0px;
+
+}
+.secondiv{
+    background-color:white;
+
+width: 100%;
+height: 45px;
+left: 1063px;
+top: 515px;
+font-family: Manrope; font-style:
+                    normal;
+                    font-weight: 600; font-size: 18px;
+                    line-height: 25px; color: #16243C;
+}
+.thirddiv{
+    background-color: lightgrey;
+    height: 260px;
+}
+
+
+
+.dataone{
+  list-style: none;
+}
+
+
+    </style>
+    <title>
+      popup window
+    </title>
+  </head>
+  <body>
+    <div class='firstdivision'>
+      <div class='secondiv'><h4>Suggestions</h4></div>
+      <div class='thirddiv'>
+        <ul class="dataone" id="dataone">
+          <li id="one"></li>
+          <li id="two"></li>
+          <li><img id="picture" style="width: 50px;height: 50px;"></li>
+        </ul>
+        <hr>
+      </div>
+    </div>
+    <script type="module" >
+          const image = document.getElementById('picture');
+          function getElementByXpath(path) {
+    return document.evaluate(path, document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
+}
+
+    async function get_data() {
+    const response = await fetch('http://localhost:8000/fields');
+
+    const data = await response.json();
+   
+    image.src = data[0].fields.picture;
+    document.getElementById('one').innerHTML=`username: ${data[0].fields.fname}`;
+      document.getElementById('two').innerHTML=`lastname: ${data[0].fields.lname}`;
+   document.getElementById('dataone').addEventListener('click',function(){
+    const response2 = await fetch('http://localhost:8001/fields');
+    const data2 = await response2.json();
+
+    for (let index = 0; index < data2.length; index++) {
+        const element = data2[index];
+        var ele = getElementByXpath(element.xpath);
+        ele.value = data[element.attribute_name];
+        fillforms(data); 
+    }
+function fillforms(data) {
+    fillField(document.querySelector('input[name="firstname"]'), data[0].fields.fname);
+    fillField(document.querySelector('input[name="lastname"]'), data[0].fields.lname);
+    fillField(image, data[0].fields.picture);
+}
+
+function fillField(field, value) {
+    if (field) {
+        field.value = value;
+    }
+}
+})
+
+   
+    }
+
+get_data();
+
+        </script>
+  </body>
+</html>
