@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Manrope' rel='stylesheet'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/images.css">
+</head>
+
+<body>
+    <div id="topdiv"><img id="arrow" src="assets/down.png"></div>
+    <div id="rectangle1">
+        <!-- <img id="eimg" alt="e-form" src="assets/e.png"> -->
+        <img id="srchimg" alt="search" src="assets/search.png">
+        <label id="toplabel">Documents</label>
+        <div id="sdiv"><label id="suggestlabel">Suggestions</label></div>
+        <div id="rectangle2">
+            <label id="suggestlabel">Suggestions</label>
+
+            <div id="rectangle7">
+            </div>
+        </div>
+        <div id="lowerdiv">
+            <img id="sugimg" alt="e-form" src="assets/suggest.png">
+            <label id="suglabel">Suggestions</label>
+            <img id="proimg" alt="e-form" src="assets/professional.png">
+            <label id="prolabel">professional Support</label>
+            <img id="inimg" alt="e-form" src="assets/inbox.png">
+            <label id="inlabel">Inbox</label>
+        </div>
+    </div>
+    <script>
+        var html = '';
+        const jsondata = async function() {
+            const response = await fetch('http://localhost:8000/fields');
+
+            const data = await response.json();
+            console.log(data.length)
+            for (i = 0; i < data.length; i++) {
+                html += `<div id="box"><img id="docimg" src=${data[i].fields.picture}></div>`;
+                var container = document.getElementById("rectangle2");
+                container.innerHTML = html;
+            }
+
+        }
+        jsondata()
+
+
+        document.getElementById('arrow').addEventListener('click', function() {
+            const element = document.getElementById('rectangle1')
+            const hide = function(element) {
+                element.style.display = 'none';
+                document.getElementById('topdiv').style.top = '550px';
+            }
+            const show = function(element) {
+                element.style.display = 'block';
+                document.getElementById('topdiv').style.top = '142px';
+            }
+            const toggle = function(element) {
+                if (window.getComputedStyle(element).display !== 'none') {
+                    hide(element);
+                    return;
+                }
+
+                // show the element
+                show(element);
+
+            }
+            toggle(element)
+
+        });
+    </script>
+</body>
+
+</html>

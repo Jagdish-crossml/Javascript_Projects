@@ -7,6 +7,8 @@
     <link href='https://fonts.googleapis.com/css?family=Manrope' rel='stylesheet'>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="hui-month-calendar/huicalender/css/huicalendar.css">
+    <script src="hui-month-calendar/huicalender/js/huicalendar.js"></script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,28 +23,10 @@
         <img id="dimg" alt="down" src="assets/sdown.png">
         <label id="toplabel">Enter your father address?</label>
         <div id="rectangle2">
-            <div id="sdiv">
-                <img id="srchimg" alt="search" src="assets/search.png">
-                <label id="suggestlabel">Suggestions</label>
-                <input type="text" id="textInput" />
-            </div>
-            <div id="ismyModal" class="ismodal">
 
-                <!-- Modal content -->
-                <div class="ismodal-content">
-                    <span class="close">&times;</span>
 
-                </div>
-
-            </div>
-            <div id="datadiv">
-
-            </div>
-
-            <div id="rectangle7">
-            </div>
         </div>
-        <div id="lowerdiv">
+        <div id="bottomdiv">
             <img id="sugimg" alt="e-form" src="assets/suggest.png">
             <label id="suglabel">Suggestions</label>
             <img id="proimg" alt="e-form" src="assets/professional.png">
@@ -51,7 +35,10 @@
             <label id="inlabel">Inbox</label>
         </div>
     </div>
-    <script src="js/wepage9.js">
+    <script>
+        $(function() {
+            $("#rectangle2").huicalendar();
+        });
     </script>
 </body>
 

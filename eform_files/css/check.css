@@ -30,7 +30,7 @@
 #rectangle2 {
     position: absolute;
     width: 376px;
-    height: 284px;
+    height: 346px;
     margin-top: 55px;
     background: #F5F5F5;
     border-radius: 0px;
@@ -40,9 +40,9 @@
 
 #toplabel {
     position: absolute;
-    width: 232px;
+    width: 277px;
     height: 25px;
-    left: 35px;
+    left: 16px;
     top: 16px;
     font-family: Manrope;
     font-style: normal;
@@ -246,117 +246,4 @@
     height: 64px;
     margin-top: 339px;
     background-color: white;
-}
-
-
-/* #load {
-    margin-left: 113px;
-    margin-top: 249px;
-} */
-
-#srchdiv {
-    width: 376px;
-    height: 40px;
-    margin-top: 0px;
-}
-
-#box {
-    height: 70px;
-    width: 376px;
-}
-
-#datalist {
-    list-style: none;
-}
-
-#datadiv {
-    width: 376px;
-    height: 244px;
-    overflow-y: auto;
-    overflow-x: hidden;
-}
-
-
-/* width */
-
-::-webkit-scrollbar {
-    width: 5px;
-}
-
-
-/* Track */
-
- ::-webkit-scrollbar-track {
-    background: #f1f1f1;
-}
-
-
-/* Handle */
-
- ::-webkit-scrollbar-thumb {
-    background: #888;
-}
-
-
-/* Handle on hover */
-
- ::-webkit-scrollbar-thumb:hover {
-    background: #555;
-}
-
-.ismodal {
-    display: none;
-    position: absolute;
-    z-index: 1;
-    padding-top: 2px;
-    left: 5px;
-    top: 0px;
-    width: 366px;
-    height: 123px;
-    overflow-y: scroll;
-    background-color: white;
-    background: #FFFFFF;
-    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
-    border-radius: 0px;
-}
-
-
-/* Modal Content */
-
-.ismodal-content {
-    background-color: #fefefe;
-    margin: auto;
-    padding: 20px;
-    width: 80%;
-    height: 50%;
-}
-
-
-/* The Close Button */
-
-.close {
-    color: #aaaaaa;
-    float: right;
-    font-size: 18px;
-    font-weight: bold;
-    margin-top: -25px;
-}
-
-.close:hover,
-.close:focus {
-    color: #000;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-#resultset {
-    margin-left: 16px;
-    margin-top: 11px;
-    list-style: none;
-    font-family: Manrope;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 14px;
-    line-height: 19px;
-    color: #16243C;
 }

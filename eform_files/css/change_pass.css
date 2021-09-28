@@ -220,25 +220,15 @@
 
 .modal {
     display: none;
-    /* Hidden by default */
     position: absolute;
-    /* Stay in place */
     z-index: 1;
-    /* Sit on top */
     padding-top: 2px;
-    /* Location of the box */
     left: 19px;
     top: 184px;
     width: 314px;
-    /* Full width */
     height: 80px;
-    /* Full height */
     overflow: auto;
-    /* Enable scroll if needed */
     background-color: white;
-    /* Fallback color */
-    background-color: white;
-    /* Black w/ opacity */
 }
 
 
@@ -249,6 +239,7 @@
     margin: auto;
     padding: 20px;
     width: 80%;
+    height: 50%;
 }
 
 
@@ -257,8 +248,9 @@
 .close {
     color: #aaaaaa;
     float: right;
-    font-size: 28px;
+    font-size: 18px;
     font-weight: bold;
+    margin-top: -25px;
 }
 
 .close:hover,
@@ -268,12 +260,19 @@
     cursor: pointer;
 }
 
+#genimg {
+    width: 19.65px;
+    height: 19.99px;
+    margin-left: 230px;
+    margin-top: 25px;
+}
+
 #genlabel {
     position: absolute;
     width: 227px;
     height: 24px;
     left: 55px;
-    top: 16px;
+    top: 2px;
     font-family: Manrope;
     font-style: normal;
     font-weight: normal;
@@ -290,7 +289,7 @@
     width: 127px;
     height: 24px;
     left: 55px;
-    top: 44px;
+    top: 34px;
     font-family: Manrope;
     font-style: normal;
     font-weight: 500;
@@ -315,6 +314,13 @@
 #togglePassword {
     position: absolute;
     margin-top: 148px;
+    margin-left: 298px;
+    cursor: pointer;
+}
+
+#reptogglePassword {
+    position: absolute;
+    margin-top: 252px;
     margin-left: 298px;
     cursor: pointer;
 }
