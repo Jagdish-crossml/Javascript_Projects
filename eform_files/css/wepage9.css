@@ -238,7 +238,7 @@
     background: #F5F7FB;
     border-radius: 10px 10px 0px 0px;
     margin-left: 5px;
-    margin-top: 4px;
+    margin-top: -140px;
 }
 
 #lowerdiv {
@@ -261,12 +261,19 @@
 }
 
 #box {
+    position: relative;
     height: 70px;
     width: 376px;
 }
 
 #datalist {
     list-style: none;
+    font-family: Manrope;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 19px;
+    color: #16243C;
 }
 
 #datadiv {

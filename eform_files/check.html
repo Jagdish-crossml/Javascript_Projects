@@ -16,28 +16,61 @@
 <body>
     <div id="topdiv"><img id="arrow" src="assets/down.png"></div>
     <div id="rectangle1">
-        <!-- <img id="eimg" alt="e-form" src="assets/e.png"> -->
-        <!-- <img id="srchimg" alt="search" src="assets/search.png"> -->
+
+        <img id="saveimg" alt="save" src="assets/save.png">
         <label id="toplabel">Save information for future use</label>
-        <!-- <div id="sdiv"> -->
-        <!-- <label id="suggestlabel">Suggestions</label> -->
-        <!-- </div> -->
         <div id="rectangle2">
-            <!-- <label id="suggestlabel">Suggestions</label> -->
-            <!-- 
-            <div id="rectangle7">
-            </div> -->
+            <div id="selectdiv"><input type="checkbox" id="checkone">
+                <label id="all">Select all</label></div>
+
+            <!-- <hr> -->
+            <input type="checkbox" id="checktwo">
+            <label id="name">What is your Name?</label>
+            <img id="rotateimg" src="assets/change.png">
+            <input class="hide" id="textbox" type="text">
+            <div id="textdiv" class="hide">
+                <img id="rightimg" src="assets/right.png">
+                <img id="wrongimg" src="assets/wrong.png">
+            </div>
         </div>
-        <!-- <div id="lowerdiv">
-            <img id="sugimg" alt="e-form" src="assets/suggest.png">
-            <label id="suglabel">Suggestions</label>
-            <img id="proimg" alt="e-form" src="assets/professional.png">
-            <label id="prolabel">professional Support</label>
-            <img id="inimg" alt="e-form" src="assets/inbox.png">
-            <label id="inlabel">Inbox</label>
-        </div> -->
     </div>
     <script>
+        const change = document.getElementById('rotateimg');
+
+
+        change.addEventListener('click', function() {
+
+            const element1 = document.getElementById('textbox')
+            const element2 = document.getElementById('textdiv')
+            const hide1 = function(element1, element2) {
+                element1.classList.toggle('hide')
+                element2.classList.toggle('hide')
+                change.style.display = 'none'
+                element1.style = 'margin-top:-30px'
+                element2.style = 'margin-top:-41px'
+
+            }
+            hide1(element1, element2)
+        });
+
+        const close = document.getElementById('wrongimg');
+        close.addEventListener('click', function() {
+
+            const elementone = document.getElementById('textbox')
+            const elementtwo = document.getElementById('textdiv')
+            const hideone = function(elementone, elementtwo) {
+                elementone.classList.toggle('hide')
+                elementtwo.classList.toggle('hide')
+                change.style.display = 'block'
+                elementone.style = 'margin-top:-30px'
+                elementtwo.style = 'margin-top:-30px'
+
+            }
+            hideone(elementone, elementtwo)
+        })
+
+
+
         document.getElementById('arrow').addEventListener('click', function() {
             const element = document.getElementById('rectangle1')
             const hide = function(element) {

@@ -1,8 +1,8 @@
 $(function() {
     $('#load').click(function() {
-        $('#list li:hidden').slice(0, 2).show();
-        if ($('#list li').length == $('#list li:visible').length) {
-            $('#load ').hide();
+        $('#box:none').slice(0, 2).show();
+        if ($('#box').length == $('#box:block').length) {
+            $('#load').hide();
         }
     });
 });
@@ -55,32 +55,22 @@ document.getElementById('arrow').addEventListener('click', function() {
     toggle(element)
 
 });
-document.getElementById('srchimg').addEventListener('click', function() {
+
+const search = document.getElementById('srchimg')
+search.addEventListener('click', function() {
+
     const element1 = document.getElementById('textInput')
     const hide1 = function(element1) {
-        element1.style.display = 'none';
+        element1.classList.toggle('hide')
 
     }
-    const show1 = function(element1) {
-        element1.style.display = 'block';
-        element1.style = 'margin-top:-140px';
-
-    }
-    const toggle1 = function(element1) {
-        if (window.getComputedStyle(element1).display !== 'none') {
-            hide1(element1);
-            return;
-        }
-
-        // show the element
-        show1(element1);
-
-    }
-    toggle1(element1)
-
-
+    hide1(element1)
 });
 
+
+
+
+//search function
 var rect = document.getElementById('sdiv');
 async function searchValue() {
     const response = await fetch('http://localhost:8000/fields');

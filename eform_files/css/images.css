@@ -252,3 +252,12 @@
     width: 177px;
     height: 113px;
 }
+
+#textInput {
+    width: 220px;
+    height: 36px;
+    background: #F5F7FB;
+    border-radius: 10px 10px 0px 0px;
+    margin-left: 5px;
+    margin-top: 4px;
+}

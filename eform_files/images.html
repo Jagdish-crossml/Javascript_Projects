@@ -18,6 +18,7 @@
     <div id="rectangle1">
         <!-- <img id="eimg" alt="e-form" src="assets/e.png"> -->
         <img id="srchimg" alt="search" src="assets/search.png">
+        <input class="hide" type="text" id="textInput" />
         <label id="toplabel">Documents</label>
         <div id="sdiv"><label id="suggestlabel">Suggestions</label></div>
         <div id="rectangle2">
@@ -74,6 +75,18 @@
             }
             toggle(element)
 
+        });
+        const doclable = document.getElementById('toplabel')
+        const search = document.getElementById('srchimg')
+        search.addEventListener('click', function() {
+
+            const element1 = document.getElementById('textInput')
+            const hide1 = function(element1) {
+                element1.classList.toggle('hide')
+                    // doclable.style.display = 'none'
+
+            }
+            hide1(element1)
         });
     </script>
 </body>
