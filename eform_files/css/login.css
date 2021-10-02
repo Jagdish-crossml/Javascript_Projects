@@ -2,7 +2,7 @@
     position: absolute;
     width: 52px;
     height: 24px;
-    left: 1250px;
+    left: 1260px;
     top: 142px;
     background: #FFFFFF;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
@@ -14,6 +14,9 @@
     height: 8.57px;
     margin-left: 20px;
     margin-top: 6px;
+    color: #000000;
+    font-size: 18px;
+    font-weight: 1000;
 }
 
 #rectangle1 {
@@ -37,18 +40,18 @@
 }
 
 #eimg {
-    width: 20px;
-    height: 20px;
+    width: 15px;
+    height: 14.99px;
     float: left;
     margin-left: 11px;
-    margin-top: 18px;
+    margin-top: 21px;
 }
 
 #uimg {
     width: 26px;
     height: 26px;
     float: right;
-    margin-top: 13px;
+    margin-top: 15px;
     margin-right: 33px;
 }
 
@@ -117,6 +120,16 @@
     border-radius: 4px;
 }
 
+input[type="email"]::placeholder {
+    /* Firefox, Chrome, Opera */
+    padding-left: 10px;
+}
+
+input[type="password"]::placeholder {
+    /* Firefox, Chrome, Opera */
+    padding-left: 10px;
+}
+
 #pwlabel {
     position: absolute;
     width: 92px;
@@ -161,6 +174,8 @@
 
 #check {
     position: absolute;
+    width: 20px;
+    height: 20px;
     left: 18px;
     top: 243px;
     background: #FFFFFF;
@@ -223,4 +238,6 @@
     margin-top: 175px;
     margin-left: 298px;
     cursor: pointer;
+    width: 20px;
+    height: 13.03px;
 }

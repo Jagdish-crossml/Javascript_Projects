@@ -1,0 +1,52 @@
+{
+    "fields": [{
+            "url": "http://127.0.0.1:5501/ext_form.html",
+            "fields": {
+            
+                "address": "2972 Westheimer Rd. Santa Ana, Illinois 85486",
+                "picture": "/home/jagdish/Desktop/suggest/assets/img1.png",
+                "rating":"8.5"
+            }
+        },
+        {
+            "url": "http://127.0.0.1:5501/ext_form.html",
+            "fields": {
+         
+                "address": "2118 Thornridge Cir. Syracuse, Connecticut 35624",
+                "picture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwgZrudPs_kOm9LXhNIXhgw_ezjWFNvBJypQ&usqp=CAU",
+                "rating":"6.5"
+            }
+        },
+        {
+            "url": "http://127.0.0.1:5501/ext_form.html",
+            "fields": {
+             
+                "address": "2715 Ash Dr. San Jose, South Dakota 83475",
+                "picture": "https://firstindia.co.in/public/news/May2021/16223516628__CM__20210305030702_Driver_license_Maharashtra.jpg",
+                "rating":"5.0"
+            }
+        },
+        {
+            "url": "http://127.0.0.1:5501/ext_form.html",
+            "fields": {
+                "address": "2118 Thornridge Cir. Syracuse, Connecticut 35624",
+                "picture": "https://cdn.kalingatv.com/wp-content/uploads/2020/08/pan-card.jpg",
+                "rating":"7.5"
+            }
+        },
+        {
+            "url": "http://127.0.0.1:5501/ext_form.html",
+            "fields": {
+                "address": "singh",
+                "picture": "https://cdn.kalingatv.com/wp-content/uploads/2020/08/pan-card.jpg"
+            }
+        },
+        {
+            "url": "http://127.0.0.1:5501/ext_form.html",
+            "fields": {
+                "address": "sanoria",
+                "picture": "https://cdn.kalingatv.com/wp-content/uploads/2020/08/pan-card.jpg"
+            }
+        }
+    ]
+}

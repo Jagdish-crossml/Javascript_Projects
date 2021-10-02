@@ -2,7 +2,7 @@
     position: absolute;
     width: 52px;
     height: 24px;
-    left: 1250px;
+    left: 1260px;
     top: 142px;
     background: #FFFFFF;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
@@ -14,6 +14,9 @@
     height: 8.57px;
     margin-left: 20px;
     margin-top: 6px;
+    color: #000000;
+    font-size: 18px;
+    font-weight: 1000;
 }
 
 #rectangle1 {
@@ -37,18 +40,18 @@
 }
 
 #eimg {
-    width: 20px;
-    height: 20px;
+    width: 15px;
+    height: 14.99px;
     float: left;
     margin-left: 11px;
-    margin-top: 19px;
+    margin-top: 21px;
 }
 
 #uimg {
     width: 26px;
     height: 26px;
     float: right;
-    margin-top: 13px;
+    margin-top: 15px;
     margin-right: 33px;
 }
 
@@ -131,6 +134,12 @@
     border-radius: 4px;
 }
 
+input[type="password"]::placeholder {
+    /* Firefox, Chrome, Opera */
+    padding-left: 10px;
+    letter-spacing: 0.15px;
+}
+
 #replabel {
     position: absolute;
     width: 114px;
@@ -166,8 +175,8 @@
     float: left;
     left: 40px;
     top: 306px;
-    background: #2F73EA;
-    border-radius: 6px;
+    background: #F5F5F5;
+    /* border-radius: 6px; */
     font-family: Manrope;
     font-style: normal;
     font-weight: 500;
@@ -176,6 +185,13 @@
     /* identical to box height */
     align-items: center;
     text-align: center;
+    color: black;
+    border-style: hidden;
+}
+
+#cancelbtn:focus {
+    background: #2F73EA;
+    border-radius: 6px;
     color: #FFFFFF;
 }
 
@@ -187,8 +203,8 @@
     left: 200px;
     /* right: 90px; */
     top: 306px;
-    background: #2F73EA;
-    border-radius: 6px;
+    background: #F5F5F5;
+    /* border-radius: 6px; */
     font-family: Manrope;
     font-style: normal;
     font-weight: 500;
@@ -197,6 +213,13 @@
     /* identical to box height */
     align-items: center;
     text-align: center;
+    color: black;
+    border-style: hidden;
+}
+
+#savebtn:focus {
+    background: #2F73EA;
+    border-radius: 6px;
     color: #FFFFFF;
 }
 
@@ -218,7 +241,7 @@
     color: #2F73EA;
 }
 
-.modal {
+.ismodal {
     display: none;
     position: absolute;
     z-index: 1;
@@ -234,7 +257,7 @@
 
 /* Modal Content */
 
-.modal-content {
+.ismodal-content {
     background-color: #fefefe;
     margin: auto;
     padding: 20px;

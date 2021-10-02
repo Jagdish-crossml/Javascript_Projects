@@ -2,6 +2,8 @@
 <html lang="en">
 
 <head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
     <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
     <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
     <link href='https://fonts.googleapis.com/css?family=Manrope' rel='stylesheet'>
@@ -10,47 +12,126 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/images.css">
+    <link rel="stylesheet" type="text/css" href="css/images.css">
 </head>
 
 <body>
-    <div id="topdiv"><img id="arrow" src="assets/down.png"></div>
+    <div id="topdiv"><i class="fa fa-angle-down" id="arrow"></i></div>
     <div id="rectangle1">
         <!-- <img id="eimg" alt="e-form" src="assets/e.png"> -->
-        <img id="srchimg" alt="search" src="assets/search.png">
+        <i class="bi bi-search" id="srchimg"></i>
         <input class="hide" type="text" id="textInput" />
         <label id="toplabel">Documents</label>
         <div id="sdiv"><label id="suggestlabel">Suggestions</label></div>
         <div id="rectangle2">
-            <label id="suggestlabel">Suggestions</label>
-
-            <div id="rectangle7">
+            <div id="cont">
+                <div id="cont1">
+                    <label id="textlabel">Passport</label>
+                    <img src="assets/img1.png" class="opac">
+                    <div id="group">
+                        <img src="assets/rating.png" id="raimg"><label id="rate">8.5</label>
+                    </div>
+                </div>
+                <div id="cont2">
+                    <label id="textlabel">Social Security Number</label>
+                    <img src="assets/img2.png" class="opac">
+                    <div id="group">
+                        <img src="assets/rating.png" id="raimg"><label id="rate">8.5</label>
+                    </div>
+                </div>
+                <div id="cont3">
+                    <label id="textlabel">Driver’s License</label>
+                    <img src="assets/img3.png" class="opac">
+                    <div id="group">
+                        <img src="assets/rating.png" id="raimg"><label id="rate">8.5</label>
+                    </div>
+                </div>
+                <div id="cont4">
+                    <label id="textlabel">State Bank of India -
+                        </label>
+                    <img src="assets/img4.png" class="opac">
+                    <div id="group">
+                        <img src="assets/rating.png" id="raimg"><label id="rate">8.5</label>
+                    </div>
+                </div>
             </div>
         </div>
         <div id="lowerdiv">
-            <img id="sugimg" alt="e-form" src="assets/suggest.png">
+            <img id="sugimg" alt="e-form" src="assets/suggestion.svg">
             <label id="suglabel">Suggestions</label>
-            <img id="proimg" alt="e-form" src="assets/professional.png">
+            <img id="proimg" alt="e-form" src="assets/professional.svg">
             <label id="prolabel">professional Support</label>
-            <img id="inimg" alt="e-form" src="assets/inbox.png">
+            <img id="inimg" alt="e-form" src="assets/inbox.svg">
             <label id="inlabel">Inbox</label>
         </div>
     </div>
     <script>
-        var html = '';
-        const jsondata = async function() {
-            const response = await fetch('http://localhost:8000/fields');
+        // const image = document.getElementById('picture');
+        // const image1 = document.getElementById('picture1');
+        // const image2 = document.getElementById('picture2');
+        // const image3 = document.getElementById('picture3');
+        // const image4 = document.getElementById('picture4');
 
-            const data = await response.json();
-            console.log(data.length)
-            for (i = 0; i < data.length; i++) {
-                html += `<div id="box"><img id="docimg" src=${data[i].fields.picture}></div>`;
-                var container = document.getElementById("rectangle2");
-                container.innerHTML = html;
-            }
 
-        }
-        jsondata()
+        // var html = '';
+        // const jsondata = async function() {
+        //     const response = await fetch('http://localhost:8000/fields');
+
+        //     const data = await response.json();
+        //     const response2 = await fetch('http://localhost:8003/fields');
+        //     const data2 = await response2.json();
+        //     // console.log(data2)
+        //     for (i = 0; i < data.length; i++) {
+        //         html += `<div id="box"><img id='docimg${i}' src=${data[i].fields.picture}></div>`;
+        //         var container = document.getElementById("rectangle2");
+        //         container.innerHTML = html;
+        //     }
+
+        //     function getElementByXpath(path) {
+        //         return document.evaluate(path, document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
+        //     }
+        //     for (let i = 0; i < data2.length; i++) {
+        //         const element = data2[i];
+        //         console.log(element)
+
+        //         var ele = getElementByXpath(element.xpath);
+        //         console.log('ele', ele);
+        //         document.getElementById(`docimg${i}`).addEventListener('click', function() {
+        //             document.getElementById('box').style = 'border:1px solid black';
+        //             console.log('click')
+
+        //             ele.src = data[i].fields[element.attribute_name];
+        //             // fillforms(data[i]);
+        //         })
+
+        //         // console.log(ele.src)
+
+
+        //         // function fillforms(data) {
+        //         //     fillField(image, data[i]);
+        //         //     fillField(image1, data[i]);
+        //         //     fillField(image2, data[i]);
+        //         // }
+
+        //         // function fillField(field, value) {
+        //         //     if (field) {
+        //         //         field.value = value;
+        //         //     }
+        //         // }
+        //     }
+        //     const box = document.getElementById('box')
+        //     const docimg = document.getElementById(`docimg${i}`)
+        //     for (i = 0; i < 6; i++) {
+        //         box.addEventListener('click', function() {
+        //             box.style = 'width:346px;height:200px;'
+
+        //         })
+        //     }
+        // }
+        // jsondata()
+
+
+
 
 
         document.getElementById('arrow').addEventListener('click', function() {

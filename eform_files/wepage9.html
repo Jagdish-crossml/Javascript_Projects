@@ -2,6 +2,8 @@
 <html lang="en">
 
 <head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
     <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
     <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
     <link href='https://fonts.googleapis.com/css?family=Manrope' rel='stylesheet'>
@@ -11,19 +13,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/wepage9.css">
+    <script type="text/javascript" src="lazy.js"></script>
+    <script type="text/javascript" src="lazy.browser.js"></script>
 </head>
 
 <body>
-    <div id="topdiv"><img id="arrow" src="assets/down.png"></div>
+    <div id="topdiv"><i class="fa fa-angle-down" id="arrow"></i></div>
     <div id="rectangle1">
-        <img id="eimg" alt="e-form" src="assets/e.png">
+        <img id="eimg" alt="e-form" src="assets/logo.svg">
         <img id="uimg" alt="user" src="assets/Oval.png">
         <img id="dimg" alt="down" src="assets/sdown.png">
-        <label id="toplabel">Enter your father address?</label>
+        <label id="toplabel">Enter your Father Address?</label>
         <div id="rectangle2">
             <div id="sdiv">
-                <img id="srchimg" alt="search" src="assets/search.png">
+                <i class="bi bi-search" id="srchimg"></i>
                 <label id="suggestlabel">Suggestions</label>
+                <div id="two">
+                    <img src="assets/user1.svg" id="icon">
+                    <img src="assets/user2.svg" id="icon">
+                    <img src="assets/user3.svg" id="icon">
+                    <img src="assets/user4.svg" id="icon">
+                    <img src="assets/user5.svg" id="icon">
+                    <img src="assets/user6.svg" id="icon">
+                </div>
                 <input class="hide" type="text" id="textInput" />
             </div>
             <div id="ismyModal" class="ismodal">
@@ -35,22 +47,91 @@
 
             </div>
             <div id="datadiv">
+                <div id="one">
+                    <p id="text"> 2972 Westheimer Rd. Santa Ana, Illinois 85486 </p>
+                    <div id="images">
+                        <i class="far fa-copy" id="cpimg"></i>
+                        <i class="fas fa-pause" id="puimg"></i>
+                        <i class="bi bi-pin-angle" id="unimg"></i>
+                    </div>
+                    <div id="group">
+                        <img id="raimg" src="assets/rating.png">
+                        <label id="number"> 8.5 </label>
+                    </div>
+                </div>
+                <div id="one">
+                    <p id="text"> 2118 Thornridge Cir. Syracuse, Connecticut 35624 </p>
+                    <div id="images">
+                        <i class="far fa-copy" id="cpimg"></i>
+                        <i class="fas fa-pause" id="puimg"></i>
+                        <i class="bi bi-pin-angle" id="unimg"></i>
+                    </div>
+                    <div id="group">
+                        <img id="raimg" src="assets/rating.png">
+                        <label id="number"> 8.5 </label>
+                    </div>
+                </div>
+                <div id="one">
+                    <p id="text"> 2715 Ash Dr. San Jose, South Dakota 83475 </p>
+                    <div id="images">
+                        <i class="far fa-copy" id="cpimg"></i>
+                        <i class="fas fa-pause" id="puimg"></i>
+                        <i class="bi bi-pin-angle" id="unimg"></i>
+                    </div>
+                    <div id="group">
+                        <img id="raimg" src="assets/rating.png">
+                        <label id="number"> 8.5 </label>
+                    </div>
+                </div>
+                <div id="one" class="hide">
+                    <p id="text"> 2972 Westheimer Rd. Santa Ana, Illinois 85486 </p>
+                    <div id="images">
+                        <i class="far fa-copy" id="cpimg"></i>
+                        <i class="fas fa-pause" id="puimg"></i>
+                        <i class="bi bi-pin-angle" id="unimg"></i>
+                    </div>
+                    <div id="group">
+                        <img id="raimg" src="assets/rating.png">
+                        <label id="number"> 8.5 </label>
+                    </div>
+                </div>
+                <div id="one" class="hide">
+                    <p id="text"> 2972 Westheimer Rd. Santa Ana, Illinois 85486 </p>
+                    <div id="images">
+                        <i class="far fa-copy" id="cpimg"></i>
+                        <i class="fas fa-pause" id="puimg"></i>
+                        <i class="bi bi-pin-angle" id="unimg"></i>
+                    </div>
+                    <div id="group">
+                        <img id="raimg" src="assets/rating.png">
+                        <label id="number"> 8.5 </label>
+                    </div>
+                </div>
+            </div>
+            <button id="load" type="button" class="btn btn-primary">Load more</button>
+            <button id="top" type="button" class="btn btn-primary">top</button>
 
-            </div>
-            <!-- <button id="load" type="button">Load more</button> -->
-            <div id="rectangle7">
-            </div>
         </div>
         <div id="lowerdiv">
-            <img id="sugimg" alt="e-form" src="assets/suggest.png">
+            <img id="sugimg" alt="e-form" src="assets/suggestion.svg">
             <label id="suglabel">Suggestions</label>
-            <img id="proimg" alt="e-form" src="assets/professional.png">
+            <img id="proimg" alt="e-form" src="assets/professional.svg">
+            <!-- <i class="bi bi-people" id="proimg"></i> -->
             <label id="prolabel">professional Support</label>
-            <img id="inimg" alt="e-form" src="assets/inbox.png">
+            <img id="inimg" alt="e-form" src="assets/inbox.svg">
+            <!-- <i class="bi bi-inbox" id="inimg"></i> -->
             <label id="inlabel">Inbox</label>
         </div>
     </div>
     <script src="js/wepage9.js">
+    </script>
+    <script>
+        document.getElementById('top').style.display = 'none'
+            // $('#one').slice(0, 2).show();
+        $('#load').on('click', function() {
+            $('.hide').removeClass('hide');
+            // document.getElementById('one').appendChild(document.getElementById('top'))
+        })
     </script>
 </body>
 

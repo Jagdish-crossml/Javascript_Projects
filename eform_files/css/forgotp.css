@@ -2,7 +2,7 @@
     position: absolute;
     width: 52px;
     height: 24px;
-    left: 1250px;
+    left: 1260px;
     top: 142px;
     background: #FFFFFF;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
@@ -14,6 +14,9 @@
     height: 8.57px;
     margin-left: 20px;
     margin-top: 6px;
+    color: #000000;
+    font-size: 18px;
+    font-weight: 1000;
 }
 
 #rectangle1 {
@@ -37,18 +40,18 @@
 }
 
 #eimg {
-    width: 20px;
-    height: 20px;
+    width: 15px;
+    height: 14.99px;
     float: left;
     margin-left: 11px;
-    margin-top: 18px;
+    margin-top: 21px;
 }
 
 #uimg {
     width: 26px;
     height: 26px;
     float: right;
-    margin-top: 13px;
+    margin-top: 15px;
     margin-right: 33px;
 }
 
@@ -85,7 +88,7 @@
     font-family: Manrope;
     font-style: normal;
     font-weight: 500;
-    font-size: 17px;
+    font-size: 15px;
     line-height: 20px;
     color: #16243C;
     opacity: 0.8;
@@ -100,7 +103,7 @@
     font-family: Manrope;
     font-style: normal;
     font-weight: 500;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 19px;
     color: #545F77;
 }
@@ -116,6 +119,17 @@
     box-sizing: border-box;
     box-shadow: 0px 4px 8px rgba(44, 39, 56, 0.04);
     border-radius: 4px;
+    font-family: Manrope;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 19px;
+    color: #2C2738;
+}
+
+input[type="email"]::placeholder {
+    /* Firefox, Chrome, Opera */
+    padding-left: 10px;
 }
 
 #cancelbtn {
@@ -125,8 +139,8 @@
     float: left;
     left: 16px;
     top: 276px;
-    background: #2F73EA;
-    border-radius: 6px;
+    background: #F5F5F5;
+    /* border-radius: 6px; */
     font-family: Manrope;
     font-style: normal;
     font-weight: 500;
@@ -135,7 +149,16 @@
     /* identical to box height */
     align-items: center;
     text-align: center;
+    color: black;
+    border-style: hidden;
+}
+
+#cancelbtn:focus {
+    background: #2F73EA;
+    /* border-radius: 6px; */
     color: #FFFFFF;
+    border: none;
+    border-color: transparent;
 }
 
 #resetbtn {
@@ -143,22 +166,29 @@
     float: right;
     width: 222px;
     height: 36px;
-    left: 150px;
-    padding-left: 7px;
+    right: 38px;
+    padding-left: 11px;
     padding-right: 10px;
     padding-top: 7px;
     padding-bottom: 7px;
     /* right: 90px; */
     top: 276px;
-    background: #2F73EA;
-    border-radius: 6px;
+    background: #F5F5F5;
+    /* border-radius: 6px; */
     font-family: Manrope;
     font-style: normal;
     font-weight: 500;
     font-size: 16px;
-    line-height: 21px;
+    line-height: 22px;
     /* identical to box height */
     align-items: center;
     text-align: center;
+    color: black;
+    border-style: hidden;
+}
+
+#resetbtn:focus {
+    background: #2F73EA;
     color: #FFFFFF;
+    border-radius: 6px;
 }
