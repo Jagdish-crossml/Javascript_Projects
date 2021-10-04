@@ -140,6 +140,7 @@
 }
 
 #name {
+    position: absolute;
     width: 264px;
     height: 38px;
     margin-top: 10px;
@@ -168,7 +169,7 @@ hr {
     border: 1px solid #E4E3E3;
 }
 
-#rotateimg {
+.rotateimg {
     float: right;
     width: 20px;
     height: 20px;
@@ -179,7 +180,7 @@ hr {
 
 #textbox {
     position: relative;
-    margin-left: 47px;
+    margin-left: 0px;
     margin-top: 1px;
     width: 248px;
     height: 25px;
@@ -208,31 +209,33 @@ hr {
     float: left;
     width: 15px;
     height: 15px;
-    margin-top: 4px;
+    margin-top: 2px;
     margin-left: 16px;
-    color: white;
+    color: #22DA77;
     /* border: 1px solid #22DA77; */
 }
 
-#rightimg:hover {
+
+/* #rightimg:hover {
     opacity: .5;
     color: #22DA77;
-}
+} */
 
 #wrongimg {
     float: right;
     width: 15px;
     height: 15px;
-    margin-top: 4px;
+    margin-top: 2px;
     margin-right: 5px;
-    color: white;
-    border: 0.4px solid #F5F5F5;
+    color: #FF0000;
+    /* border: 0.4px solid #F5F5F5; */
 }
 
-#wrongimg:hover {
+
+/* #wrongimg:hover {
     opacity: .5;
     color: #FF0000;
-}
+} */
 
 #selectdiv {
     height: 41px;
@@ -310,7 +313,9 @@ hr {
     color: #FF0000;
 }
 
-
-/* #group {
-    border: 0.5px solid #B9B9B9;
-} */
+#checkdiv {
+    position: relative;
+    width: 376px;
+    height: 60px;
+    /* border-bottom: 1px solid #E4E3E3; */
+}

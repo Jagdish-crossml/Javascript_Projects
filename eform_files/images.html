@@ -27,34 +27,52 @@
             <div id="cont">
                 <div id="cont1">
                     <label id="textlabel">Passport</label>
-                    <img src="assets/img1.png" class="opac">
+                    <img src="assets/img1.png" id="image" class="opac">
                     <div id="group">
                         <img src="assets/rating.png" id="raimg"><label id="rate">8.5</label>
                     </div>
                 </div>
                 <div id="cont2">
                     <label id="textlabel">Social Security Number</label>
-                    <img src="assets/img2.png" class="opac">
+                    <img src="assets/img2.png" id="image" class="opac">
                     <div id="group">
-                        <img src="assets/rating.png" id="raimg"><label id="rate">8.5</label>
+                        <img src="assets/rating.png" id="raimg"><label id="rate">6.5</label>
                     </div>
                 </div>
                 <div id="cont3">
                     <label id="textlabel">Driver’s License</label>
-                    <img src="assets/img3.png" class="opac">
+                    <img src="assets/img3.png" id="image" class="opac">
                     <div id="group">
-                        <img src="assets/rating.png" id="raimg"><label id="rate">8.5</label>
+                        <img src="assets/rating.png" id="raimg"><label id="rate">7.0</label>
                     </div>
                 </div>
                 <div id="cont4">
                     <label id="textlabel">State Bank of India -
                         </label>
-                    <img src="assets/img4.png" class="opac">
+                    <img src="assets/img4.png" id="image" class="opac">
                     <div id="group">
-                        <img src="assets/rating.png" id="raimg"><label id="rate">8.5</label>
+                        <img src="assets/rating.png" id="raimg"><label id="rate">5.5</label>
                     </div>
                 </div>
             </div>
+        </div>
+        <div id="ismyModal" class="ismodal">
+            <div class="ismodal-content">
+                <div id="modaltop">
+                    <label id="imglabel">Passport</label>
+                    <span class="close">&times;</span></div>
+
+                <img id="modalimg" alt="modalimg">
+                <i class="fa fa-copy" id="copy"></i>
+                <div id="thisModal" class="mymodal">
+                    <div class="ismymodal-content">
+                        <p id="copycontent">
+                            URL is copied in Clipboard, please paste it in the respective place
+                        </p>
+                        <span class="close1">close</span></div>
+                </div>
+            </div>
+
         </div>
         <div id="lowerdiv">
             <img id="sugimg" alt="e-form" src="assets/suggestion.svg">
@@ -66,6 +84,56 @@
         </div>
     </div>
     <script>
+        const modalfunc = function() {
+                var modal = document.getElementById("ismyModal");
+                var btn = document.getElementById("image");
+                var modalimg = document.getElementById('modalimg')
+
+                var span = document.getElementsByClassName("close")[0];
+                if (modal.style.display = "none") {
+                    btn.onclick = function() {
+                        modal.style.display = "block";
+                        modalimg.src = image.src
+                    }
+                }
+                span.onclick = function() {
+                    modal.style.display = "none";
+                }
+                $(document).click(function(e) {
+                    if ($(e.target).is('#ismyModal')) {
+                        $('#ismyModal').fadeOut(500);
+                    }
+                });
+            }
+            // modalfunc();
+        const image = document.getElementById('image')
+
+        image.addEventListener('click', function() {
+            // console.log('cl')
+            modalfunc()
+        })
+        var copy = document.getElementById('copy')
+        const modalfunction = function() {
+            var modal1 = document.getElementById("thisModal");
+            var copy = document.getElementById('copy')
+                // var modalimg = document.getElementById('modalimg')
+
+            var span1 = document.getElementsByClassName("close1")[0];
+            if (modal1.style.display = "none") {
+                copy.onclick = function() {
+                    modal1.style.display = "block";
+                }
+            }
+            span1.onclick = function() {
+                modal1.style.display = "none";
+            }
+            $(document).click(function(e) {
+                if ($(e.target).is('#thisModal')) {
+                    $('#thisModal').fadeOut(500);
+                }
+            });
+        }
+        modalfunction();
         // const image = document.getElementById('picture');
         // const image1 = document.getElementById('picture1');
         // const image2 = document.getElementById('picture2');

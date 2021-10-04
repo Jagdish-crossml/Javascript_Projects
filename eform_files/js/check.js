@@ -25,63 +25,194 @@
 
 
 const change = document.querySelectorAll('.rotateimg')
+const change1 = document.getElementById('rotateimg')
+const change2 = document.getElementById('rotateimg1')
+const change3 = document.getElementById('rotateimg2')
+const change4 = document.getElementById('rotateimg3')
+const change5 = document.getElementById('rotateimg4')
 const span = document.getElementById('data')
 const element1 = document.getElementById('textbox')
+const element10 = document.getElementById('textbox1')
+const element11 = document.getElementById('textbox2')
+const element12 = document.getElementById('textbox3')
+const element13 = document.getElementById('textbox4')
 const element2 = document.getElementById('textdiv')
+const element20 = document.getElementById('textdiv1')
+const element21 = document.getElementById('textdiv2')
+const element22 = document.getElementById('textdiv3')
+const element23 = document.getElementById('textdiv4')
+
 const close = document.getElementById('wrongimg');
 const showdata = document.getElementById('rightimg');
-change.forEach(item => {
-
-    item.addEventListener('click', function() {
-        console.log('click')
-        const hide1 = function(element1, element2) {
-            element1.classList.toggle('hide')
-            element2.classList.toggle('hide')
-            item.style.display = 'none'
-            element1.style = 'margin-top:-30px'
-            element2.style = 'margin-top:-41px'
-
-
-        }
-        hide1(element1, element2)
-    });
-})
-
-
-
+// change.forEach(item => {
+change1.addEventListener('click', function() {
+    console.log('click')
+    const hide1 = function(element1, element2) {
+        element1.classList.toggle('hide')
+        element2.classList.toggle('hide')
+        change1.style.display = 'none'
+        element1.style = 'margin-top:30px'
+        element2.style = 'margin-top:-35px'
+    }
+    hide1(element1, element2)
+});
+// })
 close.addEventListener('click', function() {
-
-
     const hideone = function(element1, element2) {
         element1.classList.toggle('hide')
         element2.classList.toggle('hide')
-
-        change.forEach(i => {
-            i.style.display = 'block'
-        })
-
-
+            // .forEach(i => {
+        change1.style.display = 'block'
+            // })
     }
     hideone(element1, element2)
 })
-
-
 showdata.addEventListener('click', function() {
-
-
     const hideone = function(element1, element2) {
         element1.classList.toggle('hide')
         element2.classList.toggle('hide')
-        change.forEach(i => {
-            i.style.display = 'block'
-        })
+            // change.forEach(i => {
+        change1.style.display = 'block'
+            // })
         span.innerHTML = element1.value
 
-
     }
     hideone(element1, element2)
-
 })
+
+// change2.addEventListener('click', function() {
+//     console.log('click')
+//     const hide1 = function(element10, element20) {
+//         element10.classList.toggle('hide')
+//         element20.classList.toggle('hide')
+//         change2.style.display = 'none'
+//         element10.style = 'margin-top:-30px'
+//         element20.style = 'margin-top:-41px'
+//     }
+//     hide1(element10, element20)
+// });
+// // })
+// close.addEventListener('click', function() {
+//     const hideone = function(element10, element20) {
+//         element10.classList.toggle('hide')
+//         element20.classList.toggle('hide')
+//             // .forEach(i => {
+//         change2.style.display = 'block'
+//             // })
+//     }
+//     hideone(element10, element20)
+// })
+// showdata.addEventListener('click', function() {
+//     const hideone = function(element10, element20) {
+//         element10.classList.toggle('hide')
+//         element20.classList.toggle('hide')
+//             // change.forEach(i => {
+//         change2.style.display = 'block'
+//             // })
+//         span.innerHTML = element10.value
+//     }
+//     hideone(element10, element20)
+// })
+
+// change1.addEventListener('click', function() {
+//     console.log('click')
+//     const hide1 = function(element1, element2) {
+//         element1.classList.toggle('hide')
+//         element2.classList.toggle('hide')
+//         change1.style.display = 'none'
+//         element1.style = 'margin-top:-30px'
+//         element2.style = 'margin-top:-41px'
+//     }
+//     hide1(element1, element2)
+// });
+// // })
+// close.addEventListener('click', function() {
+//     const hideone = function(element1, element2) {
+//         element1.classList.toggle('hide')
+//         element2.classList.toggle('hide')
+//             // .forEach(i => {
+//         change1.style.display = 'block'
+//             // })
+//     }
+//     hideone(element1, element2)
+// })
+// showdata.addEventListener('click', function() {
+//     const hideone = function(element1, element2) {
+//         element1.classList.toggle('hide')
+//         element2.classList.toggle('hide')
+//             // change.forEach(i => {
+//         change1.style.display = 'block'
+//             // })
+//         span.innerHTML = element1.value
+//     }
+//     hideone(element1, element2)
+// })
+// change1.addEventListener('click', function() {
+//     console.log('click')
+//     const hide1 = function(element1, element2) {
+//         element1.classList.toggle('hide')
+//         element2.classList.toggle('hide')
+//         change1.style.display = 'none'
+//         element1.style = 'margin-top:-30px'
+//         element2.style = 'margin-top:-41px'
+//     }
+//     hide1(element1, element2)
+// });
+// // })
+// close.addEventListener('click', function() {
+//     const hideone = function(element1, element2) {
+//         element1.classList.toggle('hide')
+//         element2.classList.toggle('hide')
+//             // .forEach(i => {
+//         change1.style.display = 'block'
+//             // })
+//     }
+//     hideone(element1, element2)
+// })
+// showdata.addEventListener('click', function() {
+//     const hideone = function(element1, element2) {
+//         element1.classList.toggle('hide')
+//         element2.classList.toggle('hide')
+//             // change.forEach(i => {
+//         change1.style.display = 'block'
+//             // })
+//         span.innerHTML = element1.value
+//     }
+//     hideone(element1, element2)
+// })
+// change1.addEventListener('click', function() {
+//     console.log('click')
+//     const hide1 = function(element1, element2) {
+//         element1.classList.toggle('hide')
+//         element2.classList.toggle('hide')
+//         change1.style.display = 'none'
+//         element1.style = 'margin-top:-30px'
+//         element2.style = 'margin-top:-41px'
+//     }
+//     hide1(element1, element2)
+// });
+// // })
+// close.addEventListener('click', function() {
+//     const hideone = function(element1, element2) {
+//         element1.classList.toggle('hide')
+//         element2.classList.toggle('hide')
+//             // .forEach(i => {
+//         change1.style.display = 'block'
+//             // })
+//     }
+//     hideone(element1, element2)
+// })
+// showdata.addEventListener('click', function() {
+//     const hideone = function(element1, element2) {
+//         element1.classList.toggle('hide')
+//         element2.classList.toggle('hide')
+//             // change.forEach(i => {
+//         change1.style.display = 'block'
+//             // })
+//         span.innerHTML = element1.value
+//     }
+//     hideone(element1, element2)
+// })
 
 
 document.getElementById('arrow').addEventListener('click', function() {
