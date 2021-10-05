@@ -240,4 +240,5 @@ input[type="password"]::placeholder {
     cursor: pointer;
     width: 20px;
     height: 13.03px;
+    color: #535E76;
 }

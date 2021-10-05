@@ -84,23 +84,17 @@ document.getElementById('topdiv').addEventListener('click', function() {
             hide(element);
             return;
         }
-
-        // show the element
         show(element);
-
     }
     toggle(element)
-
 });
 
 
 const search = document.getElementById('srchimg')
 search.addEventListener('click', function() {
-
     const element1 = document.getElementById('textInput')
     const hide1 = function(element1) {
         element1.classList.toggle('hide')
-
     }
     hide1(element1)
 });
@@ -117,8 +111,7 @@ async function searchValue() {
     console.log(data1[0].fields.address)
     document.getElementById('textInput').addEventListener('keyup', function() {
         let pattern = new RegExp(this.value, 'g');
-
-        let resultSet = data1.filter(item => item.fields.address.match(pattern) && this.value != '').map(item => `<div id="resultset"> ${item.fields.address} </div>`);
+        let resultSet = data1.filter(item => item.fields.address.match(pattern) && this.value != '').map(item => `<div id="resultset"><p id="resultdata">${item.fields.address}<p> <button type="button" id="btn"> In the suggestions <i class="bi bi-reply" id="reply"></i></button></div>`);
         console.log(resultSet)
         document.getElementById('ismyModal').innerHTML = resultSet;
     });
@@ -126,47 +119,70 @@ async function searchValue() {
 searchValue();
 
 
-var mybutton = document.getElementById("myBtn");
-
-window.onscroll = function() { scrollFunction() };
-
-function scrollFunction() {
-    if (document.getElementById('datadiv').scrollTop > 3 || document.documentElement.scrollTop > 2) {
-        mybutton.style.display = "block";
-    } else {
-        mybutton.style.display = "none";
-    }
-}
-
-function topFunction() {
-    document.getElementById('datadiv').scrollTop = 0;
-    document.documentElement.scrollTop = 0;
-}
-
-
+//search box 
 const modalfunc = function() {
     var modal = document.getElementById("ismyModal");
     var btn = document.getElementById("textInput");
-
-    var span = document.getElementsByClassName("close")[0];
     if (modal.style.display = "none") {
         btn.onclick = function() {
-            modal.style.display = "block";
+            modal.style.display = modal.style.display === 'none' ? 'block' : 'none';
         }
     }
-
-
-    span.onclick = function() {
-        modal.style.display = "none";
-    }
-
-    $(document).click(function(e) {
-        if ($(e.target).is('#ismyModal')) {
-            $('#ismyModal').fadeOut(500);
-        }
-
-    });
-
-
 }
 modalfunc();
+
+//+2 user icon modal
+const modal_function = function() {
+    var modals = document.getElementById("iconModal");
+    var btns = document.querySelector(".icon");
+    if (modals.style.display = "none") {
+        btns.onclick = function() {
+            modals.style.display = modals.style.display === 'none' ? 'block' : 'none';
+        }
+    }
+}
+modal_function();
+
+
+//current user modal
+const modalfunction = function() {
+    var modal = document.getElementById("userModal");
+    var btn = document.getElementById("dimg");
+    if (modal.style.display = "none") {
+        btn.onclick = function() {
+            modal.style.display = modal.style.display === 'none' ? 'block' : 'none';
+        }
+    }
+}
+modalfunction();
+
+// const togglePin = document.getElementById('#unimg');
+// // const password = document.querySelector('#npassword');
+// togglePassword.addEventListener('click', function(e) {
+//     const type = password.getAttribute('type') === 'npassword' ? 'text' : 'npassword';
+//     password.setAttribute('type', type);
+//     this.classList.toggle('bi-eye');
+// });
+
+
+//Get the button
+var mybutton = document.getElementById("myBtn");
+var rectangle = document.getElementById('datadiv');
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() { scrollFunction() };
+
+function scrollFunction() {
+    if (rectangle.scrollTop > 5 || document.documentElement.scrollTop > 5) {
+        mybutton.classList.remove('hide');
+    } else {
+        mybutton.classList.add('hide');
+    }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+    rectangle.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+    // document.documentElement.scrollTop = 0;
+}

@@ -336,14 +336,18 @@ input[type="password"]::placeholder {
 
 #togglePassword {
     position: absolute;
-    margin-top: 148px;
+    margin-top: 149px;
     margin-left: 298px;
     cursor: pointer;
+    font-size: 18px;
+    color: #535E76;
 }
 
 #reptogglePassword {
     position: absolute;
-    margin-top: 252px;
+    margin-top: 247px;
     margin-left: 298px;
     cursor: pointer;
+    font-size: 18px;
+    color: #535E76;
 }

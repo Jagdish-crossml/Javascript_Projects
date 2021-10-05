@@ -13,8 +13,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/wepage9.css">
-    <script type="text/javascript" src="lazy.js"></script>
-    <script type="text/javascript" src="lazy.browser.js"></script>
+    <!-- <script type="text/javascript" src="lazy.js"></script> -->
+    <!-- <script type="text/javascript" src="lazy.browser.js"></script> -->
 </head>
 
 <body>
@@ -23,6 +23,15 @@
         <img id="eimg" alt="e-form" src="assets/logo.svg">
         <img id="uimg" alt="user" src="assets/Oval.png">
         <img id="dimg" alt="down" src="assets/sdown.png">
+        <div id="userModal" class="usermodal">
+
+            <div class="usermodal-content">
+                <label id="options">Change Password</label>
+                <label id="options">Logout</label>
+
+            </div>
+
+        </div>
         <label id="toplabel">Enter your Father Address?</label>
         <div id="rectangle2">
             <div id="sdiv">
@@ -34,18 +43,29 @@
                     <img src="assets/user3.svg" id="icon">
                     <img src="assets/user4.svg" id="icon">
                     <img src="assets/user5.svg" id="icon">
-                    <img src="assets/user6.svg" id="icon">
+                    <img src="assets/user6.svg" id="icon" class="icon   ">
+                </div>
+                <div id="iconModal" class="iconmodal">
+                    <div class="iconmodal-content">
+                        <!-- <span class="iconclose">&times;</span> -->
+                        <div id="icondiv">
+                            <img src="assets/user5.svg" id="moreicon"><label id="userlabel">Brooklyn Simmons</label>
+                        </div>
+                        <div id="icondiv">
+                            <img src="assets/user2.svg" id="moreicon"><label id="userlabel">Leslie Alexander</label>
+                        </div>
+                        <a id="network">Show More From Network<i id="info" class="bi bi-info-circle"></i></a>
+                    </div>
+                </div>
+
+                <div id="ismyModal" class="ismodal">
+                    <div class="ismodal-content">
+                        <!-- <span class="close">&times;</span> -->
+                    </div>
                 </div>
                 <input class="hide" type="text" id="textInput" />
             </div>
-            <div id="ismyModal" class="ismodal">
 
-                <div class="ismodal-content">
-                    <span class="close">&times;</span>
-
-                </div>
-
-            </div>
             <div id="datadiv">
                 <div id="one">
                     <p id="text"> 2972 Westheimer Rd. Santa Ana, Illinois 85486 </p>
@@ -96,7 +116,7 @@
                     </div>
                 </div>
                 <div id="one" class="hide">
-                    <p id="text"> 2972 Westheimer Rd. Santa Ana, Illinois 85486 </p>
+                    <p id="text"> 2972 Westheimer Rd. Santa Ana, Illinois 85486</p>
                     <div id="images">
                         <i class="far fa-copy" id="cpimg"></i>
                         <i class="fas fa-pause" id="puimg"></i>
@@ -107,10 +127,9 @@
                         <label id="number"> 8.5 </label>
                     </div>
                 </div>
+                <button onclick="topFunction()" id="myBtn" class="hide" title="Go to top"><i class="fas fa-arrow-up"></i></button>
             </div>
             <button id="load" type="button" class="btn btn-primary">Load more</button>
-            <button id="top" type="button" class="btn btn-primary">top</button>
-
         </div>
         <div id="lowerdiv">
             <img id="sugimg" alt="e-form" src="assets/suggestion.svg">
@@ -126,11 +145,8 @@
     <script src="js/wepage9.js">
     </script>
     <script>
-        document.getElementById('top').style.display = 'none'
-            // $('#one').slice(0, 2).show();
         $('#load').on('click', function() {
             $('.hide').removeClass('hide');
-            // document.getElementById('one').appendChild(document.getElementById('top'))
         })
     </script>
 </body>

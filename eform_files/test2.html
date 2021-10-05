@@ -2,10 +2,11 @@
 <html>
 
 <head>
+    <link href='https://fonts.googleapis.com/css?family=Manrope' rel='stylesheet'>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -17,7 +18,7 @@
             height: 403px;
             right: 2%;
             bottom: 2%;
-            background: #FFFFFF;
+            /* background: blue; */
             box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
             border-radius: 10px 10px 0px 0px;
             /* overflow-x: hidden;
@@ -26,7 +27,7 @@
         
         #one {
             width: 46px;
-            height: 6px;
+            height: 200px;
             margin-top: 20px;
             margin-right: 10px;
             margin-left: 10px;
@@ -35,217 +36,560 @@
             background-color: wheat;
         } */
         
-        #cpimg {
-            position: relative;
-            width: 12.13px;
-            height: 14px;
-            float: right;
-            right: 74px;
-            /* margin-top: -14px; */
-            color: #535E76;
-            opacity: 0.5;
+        #textInput {
+            width: 366px;
+            height: 46px;
+            background: #F5F7FB;
+            border-radius: 10px 10px 0px 0px;
+            margin-left: 5px;
+            margin-top: 4px;
         }
         
-        #puimg {
+        #checkone {
             position: absolute;
-            width: 12.13px;
-            height: 14px;
-            float: right;
-            right: 44px;
-            /* margin-top: -14px; */
-            color: #535E76;
-            opacity: 0.5;
-        }
-        
-        #unimg {
-            position: absolute;
-            width: 12.13px;
-            height: 14px;
-            float: right;
-            right: 14px;
-            /* margin-top: -14px; */
-            color: #535E76;
-            opacity: 0.5;
-        }
-        
-        #raimg {
-            width: 46px;
-            height: 6px;
-        }
-        
-        #images {
-            margin-top: -50px;
-            position: relative;
-            float: right;
-        }
-        
-        #text {
-            width: 186px;
-            height: 36px;
-        }
-        
-        #check {
-            color: #22DA77;
-        }
-        
-        #btn1 {
-            border-right-style: none;
-            border-left-style: none;
-            background: #EFEFEF;
-        }
-        
-        #btn2 {
-            border-left-style: none;
-            background: #EFEFEF;
-        }
-        
-        #close {
-            color: #FF0000;
-        }
-        
-        #icon {
-            width: 26px;
-            height: 26px;
-            margin-left: -16px;
-            border-radius: 50%;
-        }
-        
-        #icon:hover {
-            background-color: blue;
-        }
-        /* #iconl {
-            width: 23.53px;
-            height: 23.53px;
-            margin-left: -18px;
-            /* background-image: url('assets/Oval.png'); */
-        /* } */
-        
-        #two {
-            float: left;
-            margin-left: 30px;
-            width: 88px;
-            height: 25.06px;
-        }
-        /* #three {
-            float: right;
-            margin-right: 31 0px;
-        } */
-        /* .dropbtn {
-            background: #2F73EA;
-            margin-right: 13px;
-            margin-top: 12px;
+            margin-left: 16px;
+            width: 16px;
+            margin-top: 15px;
+            height: 16px;
+            background: #FFFFFF;
+            border: 1px solid #DBE2EA;
+            box-sizing: border-box;
+            box-shadow: 0px 4px 8px rgba(44, 39, 56, 0.04);
             border-radius: 4px;
-            width: 97px;
-            height: 25px;
+        }
+        
+        #checktwo {
+            position: absolute;
+            margin-left: 16px;
+            width: 16px;
+            margin-top: 13px;
+            height: 16px;
+            background: #FFFFFF;
+            border: 1px solid #DBE2EA;
+            box-sizing: border-box;
+            box-shadow: 0px 4px 8px rgba(44, 39, 56, 0.04);
+            border-radius: 4px;
+        }
+        
+        #name {
+            position: absolute;
+            width: 264px;
+            height: 38px;
+            margin-top: 10px;
+            margin-left: 46px;
             font-family: Manrope;
             font-style: normal;
             font-weight: 500;
-            font-size: 12px;
-            line-height: 14px;
-            color: #FFFFFF;
+            font-size: 14px;
+            line-height: 19px;
+            color: #16243C;
         }
         
-        .dropdown {
+        #all {
+            margin-left: 46px;
+            margin-top: 12px;
+            font-family: Manrope;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 15px;
+            line-height: 20px;
+            color: #16243C;
+        }
+        
+        hr {
+            margin-top: 9px;
+            border: 1px solid #E4E3E3;
+        }
+        
+        .rotateimg {
+            float: right;
+            width: 20px;
+            height: 20px;
+            margin-top: 29px;
+            margin-right: 19px;
+            opacity: 0.5;
+        }
+        
+        #textbox {
+            position: absolute;
+            margin-left: 47px;
+            margin-top: 50px;
+            width: 248px;
+            height: 25px;
+            background: #FFFFFF;
+            border: 0.5px solid #B9B9B9;
+            box-sizing: border-box;
+            border-radius: 4px;
+            border-right-style: hidden;
+        }
+        
+        #textdiv {
             position: relative;
-            display: inline-block;
+            width: 64px;
+            height: 25px;
+            float: left;
+            margin-left: 290px;
+            margin-top: 1px;
+            background: #EFEFEF;
+            border: 0.5px solid #B9B9B9;
+            box-sizing: border-box;
+            border-radius: 4px;
+            border-left-style: hidden;
         }
         
-        .dropdown-content {
+        #rightimg {
+            float: left;
+            width: 15px;
+            height: 15px;
+            margin-top: 2px;
+            margin-left: 16px;
+            color: #22DA77;
+            /* border: 1px solid #22DA77; */
+        }
+        
+        #wrongimg {
+            float: right;
+            width: 15px;
+            height: 15px;
+            margin-top: 2px;
+            margin-right: 5px;
+            color: #FF0000;
+            /* border: 0.4px solid #F5F5F5; */
+        }
+        
+        #checkdiv {
+            position: absolute;
+            width: 376px;
+            height: 60px;
+            /* border-bottom: 1px solid #E4E3E3; */
+        }
+        
+        #btn {
+            width: 123px;
+            height: 25px;
+            background: #FBFBFB;
+            border: 1px solid #E4E4E4;
+            box-sizing: border-box;
+            border-radius: 5px;
+            font-family: Manrope;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 11px;
+            line-height: 14px;
+            /* identical to box height */
+            text-align: left;
+            color: #16243C;
+        }
+        
+        #reply {
+            font-size: 15px;
+            float: right;
+            color: #2F73EA;
+            margin-right: 9px;
+            margin-top: 1px;
+        }
+        
+        .ismodal {
             display: none;
             position: absolute;
-            background-color: #f9f9f9;
-            width: 105px;
-            height: 182px;
-            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
             z-index: 1;
+            padding-top: 2px;
+            left: 5px;
+            top: 60px;
+            width: 366px;
+            height: 123px;
+            overflow-y: scroll;
+            overflow-x: hidden;
+            background-color: white;
+            background: #FFFFFF;
+            box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 0px;
+        }
+        /* Modal Content */
+        
+        .ismodal-content {
+            background-color: #fefefe;
+            margin: auto;
+            padding: 20px;
+            width: 80%;
+            height: 50%;
+        }
+        /* The Close Button */
+        
+        .close {
+            color: #aaaaaa;
+            float: right;
+            font-size: 18px;
+            font-weight: bold;
+            margin-top: -25px;
         }
         
-        .dropdown-content a {
-            color: black;
-            padding: 12px 16px;
+        .close:hover,
+        .close:focus {
+            color: #000;
             text-decoration: none;
-            display: block;
+            cursor: pointer;
         }
         
-        .dropdown-content a:hover {
-            background-color: #f1f1f1
+        #resultset {
+            margin-top: 1px;
+            padding: 20px;
+            width: 366px;
+            height: 60px;
+            list-style: none;
+            font-family: Manrope;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 19px;
+            color: #16243C;
         }
         
-        .dropdown:hover .dropdown-content {
-            display: block;
+        #resultset:hover {
+            background: #E9E9E9;
         }
         
-        .dropdown:hover .dropbtn {
-            background-color: #3e8e41;
-        } */
-        
-        #star {
-            font-size: 6px;
-            padding: 0;
-            margin: -1px;
+        #resultdata {
+            width: 186px;
+            height: 38px;
+            float: left;
         }
         
-        #star:hover {
-            color: #E5D437;
+        .thismodal {
+            display: none;
+            position: absolute;
+            z-index: 1;
+            padding-top: 2px;
+            left: 5px;
+            top: 100px;
+            width: 366px;
+            height: 200px;
+            overflow-y: scroll;
+            overflow-x: hidden;
+            background: #F5F5F5;
+            /* border-radius: 0px; */
+            box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 0px;
+        }
+        /* Modal Content */
+        
+        .thismodal-content {
+            background: #F5F5F5;
+            margin: auto;
+            padding: 20px;
+            width: 80%;
+            height: 50%;
+        }
+        /* The Close Button */
+        
+        .closeone {
+            color: #aaaaaa;
+            float: right;
+            font-size: 18px;
+            font-weight: bold;
+            margin-top: -25px;
+        }
+        
+        .closeone:hover,
+        .closeone:focus {
+            color: #000;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        
+        #newdiv {
+            width: 376px;
+            height: 284px;
+            margin-top: 77px;
+            background-color: #F5F5F5;
+        }
+        
+        #reslt {
+            width: 344.33px;
+            height: 38px;
+            margin-left: 16px;
+        }
+        
+        #reslt:hover {
+            background-color: lightgray;
+        }
+        
+        #select {
+            width: 186px;
+            height: 36px;
+            float: left;
+            font-family: Manrope;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 19px;
+            color: #16243C;
+        }
+        
+        #cpimg {
+            float: right;
+        }
+        
+        #srchreslt {
+            float: left;
+            font-family: Manrope;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 15px;
+            line-height: 20px;
+            color: #16243C;
+        }
+        
+        #topdiv {
+            width: 376px;
+            height: 40px;
+        }
+        
+        #userbtn {
+            float: right;
+            width: 93px;
+            height: 20px;
+            background: #FFFFFF;
+            box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.05);
+            border-radius: 4px;
+            font-family: Manrope;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 12px;
+            line-height: 16px;
+            text-align: right;
+        }
+        
+        #close {
+            float: right;
+            color: red;
+        }
+        
+        #closediv {
+            color: blue;
+            margin-top: 20px;
+        }
+        
+        #main {
+            display: none;
         }
     </style>
 </head>
 
 <body>
     <div id="container">
-        <!-- 
-        <h2>Dropdown Menu</h2>
-        <p>Move the mouse over the button to open the dropdown menu.</p>
-
-        <div class="dropdown">
-            <button class="dropbtn">Dropdown</button>
-            <div class="dropdown-content">
-                <a href="#">Link 1</a>
-                <a href="#">Link 2</a>
-                <a href="#">Link 3</a>
-            </div>
-        </div>
-
-        <p><strong>Note:</strong> We use href="#" for test links. In a real web site this would be URLs.</p> -->
         <div id="one">
-            <i class="far fa-star" id="star"></i>
-            <i class="far fa-star" id="star"></i>
-            <i class="far fa-star" id="star"></i>
-            <i class="far fa-star" id="star"></i>
-            <i class="far fa-star" id="star"></i>
-
-            <!-- <p id="text">2972 Westheimer Rd. Santa Ana, Illinois 85486</p>
-            <div id="images">
-                <i class="far fa-copy" id="cpimg"></i>
-                <i class="fas fa-pause" id="puimg"></i>
-                <i class="bi bi-pin-angle" id="unimg"></i>
+            <input type="text" id="textinput" />
+            <div id="ismyModal" class="ismodal">
+                <div class="ismodal-content">
+                    <span class="close">&times;</span>
+                </div>
             </div>
-            <img id="raimg" src="assets/rating.png"> -->
-            <!-- <div id="two">
-                <img src="assets/user1.svg" id="icon">
-                <img src="assets/user2.svg" id="icon">
-                <img src="assets/user3.svg" id="icon">
-                <img src="assets/user4.svg" id="icon">
-                <img src="assets/user5.svg" id="icon">
-                <img src="assets/user6.svg" id="icon">
+
+            <div id="myModal" class="thismodal">
+                <div class="thismodal-content">
+                    <span class="closeone">&times;</span>
+                    <div id="main">
+                        <div id="topdiv"><label id="srchreslt">Search results...</label>
+                            <span class="closediv" id="closediv">&times;</span>
+                            <button id="userbtn">In this user<span><i id="close" class="bi bi-x-lg"></i></span></button>
+                        </div>
+                        <div id="reslt"><label id="select">${data1[0].fields.address}</label><i class="far fa-copy" id="cpimg"></i></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- <button type="button" id="btn">
+            In the suggestions 
+            <i class="bi bi-reply" id="reply"></i></button>
+        <section class="portfolio-experiment">
+            <a>
+                <span class="text">Hover me</span>
+                <span class="line -right"></span>
+                <span class="line -top"></span>
+                <span class="line -left"></span>
+                <span class="line -bottom"></span>
+            </a>
+        </section> -->
+
+        <!-- <div id="one">
+            <div id="checkdiv">
+                <input type="checkbox" name="check" id="checktwo">
+                <label id="name">What is your Social Security Number?</label>
+
+                <img id="rotateimg" class="rotateimg" src="assets/change.png">
+                <span id="data"></span>
+                <input class="hide" id="textbox" type="text">
+
+                <div id="textdiv" class="hide">
+
+                    <i class="fa fa-check-circle" id="rightimg"></i>
+                    <i class="fa fa-times-circle" id="wrongimg"></i>
+                </div>
             </div> -->
-            <!-- <div id="three"></div> -->
+        <!-- <i class="far fa-star" id="star"></i>
+            <i class="far fa-star" id="star"></i>
+            <i class="far fa-star" id="star"></i>
+            <i class="far fa-star" id="star"></i>
+            <i class="far fa-star" id="star"></i> -->
 
-            <!-- <i class="bi bi-person-circle" id="icon"></i>
-            <i class="bi bi-person-circle" id="icon"></i>
-            <i class="bi bi-person-circle" id="icon"></i>
-            <i class="bi bi-person-circle" id="icon"></i> -->
 
-        </div>
+        <!-- </div>  -->
+        <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+        <p data-editable>First Element</p>
+
+        <p data-editable>Second Element</p>
+
+        <p>Not editable</p> -->
     </div>
+    <script>
+        const modalfunc = function() {
+            var modal = document.getElementById("ismyModal");
+            var btn = document.getElementById("textinput");
 
-    <!-- <div class="input-group">
-        <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">
-        <div class="input-group-append">
-            <button class="btn btn-outline-secondary" id="btn1" type="button"><i id="check" class="bi bi-check-circle"></i></button>
-            <button class="btn btn-outline-secondary" id="btn2" type="button"><i id="close" class="bi bi-x-circle"></i></button>
-        </div>
-    </div> -->
+            var span = document.getElementsByClassName("close")[0];
+            if (modal.style.display = "none") {
+                btn.onclick = function() {
+                    modal.style.display = "block";
+                }
+            }
+
+
+            span.onclick = function() {
+                modal.style.display = "none";
+            }
+
+            $(document).click(function(e) {
+                if ($(e.target).is('#ismyModal')) {
+                    $('#ismyModal').fadeOut(500);
+                }
+
+            });
+
+
+        }
+        modalfunc();
+
+        const main = document.getElementById('main')
+        async function searchValue() {
+            const response = await fetch('http://localhost:8002/fields');
+
+            const data1 = await response.json();
+            console.log(data1[0].fields.address)
+            document.getElementById('textinput').addEventListener('keyup', function() {
+                let pattern = new RegExp(this.value, 'g');
+
+                let resultSet = data1.filter(item => item.fields.address.match(pattern) && this.value != '').map(item => `<div id="resultset"><p id="resultdata">${item.fields.address}<p> <button type="button" id="btn"> In the suggestions <i class="bi bi-reply" id="reply"></i></button></div>`);
+                console.log(resultSet)
+                document.getElementById('ismyModal').innerHTML = resultSet;
+                const btn = document.getElementById('resultdata')
+                btn.addEventListener('click', function() {
+                    modalfunction();
+                    // console.log('cl')
+                    // const newdiv = document.createElement('div')
+                    // newdiv.id = 'newdiv'
+                    // document.getElementById('one').replaceWith(newdiv)
+                    // newdiv.innerHTML = main.innerHTML;
+                    // const one = document.getElementById('one')
+                    // document.getElementById('closediv').addEventListener('click', function() {
+                    //     main.replaceWith(document.getElementById('one').innerHTML)
+                    // })
+                })
+            });
+
+        }
+        searchValue();
+
+        const modalfunction = function() {
+            var modal = document.getElementById("ismyModal");
+            var btn = document.getElementById("resultdata");
+            var span = document.getElementsByClassName("closeone")[0];
+            if (modal.style.display = "none") {
+                // btn.onclick = function() {
+                console.log('cls')
+
+                modal.style.display = "block";
+                // modal.innerHTML = btn.value
+                // modal.innerHTML = btn.value
+                // }
+            }
+            span.onclick = function() {
+                modal.style.display = "none";
+            }
+            $(document).click(function(e) {
+                if ($(e.target).is('#myModal')) {
+                    $('#myModal').fadeOut(500);
+                }
+            });
+        }
+        modalfunction();
+        // $('body').on('click', '[data-editable]', function() {
+
+        //     var $el = $(this);
+
+        //     var $input = $('<input/>').val($el.text());
+        //     $el.replaceWith($input);
+
+        //     var save = function() {
+        //         var $p = $('<p data-editable />').text($input.val());
+        //         $input.replaceWith($p);
+        //     };
+
+        //     $input.one('blur', save).focus();
+
+        // });
+        // const change = document.querySelectorAll('.rotateimg')
+        // const change1 = document.getElementById('rotateimg')
+
+        // const span = document.getElementById('data')
+        // const element1 = document.getElementById('textbox')
+        // const element2 = document.getElementById('textdiv')
+        // const close = document.getElementById('wrongimg');
+        // const showdata = document.getElementById('rightimg');
+        // // change.forEach(item => {
+        // change1.addEventListener('click', function() {
+        //     console.log('click')
+        //     const hide1 = function(element1, element2) {
+        //         element1.classList.toggle('hide')
+        //         element2.classList.toggle('hide')
+        //         change1.style.display = 'none'
+        //         element1.style = 'margin-top:30px'
+        //         element2.style = 'margin-top:-35px'
+        //     }
+        //     hide1(element1, element2)
+        // });
+        // // })
+        // close.addEventListener('click', function() {
+        //     const hideone = function(element1, element2) {
+        //         element1.classList.toggle('hide')
+        //         element2.classList.toggle('hide')
+        //             // .forEach(i => {
+        //         change1.style.display = 'block'
+        //             // })
+        //     }
+        //     hideone(element1, element2)
+        // })
+        // showdata.addEventListener('click', function() {
+        //         const hideone = function(element1, element2) {
+        //             element1.classList.toggle('hide')
+        //             element2.classList.toggle('hide')
+        //                 // change.forEach(i => {
+        //             change1.style.display = 'block'
+        //                 // })
+        //             span.innerHTML = element1.value
+
+        //         }
+        //         hideone(element1, element2)
+        //     })
+        /**
+  We're defining the event on the `body` element, 
+  because we know the `body` is not going away.
+  Second argument makes sure the callback only fires when 
+  the `click` event happens only on elements marked as `data-editable`
+*/
+    </script>
 
 </body>
 

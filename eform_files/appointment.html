@@ -22,19 +22,18 @@
 <body>
     <div id="topdiv"><i class="fa fa-angle-down" id="arrow"></i></div>
     <div id="rectangle1">
-        <!-- <img id="eimg" alt="e-form" src="assets/e.png"> -->
         <i class="bi bi-search" id="srchimg"></i>
-        <input class="hide" type="text" id="textInput" />
+        <input class="hide" type="text" id="textInput" /><span class="hide" id="closeicon">&times;</span>
         <label id="toplabel">List of Service Providers</label>
         <div id="sdiv">
             <label id="suggestlabel">Setup an appointment</label>
             <div class="dropdown">
                 <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <i class="fa fa-angle-up" id="up"></i>
-                    <i class="fa fa-angle-down" id="down"></i>
+                    <i class="bi bi-chevron-up" id="up" onclick="change(this); return false;"></i>
+                    <i class="bi bi-chevron-down" id="down" onclick="change(this); return false;"></i>
                     Sort by
-                    <i class="fa fa-angle-down" id="arrow1"></i></button>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <i class="bi bi-chevron-down" id="arrow1"></i></button>
+                <div class="dropdown-menu" id="dropdown_menu" aria-labelledby="dropdownMenuButton">
                     <a class="dropdown-item" href="#">None</a>
                     <a class="dropdown-item" href="#">Country</a>
                     <a class="dropdown-item" href="#">Pincode</a>
@@ -63,8 +62,6 @@
                         <label id="amount">$35</label>
                         <label id="time">per hour</label>
                     </div>
-
-
                 </div>
                 <div id="cont2">
                     <img src="assets/pro2.svg" id="icon">
@@ -74,7 +71,6 @@
                         <div id="group">
                             <img src="assets/stars.png" id="raimg"><label id="rate">8.5</label></div>
                     </div>
-
                     <div id="group2">
                         <i class="far fa-calendar-alt" id="calendar"></i><label id="app">Appointment</label>
                     </div>
@@ -128,42 +124,7 @@
             <label id="inlabel">Inbox</label>
         </div>
     </div>
-    <script>
-        document.getElementById('arrow').addEventListener('click', function() {
-            const element = document.getElementById('rectangle1')
-            const hide = function(element) {
-                element.style.display = 'none';
-                document.getElementById('topdiv').style.top = '550px';
-            }
-            const show = function(element) {
-                element.style.display = 'block';
-                document.getElementById('topdiv').style.top = '142px';
-            }
-            const toggle = function(element) {
-                if (window.getComputedStyle(element).display !== 'none') {
-                    hide(element);
-                    return;
-                }
-
-                // show the element
-                show(element);
-
-            }
-            toggle(element)
-
-        });
-        const doclable = document.getElementById('toplabel')
-        const search = document.getElementById('srchimg')
-        search.addEventListener('click', function() {
-
-            const element1 = document.getElementById('textInput')
-            const hide1 = function(element1) {
-                element1.classList.toggle('hide')
-                    // doclable.style.display = 'none'
-
-            }
-            hide1(element1)
-        });
+    <script src="js/appointment.js">
     </script>
 </body>
 
