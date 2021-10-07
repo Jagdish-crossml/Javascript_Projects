@@ -313,12 +313,13 @@
 } */
 
 #textInput {
+    position: absolute;
     width: 366px;
     height: 46px;
     background: #F5F7FB;
     border-radius: 10px 10px 0px 0px;
-    margin-left: 5px;
-    margin-top: -140px;
+    margin-left: -117px;
+    margin-top: -50px;
 }
 
 #lowerdiv {
@@ -402,8 +403,12 @@
 #datadiv {
     width: 376px;
     height: 244px;
-    overflow-y: auto;
+    overflow-y: hidden;
     overflow-x: hidden;
+}
+
+#datadiv:hover {
+    overflow-y: scroll;
 }
 
 
@@ -443,12 +448,16 @@
     top: 0px;
     width: 366px;
     height: 123px;
-    overflow-y: scroll;
+    overflow-y: hidden;
     overflow-x: hidden;
     background-color: white;
     background: #FFFFFF;
     box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
     border-radius: 0px;
+}
+
+.ismodal:hover {
+    overflow-y: scroll;
 }
 
 .iconmodal {
@@ -584,6 +593,7 @@
 
 #resultset:hover {
     background: #E9E9E9;
+    cursor: pointer;
 }
 
 #resultdata {
@@ -702,4 +712,162 @@
 
 #myBtn:hover {
     background-color: #555;
+}
+
+.thismodal {
+    display: none;
+    position: absolute;
+    z-index: 1;
+    padding-top: 2px;
+    left: 5px;
+    top: 4px;
+    width: 366px;
+    height: 284px;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    background: #F5F5F5;
+    /* border-radius: 0px; */
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 0px;
+}
+
+
+/* Modal Content */
+
+.thismodal-content {
+    background: #F5F5F5;
+    margin: auto;
+    padding-top: 2px;
+    width: 100%;
+    height: 100%;
+}
+
+
+/* The Close Button */
+
+.closeone {
+    color: #aaaaaa;
+    float: right;
+    font-size: 13px;
+    font-weight: bold;
+    margin-top: -12px;
+}
+
+.closeone:hover,
+.closeone:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#srchreslt {
+    float: left;
+    width: 110px;
+    height: 20px;
+    margin-top: 15px;
+    margin-left: 16px;
+    font-family: Manrope;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 20px;
+    color: #16243C;
+}
+
+#uprdiv {
+    width: 376px;
+    height: 40px;
+}
+
+#icon_btn_cont {
+    width: 150px;
+    height: 25px;
+    float: right;
+    margin-right: 10px;
+    margin-top: 15px;
+}
+
+#userbtn {
+    float: right;
+    width: 93px;
+    height: 20px;
+    /* margin-top: 15px; */
+    /* margin-right: 49px; */
+    background: #FFFFFF;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.05);
+    border-radius: 4px;
+    border-style: none;
+    font-family: Manrope;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 16px;
+    text-align: right;
+}
+
+#close {
+    float: right;
+    color: red;
+    font-size: 10px;
+    padding-left: 2px;
+}
+
+#searched_user_icon {
+    width: 26px;
+    height: 26px;
+    float: right;
+    /* margin-top: 15px; */
+    margin-left: 9px;
+    border-radius: 50%;
+    transition: all .3s ease-in-out;
+}
+
+#searched_user_icon:hover {
+    background-color: #2F73EA;
+    transform: scale(1.1);
+}
+
+#copy_img {
+    float: right;
+    opacity: .5;
+    margin-top: 20px;
+    margin-right: 35px;
+}
+
+#reslt {
+    width: 376px;
+    height: 58px;
+    margin-top: 7px;
+}
+
+#reslt:hover {
+    background-color: lightgray;
+    cursor: pointer;
+}
+
+#select {
+    width: 186px;
+    height: 36px;
+    float: left;
+    margin-top: 10px;
+    margin-left: 16px;
+    font-family: Manrope;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 19px;
+    color: #16243C;
+}
+
+#close_srch_bar {
+    position: relative;
+    float: right;
+    margin-top: -47px;
+    margin-right: -80px;
+    font-size: 30px;
+}
+
+#close_srch_bar:hover {
+    color: #2F73EA;
+    cursor: pointer;
 }

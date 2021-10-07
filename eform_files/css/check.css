@@ -44,10 +44,12 @@
     float: right;
     margin-right: 19px;
     margin-top: 22px;
+    transition: all .2s ease-in-out;
 }
 
 #saveimg:hover {
-    opacity: .2;
+    /* opacity: .2; */
+    transform: scale(1.05);
 }
 
 #toplabel {
@@ -177,7 +179,11 @@ hr {
     height: 20px;
     margin-top: 29px;
     margin-right: 19px;
-    opacity: 0.5;
+    /* opacity: 0.5; */
+}
+
+.rotateimg:hover {
+    fill: #2F73EA;
 }
 
 #textbox {
@@ -233,12 +239,6 @@ hr {
     /* border: 0.4px solid #F5F5F5; */
 }
 
-
-/* #wrongimg:hover {
-    opacity: .5;
-    color: #FF0000;
-} */
-
 #selectdiv {
     height: 41px;
     width: 376px;
@@ -263,7 +263,6 @@ hr {
 .finalBlock {
     width: 376px;
     height: 60px;
-    /* background-color: greenyellow; */
 }
 
 

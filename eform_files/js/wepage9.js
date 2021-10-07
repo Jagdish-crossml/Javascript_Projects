@@ -93,10 +93,16 @@ document.getElementById('topdiv').addEventListener('click', function() {
 const search = document.getElementById('srchimg')
 search.addEventListener('click', function() {
     const element1 = document.getElementById('textInput')
-    const hide1 = function(element1) {
+    const element2 = document.getElementById('close_srch_bar')
+    const hide1 = function(element1, element2) {
         element1.classList.toggle('hide')
+        element2.classList.toggle('hide')
+        element2.addEventListener('click', function() {
+            element1.classList.add('hide')
+            element2.classList.add('hide')
+        })
     }
-    hide1(element1)
+    hide1(element1, element2)
 });
 
 
@@ -114,6 +120,12 @@ async function searchValue() {
         let resultSet = data1.filter(item => item.fields.address.match(pattern) && this.value != '').map(item => `<div id="resultset"><p id="resultdata">${item.fields.address}<p> <button type="button" id="btn"> In the suggestions <i class="bi bi-reply" id="reply"></i></button></div>`);
         console.log(resultSet)
         document.getElementById('ismyModal').innerHTML = resultSet;
+        const btn = document.querySelectorAll('#resultdata')
+        btn.forEach(function(i) {
+            i.addEventListener('click', function() {
+                modalfunctions();
+            })
+        })
     });
 }
 searchValue();
@@ -156,24 +168,21 @@ const modalfunction = function() {
 }
 modalfunction();
 
-// const togglePin = document.getElementById('#unimg');
-// // const password = document.querySelector('#npassword');
-// togglePassword.addEventListener('click', function(e) {
-//     const type = password.getAttribute('type') === 'npassword' ? 'text' : 'npassword';
-//     password.setAttribute('type', type);
-//     this.classList.toggle('bi-eye');
-// });
+const togglePin = document.getElementById('unimg');
+togglePin.addEventListener('click', function() {
+    this.classList.toggle('bi-pin');
+});
 
 
 //Get the button
 var mybutton = document.getElementById("myBtn");
 var rectangle = document.getElementById('datadiv');
 
-// When the user scrolls down 20px from the top of the document, show the button
+// When the user scrolls down 5px from the top of the document, show the button
 window.onscroll = function() { scrollFunction() };
 
 function scrollFunction() {
-    if (rectangle.scrollTop > 5 || document.documentElement.scrollTop > 5) {
+    if (rectangle.scrollTo > 5) {
         mybutton.classList.remove('hide');
     } else {
         mybutton.classList.add('hide');
@@ -182,7 +191,35 @@ function scrollFunction() {
 
 // When the user clicks on the button, scroll to the top of the document
 function topFunction() {
-    rectangle.scrollTop = 0;
-    document.documentElement.scrollTop = 0;
-    // document.documentElement.scrollTop = 0;
+    rectangle.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+    // document.documentElement.scrollTo = 0;
+}
+
+
+
+const modalfunctions = function() {
+    var select = document.getElementById('select')
+    var srch_modal = document.getElementById("myModal");
+    var span1 = document.getElementsByClassName("closeone")[0];
+    if (srch_modal.style.display = "none") {
+        srch_modal.style.display = "block";
+        const fetchsearch = async function() {
+            await fetch('http://localhost:8002/fields')
+                .then(response => response.json())
+                .then(data =>
+                    select.textContent = (data[0].fields.address));
+        }
+        fetchsearch()
+    }
+    span1.onclick = function() {
+        srch_modal.style.display = "none";
+    }
+    $(document).click(function(e) {
+        if ($(e.target).is('#myModal')) {
+            $('#myModal').fadeOut(500);
+        }
+    });
 }

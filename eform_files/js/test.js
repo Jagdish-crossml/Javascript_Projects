@@ -21,99 +21,109 @@
 // }
 // rect.appendChild(toAdd)
 
-
-
-
-const change = document.querySelectorAll('.rotateimg')
-const span = document.getElementById('data')
-const element1 = document.getElementById('textbox')
-const element2 = document.getElementById('textdiv')
-
+var num;
+var change = document.getElementById(`rotateimg${num}`);
+var m1;
+var m2;
+var m3;
+var s1;
+var t1;
+var t2;
+const element2 = document.getElementById(`textdiv${t2}`)
+const span = document.getElementById(`data${s1}`)
+const element1 = document.getElementById(`textbox${t1}`)
+const change1 = document.getElementById('rotateimg')
 const close = document.getElementById('wrongimg');
 const showdata = document.getElementById('rightimg');
 
-change.forEach(item => {
-    const id = item.getAttribute("id");
-    // console.log(id)
-    item.addEventListener('click', function() {
+const texttoinput = function(num, m1, m2, m3, s1, t1, ) {
+    document.getElementById(`rotateimg${num}`).addEventListener('click', function() {
+        console.log('click')
+        document.getElementById(`data${s1}`).style.display = 'none'
+        document.getElementById(`textbox${t1}`).value = document.getElementById(`data${s1}`).innerHTML
+        const hide1 = function(t1, t2) {
+            document.getElementById(`textbox${t1}`).classList.toggle('hide')
+            document.getElementById(`textdiv${t2}`).classList.toggle('hide')
+            document.getElementById(`rotateimg${num}`).style.display = 'none'
 
-        const hide1 = function(element1, element2) {
-
-
-            // console.log(id)
-            if (id == 'rotateimg1') {
-                element1.classList.toggle('hide')
-                element2.classList.toggle('hide')
-                item.id('rotateimg1').style.display = 'none'
-                element1.style = 'margin-top:-30px'
-                element2.style = 'margin-top:-41px'
-            } else if (id == 'rotateimg2') {
-                element1.classList.toggle('hide')
-                element2.classList.toggle('hide')
-                item.id('rotateimg2').style.display = 'none'
-                element1.style = 'margin-top:40px'
-                element2.style = 'margin-top:-35px'
-            } else if (id == 'rotateimg3') {
-                element1.classList.toggle('hide')
-                element2.classList.toggle('hide')
-                item.style.display = 'none'
-                element1.style = 'margin-top:100px'
-                element2.style = 'margin-top:-35px'
-            } else if (id == 'rotateimg4') {
-                element1.classList.toggle('hide')
-                element2.classList.toggle('hide')
-                item.style.display = 'none'
-                element1.style = 'margin-top:160px'
-                element2.style = 'margin-top:-35px'
-            } else if (id == 'rotateimg5') {
-                element1.classList.toggle('hide')
-                element2.classList.toggle('hide')
-                item.style.display = 'none'
-                element1.style = 'margin-top:220px'
-                element2.style = 'margin-top:-35px'
-            } else {
-                item.style.display = 'block'
-            }
+            document.getElementById(`textbox${t1}`).style = `margin-top:${m1}px;margin-left:${m2}px`
+            document.getElementById(`textdiv${t2}`).style = `margin-top:${m3}px`
         }
-        hide1(element1, element2)
+        hide1(1, 1)
+        hide1(2, 2)
+
     });
-})
+}
+texttoinput(0, 30, 47, -35, 1, 1)
+texttoinput(1, 30, 47, -35, 2)
+texttoinput(2, 30, 47, -35, 3)
+
+
+const click = function(num, s1) {
+    close.addEventListener('click', function() {
+        const hideone = function(t1, t2) {
+            document.getElementById(`data${s1}`).innerHTML = document.getElementById(`textbox${t1}`).value
+            document.getElementById(`textbox${t1}`).classList.add('hide')
+            document.getElementById(`textdiv${t2}`).classList.add('hide')
+            document.getElementById(`rotateimg${num}`).style.display = 'block'
+            document.getElementById(`data${s1}`).style.display = 'inline-block'
+        }
+        hideone(1, 1)
+        hideone(2, 2)
+    })
+    showdata.addEventListener('click', function() {
+        const hideone = function(t1, t2) {
+            document.getElementById(`data${s1}`).innerHTML = document.getElementById(`textbox${t1}`).value
+            document.getElementById(`textbox${t1}`).classList.add('hide')
+            document.getElementById(`textdiv${t2}`).classList.add('hide')
+            document.getElementById(`rotateimg${num}`).style.display = 'block'
+            document.getElementById(`data${s1}`).style.display = 'inline-block'
+        }
+        hideone(1, 1)
+        hideone(2, 2)
+
+    })
+}
+click(0, 1)
+click(1, 2)
+click(2, 3)
 
 
 
-close.addEventListener('click', function() {
+
+// close.addEventListener('click', function() {
 
 
-    const hideone = function(element1, element2) {
-        element1.classList.toggle('hide')
-        element2.classList.toggle('hide')
+//     const hideone = function(element1, element2) {
+//         element1.classList.toggle('hide')
+//         element2.classList.toggle('hide')
 
-        change.forEach(i => {
-            i.style.display = 'block'
-        })
-
-
-    }
-    hideone(element1, element2)
-})
+//         change.forEach(i => {
+//             i.style.display = 'block'
+//         })
 
 
-showdata.addEventListener('click', function() {
+//     }
+//     hideone(element1, element2)
+// })
 
 
-    const hideone = function(element1, element2) {
-        element1.classList.toggle('hide')
-        element2.classList.toggle('hide')
-        change.forEach(i => {
-            i.style.display = 'block'
-        })
-        span.innerHTML = element1.value
+// showdata.addEventListener('click', function() {
 
 
-    }
-    hideone(element1, element2)
+//     const hideone = function(element1, element2) {
+//         element1.classList.toggle('hide')
+//         element2.classList.toggle('hide')
+//         change.forEach(i => {
+//             i.style.display = 'block'
+//         })
+//         span.innerHTML = element1.value
 
-})
+
+//     }
+//     hideone(element1, element2)
+
+// })
 
 
 document.getElementById('arrow').addEventListener('click', function() {

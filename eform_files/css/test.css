@@ -44,10 +44,12 @@
     float: right;
     margin-right: 19px;
     margin-top: 22px;
+    transition: all .2s ease-in-out;
 }
 
 #saveimg:hover {
-    opacity: .2;
+    /* opacity: .2; */
+    transform: scale(1.05);
 }
 
 #toplabel {
@@ -104,11 +106,6 @@
     display: none;
 } */
 
-#checkdiv {
-    width: 376px;
-    height: 60px;
-}
-
 #textInput {
     width: 366px;
     height: 46px;
@@ -145,8 +142,11 @@
 }
 
 #name {
+    position: absolute;
     width: 264px;
-    height: 38px;
+    height: 16px;
+    margin-bottom: 0px;
+    margin-right: 0px;
     margin-top: 10px;
     margin-left: 46px;
     font-family: Manrope;
@@ -173,54 +173,22 @@ hr {
     border: 1px solid #E4E3E3;
 }
 
-#rotateimg1 {
+.rotateimg {
     float: right;
     width: 20px;
     height: 20px;
     margin-top: 29px;
     margin-right: 19px;
-    opacity: 0.5;
+    /* opacity: 0.5; */
 }
 
-#rotateimg2 {
-    float: right;
-    width: 20px;
-    height: 20px;
-    margin-top: 29px;
-    margin-right: 19px;
-    opacity: 0.5;
+.rotateimg:hover {
+    fill: #2F73EA;
 }
 
-#rotateimg3 {
-    float: right;
-    width: 20px;
-    height: 20px;
-    margin-top: 29px;
-    margin-right: 19px;
-    opacity: 0.5;
-}
-
-#rotateimg4 {
-    float: right;
-    width: 20px;
-    height: 20px;
-    margin-top: 29px;
-    margin-right: 19px;
-    opacity: 0.5;
-}
-
-#rotateimg5 {
-    float: right;
-    width: 20px;
-    height: 20px;
-    margin-top: 29px;
-    margin-right: 19px;
-    opacity: 0.5;
-}
-
-#textbox {
+input[type=text] {
     position: relative;
-    margin-left: 47px;
+    margin-left: 0px;
     margin-top: 1px;
     width: 248px;
     height: 25px;
@@ -249,30 +217,26 @@ hr {
     float: left;
     width: 15px;
     height: 15px;
-    margin-top: 4px;
+    margin-top: 2px;
     margin-left: 16px;
-    color: white;
+    color: #22DA77;
     /* border: 1px solid #22DA77; */
 }
 
-#rightimg:hover {
+
+/* #rightimg:hover {
     opacity: .5;
     color: #22DA77;
-}
+} */
 
 #wrongimg {
     float: right;
     width: 15px;
     height: 15px;
-    margin-top: 4px;
+    margin-top: 2px;
     margin-right: 5px;
-    color: white;
-    border: 0.4px solid #F5F5F5;
-}
-
-#wrongimg:hover {
-    opacity: .5;
     color: #FF0000;
+    /* border: 0.4px solid #F5F5F5; */
 }
 
 #selectdiv {
@@ -283,10 +247,76 @@ hr {
     border-bottom: 1px solid #E4E3E3;
 }
 
-#data {
-    width: 100px;
+#data1 {
+    width: 120px;
+    height: 20px;
     margin-left: 47px;
-    margin-top: 10px;
+    margin-top: 30px;
+    font-family: Manrope;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 19px;
+    color: #16243C;
+}
+
+#data1 {
+    width: 120px;
+    height: 20px;
+    margin-left: 47px;
+    margin-top: 30px;
+    font-family: Manrope;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 19px;
+    color: #16243C;
+}
+
+#data2 {
+    width: 120px;
+    height: 20px;
+    margin-left: 47px;
+    margin-top: 30px;
+    font-family: Manrope;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 19px;
+    color: #16243C;
+}
+
+#data3 {
+    width: 120px;
+    height: 20px;
+    margin-left: 47px;
+    margin-top: 30px;
+    font-family: Manrope;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 19px;
+    color: #16243C;
+}
+
+#data4 {
+    width: 120px;
+    height: 20px;
+    margin-left: 47px;
+    margin-top: 30px;
+    font-family: Manrope;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 19px;
+    color: #16243C;
+}
+
+#data5 {
+    width: 120px;
+    height: 20px;
+    margin-left: 47px;
+    margin-top: 30px;
     font-family: Manrope;
     font-style: normal;
     font-weight: 500;
@@ -298,7 +328,6 @@ hr {
 .finalBlock {
     width: 376px;
     height: 60px;
-    /* background-color: greenyellow; */
 }
 
 
@@ -327,4 +356,33 @@ hr {
 
  ::-webkit-scrollbar-thumb:hover {
     background: #555;
+}
+
+#check {
+    color: #22DA77;
+}
+
+#btn1 {
+    border-right-style: none;
+    border-left-style: none;
+    background: #EFEFEF;
+    /* width: 32px; */
+    height: 25px;
+}
+
+#btn2 {
+    border-left-style: none;
+    background: #EFEFEF;
+    height: 25px;
+}
+
+#close {
+    color: #FF0000;
+}
+
+#checkdiv {
+    position: relative;
+    width: 376px;
+    height: 60px;
+    /* border-bottom: 1px solid #E4E3E3; */
 }

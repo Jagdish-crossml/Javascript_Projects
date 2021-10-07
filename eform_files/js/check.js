@@ -48,49 +48,43 @@ const close = document.getElementById('wrongimg');
 const showdata = document.getElementById('rightimg');
 // change.forEach(item => {
 // if (span.value = '')
+const texttoinput = function() {
+    change1.addEventListener('click', function() {
+        console.log('click')
+        span.style.display = 'none'
+        element1.value = span.innerHTML
+        const hide1 = function(element1, element2) {
+            element1.classList.toggle('hide')
+            element2.classList.toggle('hide')
+            change1.style.display = 'none'
 
-change1.addEventListener('click', function() {
-    console.log('click')
-    span.style.display = 'none'
-    element1.value = span.innerHTML
-    const hide1 = function(element1, element2) {
-        element1.classList.toggle('hide')
-        element2.classList.toggle('hide')
-        change1.style.display = 'none'
-
-        element1.style = 'margin-top:30px;margin-left:47px'
-        element2.style = 'margin-top:-35px'
-    }
-    hide1(element1, element2)
-    close.addEventListener('click', function() {
-        const hideone = function(element1, element2) {
-            span.innerHTML = element1.value
-            element1.classList.add('hide')
-            element2.classList.add('hide')
-            change1.style.display = 'block'
-            span.style.display = 'inline-block'
-
+            element1.style = 'margin-top:30px;margin-left:47px'
+            element2.style = 'margin-top:-35px'
         }
-        hideone(element1, element2)
-    })
-    showdata.addEventListener('click', function() {
-        const hideone = function() {
-            span.innerHTML = element1.value
-            element1.classList.add('hide')
-            element2.classList.add('hide')
-            change1.style.display = 'block'
-            span.style.display = 'inline-block'
-
-        }
-        hideone(element1, element2)
-
-    })
-
-
-});
-
-// })
-
+        hide1(element1, element2)
+        close.addEventListener('click', function() {
+            const hideone = function(element1, element2) {
+                span.innerHTML = element1.value
+                element1.classList.add('hide')
+                element2.classList.add('hide')
+                change1.style.display = 'block'
+                span.style.display = 'inline-block'
+            }
+            hideone(element1, element2)
+        })
+        showdata.addEventListener('click', function() {
+            const hideone = function() {
+                span.innerHTML = element1.value
+                element1.classList.add('hide')
+                element2.classList.add('hide')
+                change1.style.display = 'block'
+                span.style.display = 'inline-block'
+            }
+            hideone(element1, element2)
+        })
+    });
+}
+texttoinput()
 
 
 //drawer function
