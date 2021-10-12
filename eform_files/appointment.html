@@ -20,13 +20,13 @@
 </head>
 
 <body>
-    <div id="topdiv"><i class="fa fa-angle-down" id="arrow"></i></div>
-    <div id="rectangle1">
-        <i class="bi bi-search" id="srchimg"></i>
+    <div id="top_div"><i class="fa fa-angle-down" id="top_arrow"></i></div>
+    <div id="main_container">
+        <i class="bi bi-search" id="search_img"></i>
         <input class="hide" type="text" id="textInput" /><span class="hide" id="closeicon">&times;</span>
-        <label id="toplabel">List of Service Providers</label>
-        <div id="sdiv">
-            <label id="suggestlabel">Setup an appointment</label>
+        <label id="top_label">List of Service Providers</label>
+        <div id="suggestion_div">
+            <label id="suggest_label">Setup an appointment</label>
             <div class="dropdown">
                 <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <i class="bi bi-chevron-up" id="up" onclick="change(this); return false;"></i>
@@ -43,85 +43,85 @@
                 </div>
             </div>
         </div>
-        <div id="rectangle2">
-            <div id="cont">
-                <div id="cont1">
+        <div id="inner_container">
+            <div id="container">
+                <div id="img_container1">
                     <img src="assets/pro1.svg" id="icon">
-                    <div id="prodata">
-                        <label id="textlabel">Sridhar Raghu</label>
+                    <div id="provider_detail_div">
+                        <label id="text_label">Sridhar Raghu</label>
                         <p id="address">2972 Westheimer Rd. Santa Ana, Illinois 85486 </p>
-                        <div id="group">
-                            <img src="assets/stars.png" id="raimg"><label id="rate">8.5</label>
+                        <div id="rating_div">
+                            <img src="assets/stars.png" id="rating_img"><label id="rate_number">8.5</label>
                         </div>
                     </div>
 
-                    <div id="group2">
+                    <div id="calendar_div">
                         <i class="far fa-calendar-alt" id="calendar"></i><label id="app">Appointment</label>
                     </div>
-                    <div id="price">
+                    <div id="price_tag_div">
                         <label id="amount">$35</label>
                         <label id="time">per hour</label>
                     </div>
                 </div>
                 <div id="cont2">
                     <img src="assets/pro2.svg" id="icon">
-                    <div id="prodata">
-                        <label id="textlabel">Albert Flores</label>
+                    <div id="provider_detail_div">
+                        <label id="text_label">Albert Flores</label>
                         <p id="address">8502 Preston Rd. Inglewood, Maine 98380</p>
-                        <div id="group">
-                            <img src="assets/stars.png" id="raimg"><label id="rate">8.5</label></div>
+                        <div id="rating_div">
+                            <img src="assets/stars.png" id="rating_img"><label id="rate_number">8.5</label></div>
                     </div>
-                    <div id="group2">
+                    <div id="calendar_div">
                         <i class="far fa-calendar-alt" id="calendar"></i><label id="app">Appointment</label>
                     </div>
-                    <div id="price">
+                    <div id="price_tag_div">
                         <label id="amount">$40</label>
                         <label id="time">per hour</label>
                     </div>
                 </div>
                 <div id="cont3">
                     <img src="assets/pro3.svg" id="icon">
-                    <div id="prodata">
-                        <label id="textlabel">Jacob Jones</label>
+                    <div id="provider_detail_div">
+                        <label id="text_label">Jacob Jones</label>
                         <p id="address">2715 Ash Dr. San Jose, South Dakota 83475</p>
-                        <div id="group">
-                            <img src="assets/stars.png" id="raimg"><label id="rate">8.5</label></div>
+                        <div id="rating_div">
+                            <img src="assets/stars.png" id="rating_img"><label id="rate_number">8.5</label></div>
                     </div>
 
-                    <div id="group2">
+                    <div id="calendar_div">
                         <i class="far fa-calendar-alt" id="calendar"></i><label id="app">Appointment</label>
                     </div>
-                    <div id="price">
+                    <div id="price_tag_div">
                         <label id="amount">$25</label>
                         <label id="time">per hour</label>
                     </div>
                 </div>
                 <div id="cont4">
                     <img src="assets/pro4.svg" id="icon">
-                    <div id="prodata">
-                        <label id="textlabel">Esther Howard</label>
+                    <div id="provider_detail_div">
+                        <label id="text_label">Esther Howard</label>
                         <p id="address">3891 Ranchview Dr. Richardson, CA 62639</p>
-                        <div id="group">
-                            <img src="assets/stars.png" id="raimg"><label id="rate">8.5</label></div>
+                        <div id="rating_div">
+                            <img src="assets/stars.png" id="rating_img"><label id="rate_number">8.5</label></div>
                     </div>
 
-                    <div id="group2">
+                    <div id="calendar_div">
                         <i class="far fa-calendar-alt" id="calendar"></i><label id="app">Appointment</label>
                     </div>
-                    <div id="price">
+                    <div id="price_tag_div">
                         <label id="amount">$28</label>
                         <label id="time">per hour</label>
                     </div>
                 </div>
             </div>
         </div>
-        <div id="lowerdiv">
-            <img id="sugimg" alt="e-form" src="assets/suggestion.svg">
-            <label id="suglabel">Suggestions</label>
-            <img id="proimg" alt="e-form" src="assets/professional.svg">
-            <label id="prolabel">professional Support</label>
-            <img id="inimg" alt="e-form" src="assets/inbox.svg">
-            <label id="inlabel">Inbox</label>
+        <div id="lower_div">
+            <img id="suggest_img" alt="e-form" src="assets/suggestion.svg">
+            <label id="suggestion_label">Suggestions</label>
+            <img id="professional_img" alt="e-form" src="assets/professional.svg">
+            <label id="professional_label">professional Support</label>
+            <img id="inbox_img" alt="e-form" src="assets/inbox.svg">
+            <label id="inbox_label">Inbox</label>
         </div>
     </div>
     <script src="js/appointment.js">

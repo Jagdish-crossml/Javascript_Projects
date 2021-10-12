@@ -18,12 +18,12 @@
 </head>
 
 <body>
-    <div id="topdiv"><i class="fa fa-angle-down" id="arrow"></i></div>
-    <div id="rectangle1">
-        <img id="eimg" alt="e-form" src="assets/logo.svg">
-        <img id="uimg" alt="user" src="assets/Oval.png">
-        <img id="dimg" alt="down" src="assets/sdown.png">
-        <div id="userModal" class="usermodal">
+    <div id="top_div"><i class="fa fa-angle-down" id="top_arrow"></i></div>
+    <div id="main_container">
+        <img id="eform_logo" alt="e-form-logo" src="assets/logo.svg">
+        <img id="Current_user_icon" alt="Current user avatar" src="assets/Oval.png">
+        <img id="user_dropdown_arrow" alt="user dropdown" src="assets/sdown.png">
+        <div id="avatar_modal" class="usermodal">
 
             <div class="usermodal-content">
                 <label id="options">Change Password</label>
@@ -32,18 +32,18 @@
             </div>
 
         </div>
-        <label id="toplabel">Enter your Father Address?</label>
-        <div id="rectangle2">
-            <div id="sdiv">
-                <i class="bi bi-search" id="srchimg"></i>
-                <label id="suggestlabel">Suggestions</label>
-                <div id="two">
-                    <img src="assets/user1.svg" id="icon">
-                    <img src="assets/user2.svg" id="icon">
-                    <img src="assets/user3.svg" id="icon">
-                    <img src="assets/user4.svg" id="icon">
-                    <img src="assets/user5.svg" id="icon">
-                    <img src="assets/user6.svg" id="icon" class="icon   ">
+        <label id="top_label">Enter your Father Address?</label>
+        <div id="inner_container">
+            <div id="search_div">
+                <i class="bi bi-search" id="search_img"></i>
+                <label id="suggest_label">Suggestions</label>
+                <div id="avatar_div">
+                    <img src="assets/user1.svg" id="avatar">
+                    <img src="assets/user2.svg" id="avatar">
+                    <img src="assets/user3.svg" id="avatar">
+                    <img src="assets/user4.svg" id="avatar">
+                    <img src="assets/user5.svg" id="avatar">
+                    <img src="assets/user6.svg" id="avatar" class="icon">
                 </div>
                 <div id="iconModal" class="iconmodal">
                     <div class="iconmodal-content">
@@ -62,7 +62,7 @@
                     <div class="ismodal-content">
                     </div>
                 </div>
-                <div id="myModal" class="thismodal">
+                <div id="search_reslt_modal" class="thismodal">
                     <div class="thismodal-content">
                         <span class="closeone">&times;</span>
                         <div id="uprdiv"><label id="srchreslt">Search results..</label>
@@ -80,86 +80,87 @@
                 <span class="hide" id="close_srch_bar">&times;</span>
             </div>
 
-            <div id="datadiv">
-                <div id="one">
+            <div id="suggestion_div">
+                <div id="json_data_div">
                     <p id="text"> 2972 Westheimer Rd. Santa Ana, Illinois 85486 </p>
-                    <div id="images">
-                        <i class="far fa-copy" id="cpimg"></i>
-                        <i class="fas fa-pause" id="puimg"></i>
-                        <i class="bi bi-pin-angle" id="unimg"></i>
+                    <div id="icon_div">
+                        <i class="far fa-copy" id="copy_icon"></i>
+                        <i class="fas fa-pause" id="pause_icon"></i>
+                        <i class="bi bi-pin-angle" id="pin_icon"></i>
                     </div>
-                    <div id="group">
-                        <img id="raimg" src="assets/rating.png">
-                        <label id="number"> 8.5 </label>
+                    <div id="rating_div">
+                        <img id="rating_img" src="assets/rating.png">
+                        <label id="rate_number"> 8.5 </label>
                     </div>
                 </div>
-                <div id="one">
+                <div id="json_data_div">
                     <p id="text"> 2118 Thornridge Cir. Syracuse, Connecticut 35624 </p>
-                    <div id="images">
-                        <i class="far fa-copy" id="cpimg"></i>
-                        <i class="fas fa-pause" id="puimg"></i>
-                        <i class="bi bi-pin-angle" id="unimg"></i>
+                    <div id="icon_div">
+                        <i class="far fa-copy" id="copy_icon"></i>
+                        <i class="fas fa-pause" id="pause_icon"></i>
+                        <i class="bi bi-pin-angle" id="pin_icon"></i>
                     </div>
-                    <div id="group">
-                        <img id="raimg" src="assets/rating.png">
-                        <label id="number"> 8.5 </label>
+                    <div id="rating_div">
+                        <img id="rating_img" src="assets/rating.png">
+                        <label id="rate_number"> 8.5 </label>
                     </div>
                 </div>
-                <div id="one">
+                <div id="json_data_div">
                     <p id="text"> 2715 Ash Dr. San Jose, South Dakota 83475 </p>
-                    <div id="images">
-                        <i class="far fa-copy" id="cpimg"></i>
-                        <i class="fas fa-pause" id="puimg"></i>
-                        <i class="bi bi-pin-angle" id="unimg"></i>
+                    <div id="icon_div">
+                        <i class="far fa-copy" id="copy_icon"></i>
+                        <i class="fas fa-pause" id="pause_icon"></i>
+                        <i class="bi bi-pin-angle" id="pin_icon"></i>
                     </div>
-                    <div id="group">
-                        <img id="raimg" src="assets/rating.png">
-                        <label id="number"> 8.5 </label>
+                    <div id="rating_div">
+                        <img id="rating_img" src="assets/rating.png">
+                        <label id="rate_number"> 8.5 </label>
                     </div>
                 </div>
-                <div id="one" class="hide">
+                <div id="json_data_div" class="hide">
                     <p id="text"> 2972 Westheimer Rd. Santa Ana, Illinois 85486 </p>
-                    <div id="images">
-                        <i class="far fa-copy" id="cpimg"></i>
-                        <i class="fas fa-pause" id="puimg"></i>
-                        <i class="bi bi-pin-angle" id="unimg"></i>
+                    <div id="icon_div">
+                        <i class="far fa-copy" id="copy_icon"></i>
+                        <i class="fas fa-pause" id="pause_icon"></i>
+                        <i class="bi bi-pin-angle" id="pin_icon"></i>
                     </div>
-                    <div id="group">
-                        <img id="raimg" src="assets/rating.png">
-                        <label id="number"> 8.5 </label>
+                    <div id="rating_div">
+                        <img id="rating_img" src="assets/rating.png">
+                        <label id="rate_number"> 8.5 </label>
                     </div>
                 </div>
-                <div id="one" class="hide">
+                <div id="json_data_div" class="hide">
                     <p id="text"> 2972 Westheimer Rd. Santa Ana, Illinois 85486</p>
-                    <div id="images">
-                        <i class="far fa-copy" id="cpimg"></i>
-                        <i class="fas fa-pause" id="puimg"></i>
-                        <i class="bi bi-pin-angle" id="unimg"></i>
+                    <div id="icon_div">
+                        <i class="far fa-copy" id="copy_icon"></i>
+                        <i class="fas fa-pause" id="pause_icon"></i>
+                        <i class="bi bi-pin-angle" id="pin_icon"></i>
                     </div>
-                    <div id="group">
-                        <img id="raimg" src="assets/rating.png">
-                        <label id="number"> 8.5 </label>
+                    <div id="rating_div">
+                        <img id="rating_img" src="assets/rating.png">
+                        <label id="rate_number"> 8.5 </label>
                     </div>
                 </div>
-                <button onclick="topFunction()" id="myBtn" class="hide" title="Go to top"><i class="fas fa-arrow-up"></i></button>
+                <button onclick="topFunction()" id="scroll_to_top_btn" class="hide" title="Go to top"><i class="fas fa-arrow-up"></i></button>
             </div>
-            <button id="load" type="button" class="btn btn-primary">Load more</button>
+            <button id="load_btn" type="button" class="btn btn-primary">Load more</button>
         </div>
-        <div id="lowerdiv">
-            <img id="sugimg" alt="e-form" src="assets/suggestion.svg">
-            <label id="suglabel">Suggestions</label>
-            <img id="proimg" alt="e-form" src="assets/professional.svg">
+        <div id="lower_div">
+            <img id="suggest_img" alt="e-form" src="assets/suggestion.svg">
+
+            <label id="suggestion_label">Suggestions</label>
+            <img id="professional_img" alt="e-form" src="assets/professional.svg">
             <!-- <i class="bi bi-people" id="proimg"></i> -->
-            <label id="prolabel">professional Support</label>
-            <img id="inimg" alt="e-form" src="assets/inbox.svg">
+            <label id="professional_label">professional Support</label>
+            <img id="inbox_img" alt="e-form" src="assets/inbox.svg">
             <!-- <i class="bi bi-inbox" id="inimg"></i> -->
-            <label id="inlabel">Inbox</label>
+            <label id="inbox_label">Inbox</label>
         </div>
     </div>
     <script src="js/wepage9.js">
     </script>
     <script>
-        $('#load').on('click', function() {
+        $('#load_btn').on('click', function() {
             $('.hide').removeClass('hide');
         })
     </script>

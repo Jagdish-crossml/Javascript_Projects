@@ -1,15 +1,15 @@
-#topdiv {
+#top_div {
     position: absolute;
     width: 52px;
     height: 24px;
     left: 1260px;
-    top: 142px;
+    top: 173px;
     background: #FFFFFF;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
     border-radius: 8px 8px 0px 0px;
 }
 
-#arrow {
+#top_arrow {
     width: 15px;
     height: 8.57px;
     margin-left: 20px;
@@ -19,11 +19,11 @@
     font-weight: 1000;
 }
 
-#arrow:hover {
+#top_arrow:hover {
     color: #2F73EA;
 }
 
-#rectangle1 {
+#main_container {
     position: absolute;
     width: 376px;
     height: 403px;
@@ -34,18 +34,16 @@
     border-radius: 10px 10px 0px 0px;
 }
 
-#rectangle2 {
+#inner_container {
     position: absolute;
     width: 376px;
     height: 284px;
     margin-top: 55px;
     background: #F5F5F5;
     border-radius: 0px;
-    /* overflow-x: hidden;
-    overflow-y: auto; */
 }
 
-#toplabel {
+#top_label {
     position: absolute;
     width: 232px;
     height: 25px;
@@ -59,7 +57,7 @@
     color: #16243C;
 }
 
-#eimg {
+#eform_logo {
     width: 15px;
     height: 14.99px;
     float: left;
@@ -67,27 +65,26 @@
     margin-top: 21px;
 }
 
-#sdiv {
+#search_div {
     width: 376px;
     height: 35px;
 }
 
-#srchimg {
+#search_img {
     width: 13.5px;
     height: 13.5px;
     margin-left: 9.8px;
     margin-top: 18.8px;
     color: #96A0B5;
     transition: all .3s ease-in-out;
-    /* border: 0.2px solid #96A0B5; */
 }
 
-#srchimg:hover {
+#search_img:hover {
     color: #2F73EA;
     transform: scale(1.1);
 }
 
-#two {
+#avatar_div {
     float: right;
     margin-right: 8px;
     margin-top: 13px;
@@ -95,7 +92,7 @@
     height: 25.06px;
 }
 
-#icon {
+#avatar {
     width: 26px;
     height: 26px;
     margin-left: -16px;
@@ -103,12 +100,12 @@
     transition: all .3s ease-in-out;
 }
 
-#icon:hover {
+#avatar:hover {
     background-color: #2F73EA;
     transform: scale(1.1);
 }
 
-#suggestlabel {
+#suggest_label {
     width: 90px;
     height: 20px;
     margin-left: 4.7px;
@@ -121,75 +118,70 @@
     color: #16243C;
 }
 
-#rectangle7 {
-    position: absolute;
-    width: 376px;
-    height: 70px;
-    top: 121px;
-    z-index: -1;
-    background: #E9E9E9;
-}
-
-#cpimg {
+#copy_icon {
     position: absolute;
     width: 12.13px;
     height: 14px;
     float: right;
     right: 74px;
-    /* margin-top: -14px; */
     color: #535E76;
     opacity: 0.5;
     transition: all .3s ease-in-out;
 }
 
-#cpimg:hover {
+#copy_icon:hover {
     color: #2F73EA;
     transform: scale(1.05);
 }
 
-#puimg {
+#pause_icon {
     position: absolute;
     width: 12.13px;
     height: 14px;
     float: right;
     right: 44px;
-    /* margin-top: -14px; */
     color: #535E76;
     opacity: 0.5;
     transition: all .3s ease-in-out;
 }
 
-#puimg:hover {
+#pause_icon:hover {
     color: #2F73EA;
     transform: scale(1.05);
 }
 
-#unimg {
+#pin_icon {
     position: absolute;
     width: 12.13px;
     height: 14px;
     float: right;
     right: 14px;
-    /* margin-top: -14px; */
     color: #535E76;
     opacity: 0.5;
     transition: all .3s ease-in-out;
 }
 
-#unimg:hover {
+#pin_icon:hover {
     color: #2F73EA;
     transform: scale(1.05);
 }
 
-#sugimg {
+#suggest_img {
     width: 17.08px;
     height: 18px;
     float: left;
     margin-left: 47px;
     margin-top: 12px;
+    color: #535E76;
+    transition: all .2s ease-in-out;
 }
 
-#proimg {
+#suggest_img:hover {
+    color: #2F73EA;
+    transform: scale(1.05);
+}
+
+#professional_img {
     width: 18px;
     height: 18px;
     float: left;
@@ -197,16 +189,15 @@
     margin-top: 12px;
 }
 
-#inimg {
+#inbox_img {
     width: 18px;
     height: 18px;
     float: right;
-    /* margin-left: 333px; */
     margin-right: 25px;
     margin-top: 12px;
 }
 
-#uimg {
+#Current_user_icon {
     width: 26px;
     height: 26px;
     float: right;
@@ -214,7 +205,7 @@
     margin-right: 33px;
 }
 
-#dimg {
+#user_dropdown_arrow {
     width: 8px;
     height: 4.94px;
     float: right;
@@ -222,7 +213,7 @@
     margin-top: 26px;
 }
 
-#suglabel {
+#suggestion_label {
     position: absolute;
     width: 73px;
     height: 16px;
@@ -237,11 +228,11 @@
     color: #535E76;
 }
 
-#suglabel:hover {
+#suggestion_label:hover {
     color: #2F73EA;
 }
 
-#prolabel {
+#professional_label {
     position: absolute;
     width: 117px;
     height: 16px;
@@ -256,11 +247,11 @@
     color: #535E76;
 }
 
-#prolabel:hover {
+#professional_label:hover {
     color: #2F73EA;
 }
 
-#inlabel {
+#inbox_label {
     position: absolute;
     width: 31px;
     height: 16px;
@@ -275,42 +266,21 @@
     color: #535E76;
 }
 
-#inlabel:hover {
+#inbox_label:hover {
     color: #2F73EA;
 }
 
-#raimg {
+#rating_img {
     width: 46px;
     height: 6px;
-    /* margin-top: 8px; */
 }
 
-#group {
+#rating_div {
     width: 76px;
     height: 16px;
     margin-top: 2px;
     margin-left: 16px;
 }
-
-#list {
-    list-style: none;
-    width: 170px;
-    height: 60px;
-    margin-left: 16px;
-    margin-top: 16px;
-    font-family: Manrope;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 14px;
-    line-height: 19px;
-    color: #16243C;
-}
-
-
-/* 
-#list:nth-child(n+4) {
-    display: none;
-} */
 
 #textInput {
     position: absolute;
@@ -322,14 +292,14 @@
     margin-top: -50px;
 }
 
-#lowerdiv {
+#lower_div {
     width: 376px;
     height: 64px;
     margin-top: 339px;
     background-color: white;
 }
 
-#load {
+#load_btn {
     position: absolute;
     width: 85px;
     height: 25px;
@@ -347,25 +317,22 @@
     color: #FFFFFF;
 }
 
-#load:hover {
+#load_btn:hover {
     transform: scale(1.05);
 }
 
-#srchdiv {
-    width: 376px;
-    height: 40px;
-    margin-top: 0px;
-}
-
-#one {
+#json_data_div {
     position: relative;
     height: 70px;
     width: 376px;
-    /* padding: 2px; */
     margin-top: 18px;
 }
 
-#images {
+#json_data_div:hover {
+    background: #E9E9E9;
+}
+
+#icon_div {
     margin-top: -40px;
     position: relative;
     float: right;
@@ -383,57 +350,28 @@
     color: #16243C;
 }
 
-#one:hover {
-    background: #E9E9E9;
-}
-
-#datalist {
-    width: 186px;
-    height: 40px;
-    margin-top: 10px;
-    list-style: none;
-    font-family: Manrope;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 14px;
-    line-height: 19px;
-    color: #16243C;
-}
-
-#datadiv {
+#suggestion_div {
     width: 376px;
     height: 244px;
     overflow-y: hidden;
     overflow-x: hidden;
 }
 
-#datadiv:hover {
+#suggestion_div:hover {
     overflow-y: scroll;
 }
-
-
-/* width */
 
 ::-webkit-scrollbar {
     width: 5px;
 }
 
-
-/* Track */
-
  ::-webkit-scrollbar-track {
     background: #f1f1f1;
 }
 
-
-/* Handle */
-
  ::-webkit-scrollbar-thumb {
     background: #888;
 }
-
-
-/* Handle on hover */
 
  ::-webkit-scrollbar-thumb:hover {
     background: #555;
@@ -602,7 +540,7 @@
     float: left;
 }
 
-#number {
+#rate_number {
     margin-left: 8px;
     width: 18px;
     height: 16px;
@@ -693,7 +631,7 @@
     margin-top: 1px;
 }
 
-#myBtn {
+#scroll_to_top_btn {
     width: 26px;
     height: 26px;
     background: #4C9AFF;
@@ -710,7 +648,7 @@
     border-radius: 50%;
 }
 
-#myBtn:hover {
+#scroll_to_top_btn:hover {
     background-color: #555;
 }
 

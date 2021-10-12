@@ -67,17 +67,17 @@
 // jsondata();
 
 
-document.getElementById('topdiv').addEventListener('click', function() {
-    const element = document.getElementById('rectangle1')
+document.getElementById('top_div').addEventListener('click', function() {
+    const element = document.getElementById('main_container')
     const hide = function(element) {
         element.style.display = 'none';
-        document.getElementById('topdiv').style.top = '550px';
-        document.getElementById('topdiv').innerHTML = '<img id="eformimg" src="assets/eform.png">'
+        document.getElementById('top_div').style.top = '581px';
+        document.getElementById('top_div').innerHTML = '<img id="eformimg" src="assets/eform.png">'
     }
     const show = function(element) {
         element.style.display = 'block';
-        document.getElementById('topdiv').style.top = '142px';
-        document.getElementById('topdiv').innerHTML = '<img id="arrow" src="assets/down.png">'
+        document.getElementById('top_div').style.top = '173px';
+        document.getElementById('top_div').innerHTML = '<img id="top_arrow" src="assets/down.png">'
     }
     const toggle = function(element) {
         if (window.getComputedStyle(element).display !== 'none') {
@@ -90,7 +90,7 @@ document.getElementById('topdiv').addEventListener('click', function() {
 });
 
 
-const search = document.getElementById('srchimg')
+const search = document.getElementById('search_img')
 search.addEventListener('click', function() {
     const element1 = document.getElementById('textInput')
     const element2 = document.getElementById('close_srch_bar')
@@ -109,7 +109,7 @@ search.addEventListener('click', function() {
 
 
 //search function
-var rect = document.getElementById('sdiv');
+var rect = document.getElementById('search_div');
 async function searchValue() {
     const response = await fetch('http://localhost:8002/fields');
 
@@ -158,8 +158,8 @@ modal_function();
 
 //current user modal
 const modalfunction = function() {
-    var modal = document.getElementById("userModal");
-    var btn = document.getElementById("dimg");
+    var modal = document.getElementById("avatar_modal");
+    var btn = document.getElementById("user_dropdown_arrow");
     if (modal.style.display = "none") {
         btn.onclick = function() {
             modal.style.display = modal.style.display === 'none' ? 'block' : 'none';
@@ -168,15 +168,15 @@ const modalfunction = function() {
 }
 modalfunction();
 
-const togglePin = document.getElementById('unimg');
+const togglePin = document.getElementById('pin_icon');
 togglePin.addEventListener('click', function() {
     this.classList.toggle('bi-pin');
 });
 
 
 //Get the button
-var mybutton = document.getElementById("myBtn");
-var rectangle = document.getElementById('datadiv');
+var mybutton = document.getElementById("scroll_to_top_btn");
+var rectangle = document.getElementById('suggestion_div');
 
 // When the user scrolls down 5px from the top of the document, show the button
 window.onscroll = function() { scrollFunction() };
@@ -202,7 +202,7 @@ function topFunction() {
 
 const modalfunctions = function() {
     var select = document.getElementById('select')
-    var srch_modal = document.getElementById("myModal");
+    var srch_modal = document.getElementById("search_reslt_modal");
     var span1 = document.getElementsByClassName("closeone")[0];
     if (srch_modal.style.display = "none") {
         srch_modal.style.display = "block";
@@ -218,8 +218,8 @@ const modalfunctions = function() {
         srch_modal.style.display = "none";
     }
     $(document).click(function(e) {
-        if ($(e.target).is('#myModal')) {
-            $('#myModal').fadeOut(500);
+        if ($(e.target).is('#search_reslt_modal')) {
+            $('#search_reslt_modal').fadeOut(500);
         }
     });
 }

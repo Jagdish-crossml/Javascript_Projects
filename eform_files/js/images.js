@@ -22,10 +22,10 @@ const modalfunc = function() {
 modalfunc();
 
 const image = document.getElementById('image')
-var copy = document.getElementById('copy')
+    // var copy = document.getElementById('copy')
 const modalfunction = function() {
     var modal1 = document.getElementById("thisModal");
-    var copy = document.getElementById('copy')
+    var copy = document.getElementById('copy_url')
 
     var span1 = document.getElementsByClassName("close1")[0];
     if (modal1.style.display = "none") {
@@ -111,15 +111,15 @@ modalfunction();
 
 
 
-document.getElementById('arrow').addEventListener('click', function() {
-    const element = document.getElementById('rectangle1')
+document.getElementById('top_arrow').addEventListener('click', function() {
+    const element = document.getElementById('main_container')
     const hide = function(element) {
         element.style.display = 'none';
-        document.getElementById('topdiv').style.top = '550px';
+        document.getElementById('top_div').style.top = '581px';
     }
     const show = function(element) {
         element.style.display = 'block';
-        document.getElementById('topdiv').style.top = '142px';
+        document.getElementById('top_div').style.top = '173px';
     }
     const toggle = function(element) {
         if (window.getComputedStyle(element).display !== 'none') {
@@ -134,8 +134,8 @@ document.getElementById('arrow').addEventListener('click', function() {
     toggle(element)
 
 });
-const doclable = document.getElementById('toplabel')
-const search = document.getElementById('srchimg')
+const doclable = document.getElementById('top_label')
+const search = document.getElementById('search_img')
 search.addEventListener('click', function() {
 
     const element1 = document.getElementById('textInput')

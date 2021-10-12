@@ -24,26 +24,12 @@
 
 
 
-// const change = document.querySelectorAll('.rotateimg')
 
-// const change2 = document.getElementById('rotateimg1')
-// const change3 = document.getElementById('rotateimg2')
-// const change4 = document.getElementById('rotateimg3')
-// const change5 = document.getElementById('rotateimg4')
-
-// const element10 = document.getElementById('textbox1')
-// const element11 = document.getElementById('textbox2')
-// const element12 = document.getElementById('textbox3')
-// const element13 = document.getElementById('textbox4')
-
-// const element20 = document.getElementById('textdiv1')
-// const element21 = document.getElementById('textdiv2')
-// const element22 = document.getElementById('textdiv3')
-// const element23 = document.getElementById('textdiv4')
 const element2 = document.getElementById('textdiv')
 const span = document.getElementById('data')
 const element1 = document.getElementById('textbox')
 const change1 = document.getElementById('rotateimg')
+
 const close = document.getElementById('wrongimg');
 const showdata = document.getElementById('rightimg');
 // change.forEach(item => {
@@ -82,8 +68,11 @@ const texttoinput = function() {
             }
             hideone(element1, element2)
         })
-    });
-}
+    })
+
+};
+
+
 texttoinput()
 
 

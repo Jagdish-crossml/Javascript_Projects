@@ -65,7 +65,7 @@
 
 #top_label {
     position: absolute;
-    width: 127px;
+    width: 232px;
     height: 25px;
     left: 35px;
     top: 16px;
@@ -74,69 +74,6 @@
     font-weight: 600;
     font-size: 18px;
     line-height: 25px;
+    /* identical to box height */
     color: #16243C;
-}
-
-#login_label {
-    position: absolute;
-    width: 262px;
-    height: 20px;
-    left: 18px;
-    top: 15px;
-    font-family: Manrope;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 15px;
-    line-height: 20px;
-    color: #16243C;
-}
-
-#username_label {
-    position: absolute;
-    width: 68px;
-    height: 19px;
-    left: 18px;
-    top: 51px;
-    font-family: Manrope;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 19px;
-    color: #545F77;
-}
-
-#username_input {
-    position: absolute;
-    width: 315px;
-    height: 45px;
-    left: 18px;
-    right: 43px;
-    top: 79px;
-    background: #FFFFFF;
-    border: 1px solid #2F73EA;
-    box-sizing: border-box;
-    box-shadow: 0px 4px 8px rgba(44, 39, 56, 0.04);
-    border-radius: 4px;
-}
-
-input[type="text"]::placeholder {
-    padding-left: 10px;
-}
-
-#next_btn {
-    position: absolute;
-    width: 116px;
-    height: 36px;
-    left: 130px;
-    top: 289px;
-    background: #2F73EA;
-    border-radius: 6px;
-    font-family: Manrope;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 22px;
-    align-items: center;
-    text-align: center;
-    color: #FFFFFF;
 }

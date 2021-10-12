@@ -11,48 +11,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/username.css">
     <title>
-        popup window
+        Username page
     </title>
 </head>
 
 <body>
-    <div id="topdiv"><i class="fa fa-angle-down" id="arrow"></i></div>
-    <div id="rectangle1">
-        <img id="eimg" alt="e-form" src="assets/logo.svg">
-        <img id="uimg" alt="user" src="assets/Oval.png">
-        <img id="dimg" alt="down" src="assets/sdown.png">
-        <label id="toplabel">Login to eForm</label>
-        <div id="rectangle2">
-            <label id="loglabel">To Login enter your credentials
+    <div id="top_div"><i class="fa fa-angle-down" id="top_arrow"></i></div>
+    <div id="main_container">
+        <img id="eform_logo" alt="e-form-logo" src="assets/logo.svg">
+        <img id="Current_user_icon" alt="Current user avatar" src="assets/Oval.png">
+        <img id="user_dropdown_arrow" alt="user dropdown" src="assets/sdown.png">
+        <label id="top_label">Login to eForm</label>
+        <div id="inner_container">
+            <label id="login_label">To Login enter your credentials
                     below</label>
-            <label id="userlabel">Username</label>
-            <input type="text" id="username" class="username" placeholder="johndoe2876">
-            <button type="button" id="nextbtn" class="btn btn-primary">Next</button>
+            <label id="username_label">Username</label>
+            <input type="text" id="username_input" class="username" placeholder="johndoe2876">
+            <button type="button" id="next_btn" class="btn btn-primary">Next</button>
         </div>
     </div>
     <script>
-        document.getElementById('arrow').addEventListener('click', function() {
-            const element = document.getElementById('rectangle1')
+        document.getElementById('top_arrow').addEventListener('click', function() {
+            const element = document.getElementById('main_container')
             const hide = function(element) {
                 element.style.display = 'none';
-                document.getElementById('topdiv').style.top = '550px';
+                document.getElementById('top_div').style.top = '581px';
             }
             const show = function(element) {
                 element.style.display = 'block';
-                document.getElementById('topdiv').style.top = '142px';
+                document.getElementById('top_div').style.top = '173px';
             }
             const toggle = function(element) {
                 if (window.getComputedStyle(element).display !== 'none') {
                     hide(element);
                     return;
                 }
-
-                // show the element
                 show(element);
-
             }
             toggle(element)
-
         });
     </script>
 </body>

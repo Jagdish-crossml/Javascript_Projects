@@ -1,4 +1,4 @@
-#topdiv {
+#top_div {
     position: absolute;
     width: 52px;
     height: 24px;
@@ -9,7 +9,7 @@
     border-radius: 8px 8px 0px 0px;
 }
 
-#arrow {
+#top_arrow {
     width: 15px;
     height: 8.57px;
     margin-left: 20px;
@@ -19,7 +19,7 @@
     font-weight: 1000;
 }
 
-#rectangle1 {
+#main_container {
     position: absolute;
     width: 376px;
     height: 403px;
@@ -30,7 +30,7 @@
     border-radius: 10px 10px 0px 0px;
 }
 
-#rectangle2 {
+#inner_container {
     position: absolute;
     width: 376px;
     height: 346px;
@@ -39,7 +39,7 @@
     border-radius: 0px;
 }
 
-#eimg {
+#eform_logo {
     width: 15px;
     height: 14.99px;
     float: left;
@@ -47,7 +47,7 @@
     margin-top: 21px;
 }
 
-#uimg {
+#Current_user_icon {
     width: 26px;
     height: 26px;
     float: right;
@@ -55,7 +55,7 @@
     margin-right: 33px;
 }
 
-#dimg {
+#user_dropdown_arrow {
     width: 8px;
     height: 4.94px;
     float: right;
@@ -63,7 +63,7 @@
     margin-top: 26px;
 }
 
-#toplabel {
+#top_label {
     position: absolute;
     width: 127px;
     height: 25px;
@@ -74,11 +74,10 @@
     font-weight: 600;
     font-size: 18px;
     line-height: 25px;
-    /* identical to box height */
     color: #16243C;
 }
 
-#loglabel {
+#login_label {
     position: absolute;
     width: 262px;
     height: 20px;
@@ -92,7 +91,7 @@
     color: #16243C;
 }
 
-#emlabel {
+#email_label {
     position: absolute;
     width: 92px;
     height: 19px;
@@ -106,7 +105,7 @@
     color: #545F77;
 }
 
-#email {
+#email_input {
     position: absolute;
     width: 315px;
     height: 45px;
@@ -121,16 +120,14 @@
 }
 
 input[type="email"]::placeholder {
-    /* Firefox, Chrome, Opera */
     padding-left: 10px;
 }
 
 input[type="password"]::placeholder {
-    /* Firefox, Chrome, Opera */
     padding-left: 10px;
 }
 
-#pwlabel {
+#password_label {
     position: absolute;
     width: 92px;
     height: 19px;
@@ -144,7 +141,7 @@ input[type="password"]::placeholder {
     color: #545F77;
 }
 
-#password {
+#password_input {
     position: absolute;
     width: 315px;
     height: 45px;
@@ -158,7 +155,7 @@ input[type="password"]::placeholder {
     border-radius: 4px;
 }
 
-#newlabel {
+#new_user_label {
     position: absolute;
     width: 139px;
     height: 16px;
@@ -172,7 +169,7 @@ input[type="password"]::placeholder {
     color: #545F77;
 }
 
-#check {
+#check_box {
     position: absolute;
     width: 20px;
     height: 20px;
@@ -185,7 +182,7 @@ input[type="password"]::placeholder {
     border-radius: 4px;
 }
 
-#keeplabel {
+#keep_label {
     position: absolute;
     width: 188px;
     height: 19px;
@@ -199,7 +196,7 @@ input[type="password"]::placeholder {
     color: #545F77;
 }
 
-#forgot {
+#forgot_pass_link {
     position: absolute;
     width: 99px;
     height: 16px;
@@ -214,7 +211,7 @@ input[type="password"]::placeholder {
     color: #2F73EA;
 }
 
-#loginbtn {
+#login_btn {
     position: absolute;
     width: 116px;
     height: 36px;

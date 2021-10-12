@@ -1,15 +1,15 @@
-#topdiv {
+#top_div {
     position: absolute;
     width: 52px;
     height: 24px;
     left: 1260px;
-    top: 142px;
+    top: 173px;
     background: #FFFFFF;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
     border-radius: 8px 8px 0px 0px;
 }
 
-#arrow {
+#top_arrow {
     width: 15px;
     height: 8.57px;
     margin-left: 20px;
@@ -19,11 +19,11 @@
     font-weight: 1000;
 }
 
-#arrow:hover {
+#top_arrow:hover {
     color: #2F73EA;
 }
 
-#rectangle1 {
+#main_container {
     position: absolute;
     width: 376px;
     height: 403px;
@@ -34,7 +34,7 @@
     border-radius: 10px 10px 0px 0px;
 }
 
-#rectangle2 {
+#inner_container {
     position: absolute;
     width: 376px;
     height: 244px;
@@ -44,7 +44,7 @@
     overflow-y: hidden;
 }
 
-#toplabel {
+#top_label {
     position: absolute;
     width: 232px;
     height: 25px;
@@ -58,15 +58,7 @@
     color: #16243C;
 }
 
-#eimg {
-    width: 20px;
-    height: 20px;
-    float: left;
-    margin-left: 11px;
-    margin-top: 18px;
-}
-
-#srchimg {
+#search_img {
     font-size: 14px;
     float: right;
     margin-right: 14.69px;
@@ -74,11 +66,11 @@
     color: #96A0B5;
 }
 
-#srchimg:hover {
+#search_img:hover {
     color: #2F73EA;
 }
 
-#sdiv {
+#suggestion_div {
     height: 40px;
     width: 376px;
     margin-top: 55px;
@@ -86,7 +78,7 @@
     ;
 }
 
-#suggestlabel {
+#suggest_label {
     width: 90px;
     height: 20px;
     margin-left: 16px;
@@ -99,43 +91,7 @@
     color: #16243C;
 }
 
-#rectangle7 {
-    position: absolute;
-    width: 376px;
-    height: 70px;
-    top: 121px;
-    z-index: -1;
-    background: #E9E9E9;
-}
-
-#cpimg {
-    position: absolute;
-    width: 12.13px;
-    height: 14px;
-    float: right;
-    right: 74px;
-    margin-top: 10px;
-}
-
-#puimg {
-    position: absolute;
-    width: 12.13px;
-    height: 14px;
-    float: right;
-    right: 44px;
-    margin-top: 10px;
-}
-
-#unimg {
-    position: absolute;
-    width: 12.13px;
-    height: 14px;
-    float: right;
-    right: 14px;
-    margin-top: 10px;
-}
-
-#sugimg {
+#suggest_img {
     width: 17.08px;
     height: 18px;
     float: left;
@@ -143,7 +99,7 @@
     margin-top: 12px;
 }
 
-#proimg {
+#professional_img {
     width: 18px;
     height: 18px;
     float: left;
@@ -151,32 +107,15 @@
     margin-top: 12px;
 }
 
-#inimg {
+#inbox_img {
     width: 18px;
     height: 18px;
     float: right;
-    /* margin-left: 333px; */
     margin-right: 25px;
     margin-top: 12px;
 }
 
-#uimg {
-    width: 26px;
-    height: 26px;
-    float: right;
-    margin-top: 13px;
-    margin-right: 33px;
-}
-
-#dimg {
-    width: 8px;
-    height: 4.94px;
-    float: right;
-    margin-right: -40px;
-    margin-top: 26px;
-}
-
-#suglabel {
+#suggestion_label {
     position: absolute;
     width: 73px;
     height: 16px;
@@ -191,11 +130,11 @@
     color: #535E76;
 }
 
-#suglabel:hover {
+#suggestion_label:hover {
     color: #2F73EA;
 }
 
-#prolabel {
+#professional_label {
     position: absolute;
     width: 117px;
     height: 16px;
@@ -210,11 +149,11 @@
     color: #535E76;
 }
 
-#prolabel:hover {
+#professional_label:hover {
     color: #2F73EA;
 }
 
-#inlabel {
+#inbox_label {
     position: absolute;
     width: 31px;
     height: 16px;
@@ -229,54 +168,19 @@
     color: #535E76;
 }
 
-#inlabel:hover {
+#inbox_label:hover {
     color: #2F73EA;
 }
 
-#lowerdiv {
+#lower_div {
     width: 376px;
     height: 64px;
     margin-top: 240px;
     background-color: white;
 }
 
-#box {
-    width: 173px;
-    height: 113px;
-    margin-left: 16px;
-    margin-top: 10px;
-    background-color: pink;
-    overflow-y: hidden;
-}
-
-#box:nth-child(2) {
-    background: red;
-    margin-right: 13px;
-    float: right;
-    margin-top: -113px;
-    opacity: 0.5;
-}
-
-#box:nth-child(3) {
-    background: gray;
-    margin-top: 1px;
-    opacity: 0.5;
-}
-
-#box:nth-child(4) {
-    background: blue;
-    float: right;
-    margin-right: 13px;
-    margin-top: -113px;
-    opacity: 0.5;
-}
-
-#docimg {
-    width: 177px;
-    height: 113px;
-}
-
 #textInput {
+    position: absolute;
     width: 220px;
     height: 36px;
     background: #F5F7FB;
@@ -285,35 +189,20 @@
     margin-top: 4px;
 }
 
-#rating {
-    width: 46px;
-    height: 6px;
-    margin-top: 99px;
-    margin-left: 10px;
-}
-
-#display {
-    width: 346px;
-    height: 244px;
-    margin-left: 20px;
-    margin-right: 20px;
-    background-color: blueviolet;
-}
-
 #close {
     margin-top: 50px;
     float: right;
     margin-right: 20px;
 }
 
-#cont {
+#container {
     width: 347px;
     height: 225px;
     margin-top: 4px;
     margin-left: 16px;
 }
 
-#cont1 {
+#img_container1 {
     width: 173px;
     height: 112px;
     float: left;
@@ -323,7 +212,7 @@
     transition: all .3s ease-in-out;
 }
 
-#cont1:hover {
+#img_container1:hover {
     transform: scale(1.05);
 }
 
@@ -336,7 +225,7 @@
     top: 0;
 }
 
-#cont2 {
+#img_container2 {
     width: 173px;
     height: 112px;
     float: left;
@@ -347,11 +236,11 @@
     transition: all .3s ease-in-out;
 }
 
-#cont2:hover {
+#img_container2:hover {
     transform: scale(1.05);
 }
 
-#cont3 {
+#img_container3 {
     width: 173px;
     height: 112px;
     float: left;
@@ -362,11 +251,11 @@
     transition: all .3s ease-in-out;
 }
 
-#cont3:hover {
+#img_container3:hover {
     transform: scale(1.05);
 }
 
-#cont4 {
+#img_container4 {
     width: 173px;
     height: 112px;
     float: left;
@@ -378,7 +267,7 @@
     transition: all .3s ease-in-out;
 }
 
-#cont4:hover {
+#img_container4:hover {
     transform: scale(1.05);
 }
 
@@ -390,13 +279,13 @@
     margin-left: 10px;
 }
 
-#raimg {
+#rating_img {
     width: 46px;
     height: 6px;
     float: left;
 }
 
-#rate {
+#rate_number {
     position: relative;
     bottom: 4px;
     width: 18px;
@@ -410,7 +299,7 @@
     color: #FFFFFF;
 }
 
-#textlabel {
+#text_label {
     position: relative;
     margin-top: 3px;
     margin-left: 10px;
@@ -465,7 +354,7 @@
     overflow: hidden;
 }
 
-#imglabel {
+#image_label {
     font-family: Manrope;
     font-style: normal;
     font-weight: 500;
@@ -513,7 +402,7 @@
     height: 215px;
 }
 
-#copy {
+#copy_url {
     position: absolute;
     display: inline-block;
     border-radius: 60px;

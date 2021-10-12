@@ -1,12 +1,12 @@
-document.getElementById('arrow').addEventListener('click', function() {
-    const element = document.getElementById('rectangle1')
+document.getElementById('top_arrow').addEventListener('click', function() {
+    const element = document.getElementById('main_container')
     const hide = function(element) {
         element.style.display = 'none';
-        document.getElementById('topdiv').style.top = '550px';
+        document.getElementById('top_div').style.top = '581px';
     }
     const show = function(element) {
         element.style.display = 'block';
-        document.getElementById('topdiv').style.top = '142px';
+        document.getElementById('top_div').style.top = '173px';
     }
     const toggle = function(element) {
         if (window.getComputedStyle(element).display !== 'none') {
@@ -20,8 +20,8 @@ document.getElementById('arrow').addEventListener('click', function() {
     toggle(element)
 
 });
-const toplabel = document.getElementById('toplabel')
-const search = document.getElementById('srchimg')
+const toplabel = document.getElementById('top_label')
+const search = document.getElementById('search_img')
 const closeicon = document.getElementById('closeicon')
 search.addEventListener('click', function() {
 

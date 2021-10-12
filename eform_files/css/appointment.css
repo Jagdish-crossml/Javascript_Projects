@@ -1,15 +1,15 @@
-#topdiv {
+#top_div {
     position: absolute;
     width: 52px;
     height: 24px;
     left: 1260px;
-    top: 142px;
+    top: 173px;
     background: #FFFFFF;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
     border-radius: 8px 8px 0px 0px;
 }
 
-#arrow {
+#top_arrow {
     width: 15px;
     height: 8.57px;
     margin-left: 20px;
@@ -19,11 +19,11 @@
     font-weight: 1000;
 }
 
-#arrow:hover {
+#top_arrow:hover {
     color: #2F73EA;
 }
 
-#rectangle1 {
+#main_container {
     position: absolute;
     width: 376px;
     height: 403px;
@@ -34,7 +34,7 @@
     border-radius: 10px 10px 0px 0px;
 }
 
-#rectangle2 {
+#inner_container {
     position: absolute;
     width: 376px;
     height: 244px;
@@ -44,7 +44,7 @@
     overflow-y: hidden;
 }
 
-#toplabel {
+#top_label {
     position: absolute;
     width: 232px;
     height: 25px;
@@ -66,7 +66,7 @@
     margin-top: 18px;
 }
 
-#srchimg {
+#search_img {
     width: 18px;
     height: 18px;
     float: right;
@@ -75,11 +75,11 @@
     opacity: .6;
 }
 
-#srchimg:hover {
+#search_img:hover {
     color: #2F73EA;
 }
 
-#sdiv {
+#suggestion_div {
     height: 40px;
     width: 376px;
     margin-top: 55px;
@@ -87,7 +87,7 @@
     ;
 }
 
-#suggestlabel {
+#suggest_label {
     width: 158px;
     height: 20px;
     margin-left: 16px;
@@ -104,12 +104,11 @@
     float: right;
 }
 
-#prodata {
+#provider_detail_div {
     width: 129px;
     height: 65px;
     margin-top: 9px;
     float: right;
-    /* padding: 0px; */
 }
 
 #icon {
@@ -238,7 +237,7 @@
     margin-top: 10px;
 }
 
-#sugimg {
+#suggest_img {
     width: 17.08px;
     height: 18px;
     float: left;
@@ -246,7 +245,7 @@
     margin-top: 12px;
 }
 
-#proimg {
+#professional_img {
     width: 18px;
     height: 18px;
     float: left;
@@ -254,7 +253,7 @@
     margin-top: 12px;
 }
 
-#inimg {
+#inbox_img {
     width: 18px;
     height: 18px;
     float: right;
@@ -279,7 +278,7 @@
     margin-top: 26px;
 }
 
-#suglabel {
+#suggestion_label {
     position: absolute;
     width: 73px;
     height: 16px;
@@ -294,11 +293,11 @@
     color: #535E76;
 }
 
-#suglabel:hover {
+#suggestion_label:hover {
     color: #2F73EA;
 }
 
-#prolabel {
+#professional_label {
     position: absolute;
     width: 117px;
     height: 16px;
@@ -313,11 +312,11 @@
     color: #535E76;
 }
 
-#prolabel:hover {
+#professional_label:hover {
     color: #2F73EA;
 }
 
-#inlabel {
+#inbox_label {
     position: absolute;
     width: 31px;
     height: 16px;
@@ -332,11 +331,11 @@
     color: #535E76;
 }
 
-#inlabel:hover {
+#inbox_label:hover {
     color: #2F73EA;
 }
 
-#lowerdiv {
+#lower_div {
     width: 376px;
     height: 64px;
     margin-top: 240px;
@@ -410,14 +409,14 @@
     margin-right: 20px;
 }
 
-#cont {
+#container {
     width: 347px;
     height: 225px;
     margin-top: 4px;
     margin-left: 16px;
 }
 
-#cont1 {
+#img_container1 {
     width: 173px;
     height: 112px;
     float: left;
@@ -429,7 +428,7 @@
     transition: all .3s ease-in-out;
 }
 
-#cont1:hover {
+#img_container1:hover {
     transform: scale(1.05);
 }
 
@@ -494,21 +493,19 @@
     transform: scale(1.05);
 }
 
-#group {
-    /* position: relative; */
+#rating_div {
     width: 68px;
     height: 14px;
     margin-top: 35px;
-    /* margin-left: 10px; */
 }
 
-#raimg {
+#rating_img {
     width: 46px;
     height: 6px;
     float: left;
 }
 
-#rate {
+#rate_number {
     position: relative;
     bottom: 4px;
     width: 18px;
@@ -534,13 +531,9 @@
     opacity: 1;
 }
 
-#textlabel {
-    /* position: relative; */
+#text_label {
     width: 97px;
     margin: 0 0 0 0px;
-    /* height: 19px; */
-    /* margin-top: 9px; */
-    /* margin-left: 7px; */
     font-family: Manrope;
     font-style: normal;
     font-weight: 500;
@@ -549,7 +542,7 @@
     color: #2B1717;
 }
 
-#group2 {
+#calendar_div {
     width: 84px;
     height: 20px;
     margin-left: 8px;
@@ -557,7 +550,7 @@
     float: left;
 }
 
-#group2:hover {
+#calendar_div:hover {
     opacity: 1;
 }
 
@@ -592,7 +585,7 @@
     color: #2B1717;
 }
 
-#price {
+#price_tag_div {
     width: 40px;
     height: 31px;
     float: right;
