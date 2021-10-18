@@ -7,12 +7,12 @@
     <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
     <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
     <link href='https://fonts.googleapis.com/css?family=Manrope' rel='stylesheet'>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/wepage9.css">
+    <link rel="stylesheet" href="css/countries.css">
     <!-- <script type="text/javascript" src="lazy.js"></script> -->
     <!-- <script type="text/javascript" src="lazy.browser.js"></script> -->
 </head>
@@ -20,10 +20,10 @@
 <body>
     <div id="top_div"><i class="fa fa-angle-down" id="top_arrow"></i></div>
     <div id="main_container">
-        <img id="eform_logo" alt="e-form-logo" src="assets/logo.svg">
-        <img id="Current_user_icon" alt="Current user avatar" src="assets/Oval.png">
-        <span class="position-absolute translate-middle p-1 bg-success border border-light rounded-circle" id="online_status"></span>
-        <img id="user_dropdown_arrow" alt="user dropdown" src="assets/sdown.png">
+        <!-- <img id="eform_logo" alt="e-form-logo" src="assets/logo.svg"> -->
+        <i class="bi bi-search" id="search_img"></i>
+        <!-- <img id="Current_user_icon" alt="Current user avatar" src="assets/Oval.png">
+        <img id="user_dropdown_arrow" alt="user dropdown" src="assets/sdown.png"> -->
         <div id="avatar_modal" class="usermodal">
 
             <div class="usermodal-content">
@@ -33,10 +33,10 @@
             </div>
 
         </div>
-        <label id="top_label">Enter your Father Address?</label>
+        <label id="top_label">Enter countries you have visited?</label>
         <div id="inner_container">
             <div id="search_div">
-                <i class="bi bi-search" id="search_img"></i>
+
                 <label id="suggest_label">Suggestions</label>
                 <div id="avatar_div">
                     <img src="assets/user1.svg" id="avatar">
@@ -65,7 +65,7 @@
                 </div>
                 <div id="search_reslt_modal" class="thismodal">
                     <div class="thismodal-content">
-                        <!-- <span class="closeone">&times;</span> -->
+                        <span class="closeone">&times;</span>
                         <div id="uprdiv"><label id="srchreslt">Search results..</label>
                             <div id="icon_btn_cont">
                                 <img src="assets/user1.svg" id="searched_user_icon">
@@ -74,18 +74,16 @@
                             </div>
 
                         </div>
-                        <div id="reslt"><label id="select" class="slct"></label><i class="far fa-copy" id="srch_copy_icon"></i></div>
-                        <div id="reslt"><label id="select" class="slct"></label><i class="far fa-copy" id="srch_copy_icon"></i></div>
-                        <div id="reslt"><label id="select" class="slct"></label><i class="far fa-copy" id="srch_copy_icon"></i></div>
+                        <div id="reslt"><label id="select"></label><i class="far fa-copy" id="copy_img"></i></div>
                     </div>
                 </div>
-                <input type="text" id="textInput" />
+                <input class="hide" type="text" id="textInput" />
                 <span class="hide" id="close_srch_bar">&times;</span>
             </div>
 
             <div id="suggestion_div">
                 <div id="json_data_div">
-                    <p id="text"> 2972 Westheimer Rd. Santa Ana, Illinois 85486 </p>
+                    <p id="text">Russia | Ukraine | France | Spain | Sweden | Germany | Finland | Norway</p>
                     <div id="icon_div">
                         <i class="far fa-copy" id="copy_icon"></i>
                         <i class="fas fa-pause" id="pause_icon"></i>
@@ -97,7 +95,7 @@
                     </div>
                 </div>
                 <div id="json_data_div">
-                    <p id="text"> 2118 Thornridge Cir. Syracuse, Connecticut 35624 </p>
+                    <p id="text">India | Singapore | Malaysia | Japan | Thailand</p>
                     <div id="icon_div">
                         <i class="far fa-copy" id="copy_icon"></i>
                         <i class="fas fa-pause" id="pause_icon"></i>
@@ -108,42 +106,7 @@
                         <label id="rate_number"> 8.5 </label>
                     </div>
                 </div>
-                <div id="json_data_div">
-                    <p id="text"> 2715 Ash Dr. San Jose, South Dakota 83475 </p>
-                    <div id="icon_div">
-                        <i class="far fa-copy" id="copy_icon"></i>
-                        <i class="fas fa-pause" id="pause_icon"></i>
-                        <i class="bi bi-pin-angle" id="pin_icon"></i>
-                    </div>
-                    <div id="rating_div">
-                        <img id="rating_img" src="assets/rating.png">
-                        <label id="rate_number"> 8.5 </label>
-                    </div>
-                </div>
-                <div id="json_data_div" class="hide">
-                    <p id="text"> 2972 Westheimer Rd. Santa Ana, Illinois 85486 </p>
-                    <div id="icon_div">
-                        <i class="far fa-copy" id="copy_icon"></i>
-                        <i class="fas fa-pause" id="pause_icon"></i>
-                        <i class="bi bi-pin-angle" id="pin_icon"></i>
-                    </div>
-                    <div id="rating_div">
-                        <img id="rating_img" src="assets/rating.png">
-                        <label id="rate_number"> 8.5 </label>
-                    </div>
-                </div>
-                <div id="json_data_div" class="hide">
-                    <p id="text"> 2972 Westheimer Rd. Santa Ana, Illinois 85486</p>
-                    <div id="icon_div">
-                        <i class="far fa-copy" id="copy_icon"></i>
-                        <i class="fas fa-pause" id="pause_icon"></i>
-                        <i class="bi bi-pin-angle" id="pin_icon"></i>
-                    </div>
-                    <div id="rating_div">
-                        <img id="rating_img" src="assets/rating.png">
-                        <label id="rate_number"> 8.5 </label>
-                    </div>
-                </div>
+
                 <button onclick="topFunction()" id="scroll_to_top_btn" class="hide" title="Go to top"><i class="fas fa-arrow-up"></i></button>
             </div>
             <button id="load_btn" type="button" class="btn btn-primary">Load more</button>

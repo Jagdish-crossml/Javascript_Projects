@@ -2,13 +2,18 @@
 <html lang="en">
 
 <head>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes"> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
     <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
     <link href='https://fonts.googleapis.com/css?family=Manrope' rel='stylesheet'>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,143 +21,98 @@
 </head>
 
 <body>
-    <div class="input-group">
-        <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">
-        <div class="input-group-append">
-            <button class="btn btn-outline-primary" type="button"><i class="bi bi-check-circle"></i><i class="bi bi-x-circle"></i></button>
-        </div>
-    </div>
+    <div id="top_div"><img id="top_arrow" src="assets/down.png"></div>
+    <div id="main_container">
 
-    <div id="topdiv"><img id="arrow" src="assets/down.png"></div>
-    <div id="rectangle1">
+        <img id="save_icon" alt="save" src="assets/save.png">
+        <label id="top_label">Save information for future use</label>
+        <div id="inner_container">
+            <div id="select_all_div"><input type="checkbox" id="slct_all_checkbox" onchange="checkAll(this)">
 
-        <img id="saveimg" alt="save" src="assets/save.png">
-        <label id="toplabel">Save information for future use</label>
-        <div id="rectangle2">
-            <div id="selectdiv"><input type="checkbox" id="checkone" onchange="checkAll(this)">
+                <label id="slct_all_label">Select all</label></div>
+            <div id="save_info_div">
+                <input type="checkbox" name="check" id="save_info_checkbox">
+                <label id="save_info_label">What is your Name?</label>
+                <label id="data_label" class="data">John doe</label>
+                <img id="change_info_icon" class="rotateimg" src="assets/change.svg" data-container="body" data-toggle="popover" data-placement="top" data-content="Change">
 
-                <label id="all">Select all</label></div>
-            <div id="checkdiv">
-                <input type="checkbox" name="check" id="checktwo">
-                <label id="name">What is your Name?</label>
-                <label id="data1">John doe</label>
-                <img id="rotateimg0" class="rotateimg" src="assets/change.svg" data-container="body" data-toggle="popover" data-placement="top" data-content="Change">
+                <input class="hide" id="text_input_box" type="text">
 
-                <input class="hide" id="textbox1" type="text">
+                <div id="icon_div" class="hide">
 
-                <div id="textdiv1" class="hide">
-
-                    <i class="bi bi-check-circle" id="rightimg"></i>
-                    <i class="bi bi-x-circle" id="wrongimg"></i>
+                    <i class="bi bi-check-circle" id="check_icon"></i>
+                    <i class="bi bi-x-circle" id="close_icon"></i>
                 </div>
 
             </div>
 
 
-            <div id="checkdiv">
-                <input type="checkbox" name="check" id="checktwo">
-                <label id="name">What is your PAN number?</label>
+            <div id="save_info_div">
+                <input type="checkbox" name="check" id="save_info_checkbox">
+                <label id="save_info_label">What is your PAN number?</label>
+                <label id="data_label" class="data">AIOUY9898E</label>
+                <img id="change_info_icon" class="rotateimg" src="assets/change.png">
+                <input class="hide" id="text_input_box" type="text">
 
-                <img id="rotateimg1" class="rotateimg" src="assets/change.png">
-                <label id="data2">AIOUY9898E</label>
-                <input class="hide" id="textbox2" type="text">
+                <div id="icon_div" class="hide">
 
-                <div id="textdiv2" class="hide">
-
-                    <i class="fa fa-check-circle" id="rightimg"></i>
-                    <i class="fa fa-times-circle" id="wrongimg"></i>
+                    <i class="fa fa-check-circle" id="check_icon"></i>
+                    <i class="fa fa-times-circle" id="close_icon"></i>
                 </div>
             </div>
-            <div id="checkdiv">
-                <input type="checkbox" name="check" id="checktwo">
-                <label id="name">What is your Social Security Number?</label>
+            <div id="save_info_div">
+                <input type="checkbox" name="check" id="save_info_checkbox">
+                <label id="save_info_label">What is your Social Security Number?</label>
+                <label id="data_label" class="data">078-05-1176</label>
+                <img id="change_info_icon" class="rotateimg" src="assets/change.png">
 
-                <img id="rotateimg2" class="rotateimg" src="assets/change.png">
-                <label id="data3">078-05-1176</label>
-                <input class="hide" id="textbox3" type="text">
+                <input class="hide" id="text_input_box" type="text">
 
-                <div id="textdiv3" class="hide">
+                <div id="icon_div" class="hide">
 
-                    <i class="fa fa-check-circle" id="rightimg"></i>
-                    <i class="fa fa-times-circle" id="wrongimg"></i>
+                    <i class="fa fa-check-circle" id="check_icon"></i>
+                    <i class="fa fa-times-circle" id="close_icon"></i>
                 </div>
             </div>
-            <div id="checkdiv">
+            <div id="save_info_div">
 
-                <input type="checkbox" name="check" id="checktwo">
-                <label id="name">What is your Email Id?</label>
-                <label id="data4">johndoe@hotmail.com</label>
-                <img id="rotateimg3" class="rotateimg" src="assets/change.png">
-                <input class="hide" id="textbox4" type="text">
+                <input type="checkbox" name="check" id="save_info_checkbox">
+                <label id="save_info_label">What is your Email Id?</label>
+                <label id="data_label" class="data">johndoe@hotmail.com</label>
+                <img id="change_info_icon" class="rotateimg" src="assets/change.png">
+                <input class="hide" id="text_input_box" type="text">
 
-                <div id="textdiv4" class="hide">
+                <div id="icon_div" class="hide">
 
-                    <i class="fa fa-check-circle" id="rightimg"></i>
-                    <i class="fa fa-times-circle" id="wrongimg"></i>
+                    <i class="fa fa-check-circle" id="check_icon"></i>
+                    <i class="fa fa-times-circle" id="close_icon"></i>
                 </div>
 
             </div>
-            <div id="checkdiv">
-                <input type="checkbox" name="check" id="checktwo">
-                <label id="name">What is your father's name?</label>
+            <div id="save_info_div">
+                <input type="checkbox" name="check" id="save_info_checkbox">
+                <label id="save_info_label">What is your father's name?</label>
+                <label id="data_label" class="data">Mathew Charlie</label>
+                <img id="change_info_icon" class="rotateimg" src="assets/change.png">
 
-                <img id="rotateimg4" class="rotateimg" src="assets/change.png">
-                <label id="data5">Mathew Charlie</label>
-                <input class="hide" id="textbox5" type="text">
+                <input class="hide" id="text_input_box" type="text">
 
-                <div id="textdiv5" class="hide">
+                <div id="icon_div" class="hide">
 
-                    <i class="fa fa-check-circle" id="rightimg"></i>
-                    <i class="fa fa-times-circle" id="wrongimg"></i>
+                    <i class="fa fa-check-circle" id="check_icon"></i>
+                    <i class="fa fa-times-circle" id="close_icon"></i>
                 </div>
             </div>
 
         </div>
     </div>
     <script src="js/test.js">
-        function toggle_input() {
-            console.log('click')
-            span.style.display = 'none'
-            element1.value = span.innerHTML
-            const hide1 = function(element1, element2) {
-                element1.classList.toggle('hide')
-                element2.classList.toggle('hide')
-                change1.style.display = 'none'
-
-                element1.style = 'margin-top:30px;margin-left:47px'
-                element2.style = 'margin-top:-35px'
-            }
-            hide1(element1, element2)
-            close.addEventListener('click', function() {
-                const hideone = function(element1, element2) {
-                    span.innerHTML = element1.value
-                    element1.classList.add('hide')
-                    element2.classList.add('hide')
-                    change1.style.display = 'block'
-                    span.style.display = 'inline-block'
-                }
-                hideone(element1, element2)
-            })
-            showdata.addEventListener('click', function() {
-                const hideone = function() {
-                    span.innerHTML = element1.value
-                    element1.classList.add('hide')
-                    element2.classList.add('hide')
-                    change1.style.display = 'block'
-                    span.style.display = 'inline-block'
-                }
-                hideone(element1, element2)
-            })
-        };
-        const texttoinput = function() {
-            debugger
-            const change1 = document.getElementsByClassName('rotateimg');
-
-            Array.from(change1).forEach(element => {
-                element.addEventListener('click', toggle_input, false);
-            });
-        }
-        texttoinput()
+    </script>
+    <script>
+        $('[data-toggle="popover"]').popover({
+            trigger: 'hover',
+            title: ''
+        });
     </script>
 </body>
 

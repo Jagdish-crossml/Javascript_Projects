@@ -28,3 +28,21 @@ togglePassword.addEventListener('click', function(e) {
     // toggle the eye / eye slash icon
     this.classList.toggle('bi-eye');
 });
+
+const modalfunction = function() {
+    var modal = document.getElementById("avatar_modal");
+    var btn = document.getElementById("user_dropdown_arrow");
+    if (modal.style.display = "none") {
+        btn.onclick = function() {
+            modal.style.display = modal.style.display === 'none' ? 'block' : 'none';
+        }
+    }
+}
+modalfunction();
+
+
+
+// const chnge_pass= document.getElementById('options')
+// chnge_pass.addEventListener('click',function(){
+
+// })

@@ -1,4 +1,4 @@
-#topdiv {
+#top_div {
     position: absolute;
     width: 52px;
     height: 24px;
@@ -9,14 +9,14 @@
     border-radius: 8px 8px 0px 0px;
 }
 
-#arrow {
+#top_arrow {
     width: 15px;
     height: 8.57px;
     margin-left: 20px;
     margin-top: 6px;
 }
 
-#rectangle1 {
+#main_container {
     position: absolute;
     width: 376px;
     height: 403px;
@@ -27,7 +27,7 @@
     border-radius: 10px 10px 0px 0px;
 }
 
-#rectangle2 {
+#inner_container {
     position: absolute;
     width: 376px;
     height: 346px;
@@ -38,7 +38,7 @@
     overflow-y: scroll;
 }
 
-#saveimg {
+#save_icon {
     width: 14px;
     height: 14px;
     float: right;
@@ -47,12 +47,12 @@
     transition: all .2s ease-in-out;
 }
 
-#saveimg:hover {
+#save_icon:hover {
     /* opacity: .2; */
     transform: scale(1.05);
 }
 
-#toplabel {
+#top_label {
     position: absolute;
     width: 277px;
     height: 25px;
@@ -66,20 +66,24 @@
     color: #16243C;
 }
 
+
+/* 
 #eimg {
     width: 20px;
     height: 20px;
     float: left;
     margin-left: 11px;
     margin-top: 18px;
-}
+} */
 
-#sdiv {
+
+/* #select_all_div {
     width: 376px;
     height: 40px;
-}
+} */
 
-#srchimg {
+
+/* #srchimg {
     width: 18px;
     height: 18px;
     margin-left: 8px;
@@ -98,7 +102,7 @@
     font-size: 14px;
     line-height: 19px;
     color: #16243C;
-}
+} */
 
 
 /* 
@@ -115,7 +119,7 @@
     margin-top: 4px;
 }
 
-#checkone {
+#slct_all_checkbox {
     position: absolute;
     margin-left: 16px;
     width: 16px;
@@ -128,7 +132,7 @@
     border-radius: 4px;
 }
 
-#checktwo {
+#save_info_checkbox {
     position: absolute;
     margin-left: 16px;
     width: 16px;
@@ -141,7 +145,7 @@
     border-radius: 4px;
 }
 
-#name {
+#save_info_label {
     position: absolute;
     width: 264px;
     height: 16px;
@@ -157,7 +161,7 @@
     color: #16243C;
 }
 
-#all {
+#slct_all_label {
     margin-left: 46px;
     margin-top: 12px;
     font-family: Manrope;
@@ -168,10 +172,11 @@
     color: #16243C;
 }
 
-hr {
+
+/* hr {
     margin-top: 9px;
     border: 1px solid #E4E3E3;
-}
+} */
 
 .rotateimg {
     float: right;
@@ -186,7 +191,7 @@ hr {
     fill: #2F73EA;
 }
 
-#textbox {
+#text_input_box {
     position: relative;
     margin-left: 0px;
     margin-top: 1px;
@@ -199,7 +204,7 @@ hr {
     border-right-style: hidden;
 }
 
-#textdiv {
+#icon_div {
     position: relative;
     width: 64px;
     height: 25px;
@@ -213,7 +218,7 @@ hr {
     border-left-style: hidden;
 }
 
-#rightimg {
+#check_icon {
     float: left;
     width: 15px;
     height: 15px;
@@ -229,7 +234,7 @@ hr {
     color: #22DA77;
 } */
 
-#wrongimg {
+#close_icon {
     float: right;
     width: 15px;
     height: 15px;
@@ -239,7 +244,7 @@ hr {
     /* border: 0.4px solid #F5F5F5; */
 }
 
-#selectdiv {
+#slct_all_label {
     height: 41px;
     width: 376px;
     background: #F5F5F5;
@@ -247,7 +252,7 @@ hr {
     border-bottom: 1px solid #E4E3E3;
 }
 
-#data {
+#data_label {
     width: 120px;
     height: 20px;
     margin-left: 47px;
@@ -293,7 +298,8 @@ hr {
     background: #555;
 }
 
-#check {
+
+/* #check {
     color: #22DA77;
 }
 
@@ -301,7 +307,6 @@ hr {
     border-right-style: none;
     border-left-style: none;
     background: #EFEFEF;
-    /* width: 32px; */
     height: 25px;
 }
 
@@ -313,9 +318,9 @@ hr {
 
 #close {
     color: #FF0000;
-}
+} */
 
-#checkdiv {
+#save_info_div {
     position: relative;
     width: 376px;
     height: 60px;

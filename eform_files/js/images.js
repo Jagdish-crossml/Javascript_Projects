@@ -115,11 +115,11 @@ document.getElementById('top_arrow').addEventListener('click', function() {
     const element = document.getElementById('main_container')
     const hide = function(element) {
         element.style.display = 'none';
-        document.getElementById('top_div').style.top = '581px';
+        document.getElementById('top_div').style.top = '550px';
     }
     const show = function(element) {
         element.style.display = 'block';
-        document.getElementById('top_div').style.top = '173px';
+        document.getElementById('top_div').style.top = '142px';
     }
     const toggle = function(element) {
         if (window.getComputedStyle(element).display !== 'none') {

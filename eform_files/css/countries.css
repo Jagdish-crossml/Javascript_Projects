@@ -45,9 +45,9 @@
 
 #top_label {
     position: absolute;
-    width: 232px;
+    width: 284px;
     height: 25px;
-    left: 35px;
+    left: 16px;
     top: 16px;
     font-family: Manrope;
     font-style: normal;
@@ -73,8 +73,9 @@
 #search_img {
     width: 13.5px;
     height: 13.5px;
-    margin-left: 9.8px;
-    margin-top: 18.8px;
+    float: right;
+    margin-right: 12px;
+    margin-top: 20px;
     color: #96A0B5;
     transition: all .3s ease-in-out;
 }
@@ -108,7 +109,7 @@
 #suggest_label {
     width: 90px;
     height: 20px;
-    margin-left: 4.7px;
+    margin-left: 16px;
     margin-top: 15px;
     font-family: Manrope;
     font-style: normal;
@@ -124,6 +125,7 @@
     height: 14px;
     float: right;
     right: 74px;
+    margin-top: 10px;
     color: #535E76;
     opacity: 0.5;
     transition: all .3s ease-in-out;
@@ -140,6 +142,7 @@
     height: 14px;
     float: right;
     right: 44px;
+    margin-top: 10px;
     color: #535E76;
     opacity: 0.5;
     transition: all .3s ease-in-out;
@@ -156,6 +159,7 @@
     height: 14px;
     float: right;
     right: 14px;
+    margin-top: 10px;
     color: #535E76;
     opacity: 0.5;
     transition: all .3s ease-in-out;
@@ -284,13 +288,12 @@
 
 #textInput {
     position: absolute;
-    display: none;
     width: 366px;
     height: 46px;
     background: #F5F7FB;
     border-radius: 10px 10px 0px 0px;
-    margin-left: 4px;
-    margin-top: -90px;
+    margin-left: -117px;
+    margin-top: -50px;
 }
 
 #lower_div {
@@ -340,9 +343,11 @@
 }
 
 #text {
-    width: 186px;
-    height: 36px;
+    width: 236px;
+    height: 38px;
     margin-left: 16px;
+    margin-bottom: 0px;
+    top: 5px;
     font-family: Manrope;
     font-style: normal;
     font-weight: normal;
@@ -383,9 +388,9 @@
     position: absolute;
     z-index: 1;
     padding-top: 2px;
-    /* left: 5px; */
+    left: 5px;
     top: 0px;
-    width: 376px;
+    width: 366px;
     height: 123px;
     overflow-y: hidden;
     overflow-x: hidden;
@@ -658,15 +663,15 @@
     position: absolute;
     z-index: 1;
     padding-top: 2px;
-    /* left: 5px; */
-    top: 1px;
-    width: 376px;
+    left: 5px;
+    top: 4px;
+    width: 366px;
     height: 284px;
     overflow-y: hidden;
     overflow-x: hidden;
     background: #F5F5F5;
     /* border-radius: 0px; */
-    /* box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1); */
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
     border-radius: 0px;
 }
 
@@ -766,6 +771,13 @@
     transform: scale(1.1);
 }
 
+#copy_img {
+    float: right;
+    opacity: .5;
+    margin-top: 20px;
+    margin-right: 35px;
+}
+
 #reslt {
     width: 376px;
     height: 58px;
@@ -802,23 +814,4 @@
 #close_srch_bar:hover {
     color: #2F73EA;
     cursor: pointer;
-}
-
-#srch_copy_icon {
-    float: right;
-    opacity: .5;
-    margin-top: 20px;
-    margin-right: 15.67px;
-    color: #535E76;
-    /* border: 0.2px; */
-}
-
-#srch_copy_icon:hover {
-    color: #2F73EA;
-}
-
-#online_status {
-    float: right;
-    margin-top: 38px;
-    margin-left: 310px;
 }

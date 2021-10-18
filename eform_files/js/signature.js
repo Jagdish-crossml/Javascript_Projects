@@ -1,74 +1,3 @@
-// var html = '';
-// const jsondata = async function() {
-//     const response = await fetch('http://localhost:8002/fields');
-
-//     const data = await response.json();
-//     console.log(data.length)
-//     for (i = 0; i < data.length; i++) {
-//         html += `<div id="box"><ul id="datalist">
-//             <li> ${data[i].fields.address} <img id="cpimg" alt="e-form" src="assets/copy.png">
-//             <img id="puimg" alt="e-form" src="assets/pause.png">
-//             <img id="unimg" alt="e-form" src="assets/unpin.png"></li>
-//             <li><img id="raimg" src="assets/rating.png"><label id="number">8.5</label></li>
-//             </ul></div>`;
-//         var container = document.getElementById("datadiv");
-//         container.innerHTML = html;
-//         const btns = document.createElement('button')
-//         btns.innerText = 'Load More'
-//         btns.id = 'load'
-//         btns.className = 'btn btn-primary'
-//         document.getElementById('datadiv').insertAdjacentElement('beforeend', btns)
-//         btns.addEventListener('click', function() {
-//             $(window).scroll(function() {
-//                 if ($(window).scrollTop() == $(document).height() - $(window).height()) {
-//                     // ajax call get data from server and append to the div
-
-//                 }
-//             });
-//         })
-//     }
-
-// }
-// jsondata();
-
-// var html = '';
-// const jsondata = async function() {
-//     const response = await fetch('http://localhost:8002/fields');
-
-//     const data = await response.json();
-//     console.log(data.length)
-//     for (i = 0; i < data.length; i++) {
-
-//         html += `<div id="one">
-//         <p id="text"> ${data[i].fields.address}</p>
-//         <div id="images">
-//                 <i class="far fa-copy" id="cpimg"></i>
-//                 <i class="fas fa-pause" id="puimg"></i>
-//                 <i class="bi bi-pin-angle" id="unimg"></i>
-//             </div>
-//             <div id="group">
-//             <img id="raimg" src="assets/rating.png">
-//             <label id="number"> ${data[i].fields.rating} </label>
-//             </div></div>`;
-//         var container = document.getElementById("datadiv");
-//         container.innerHTML = html;
-//         const btns = document.createElement('button')
-//         btns.innerText = 'Load More'
-//         btns.id = 'load'
-//         btns.className = 'btn btn-primary'
-//         document.getElementById('datadiv').insertAdjacentElement('beforeend', btns)
-//         btns.addEventListener('click', function() {
-//             window.scroll({ top: 100, behavior: 'smooth' })
-
-//         })
-//     }
-
-// }
-// jsondata();
-const element2 = document.getElementById('close_srch_bar')
-
-
-
 document.getElementById('top_div').addEventListener('click', function() {
     const element = document.getElementById('main_container')
     const hide = function(element) {
@@ -134,18 +63,13 @@ searchValue();
 
 
 //search box 
-var modal = document.getElementById("ismyModal");
 const modalfunc = function() {
-
+    var modal = document.getElementById("ismyModal");
     var btn = document.getElementById("textInput");
     if (modal.style.display = "none") {
         btn.onclick = function() {
             modal.style.display = modal.style.display === 'none' ? 'block' : 'none';
         }
-        element2.onclick = function() {
-            modal.style.display = modal.style.display === 'none' ? 'block' : 'none';
-        }
-
     }
 }
 modalfunc();
@@ -208,8 +132,6 @@ function topFunction() {
 
 
 const modalfunctions = function() {
-
-    var slct = document.getElementsByClassName('slct')
     var select = document.getElementById('select')
     var srch_modal = document.getElementById("search_reslt_modal");
     var span1 = document.getElementsByClassName("closeone")[0];
@@ -219,14 +141,9 @@ const modalfunctions = function() {
             await fetch('http://localhost:8002/fields')
                 .then(response => response.json())
                 .then(data =>
-                    Array.prototype.forEach.call(slct, function(a) { a.textContent = (data[0].fields.address) }))
-
+                    select.textContent = (data[0].fields.address));
         }
         fetchsearch()
-    }
-    element2.onclick = function() {
-        srch_modal.style.display = "none";
-        modal.style.display = 'none';
     }
     span1.onclick = function() {
         srch_modal.style.display = "none";

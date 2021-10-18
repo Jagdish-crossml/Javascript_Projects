@@ -21,128 +21,94 @@
 // }
 // rect.appendChild(toAdd)
 
-var num;
-var change = document.getElementById(`rotateimg${num}`);
-var m1;
-var m2;
-var m3;
-var s1;
-var t1;
-var t2;
-const element2 = document.getElementById(`textdiv${t2}`)
-const span = document.getElementById(`data${s1}`)
-const element1 = document.getElementById(`textbox${t1}`)
-const change1 = document.getElementById('rotateimg')
-const close = document.getElementById('wrongimg');
-const showdata = document.getElementById('rightimg');
-
-const texttoinput = function(num, m1, m2, m3, s1, t1, ) {
-    document.getElementById(`rotateimg${num}`).addEventListener('click', function() {
-        console.log('click')
-        document.getElementById(`data${s1}`).style.display = 'none'
-        document.getElementById(`textbox${t1}`).value = document.getElementById(`data${s1}`).innerHTML
-        const hide1 = function(t1, t2) {
-            document.getElementById(`textbox${t1}`).classList.toggle('hide')
-            document.getElementById(`textdiv${t2}`).classList.toggle('hide')
-            document.getElementById(`rotateimg${num}`).style.display = 'none'
-
-            document.getElementById(`textbox${t1}`).style = `margin-top:${m1}px;margin-left:${m2}px`
-            document.getElementById(`textdiv${t2}`).style = `margin-top:${m3}px`
-        }
-        hide1(1, 1)
-        hide1(2, 2)
-
-    });
-}
-texttoinput(0, 30, 47, -35, 1, 1)
-texttoinput(1, 30, 47, -35, 2)
-texttoinput(2, 30, 47, -35, 3)
 
 
-const click = function(num, s1) {
-    close.addEventListener('click', function() {
-        const hideone = function(t1, t2) {
-            document.getElementById(`data${s1}`).innerHTML = document.getElementById(`textbox${t1}`).value
-            document.getElementById(`textbox${t1}`).classList.add('hide')
-            document.getElementById(`textdiv${t2}`).classList.add('hide')
-            document.getElementById(`rotateimg${num}`).style.display = 'block'
-            document.getElementById(`data${s1}`).style.display = 'inline-block'
-        }
-        hideone(1, 1)
-        hideone(2, 2)
+
+
+const element2 = document.getElementById('icon_div')
+    // const span = document.getElementById('data_label')
+const span = document.getElementsByClassName('data')
+const element1 = document.getElementById('text_input_box')
+    // const change1 = document.getElementById('change_info_icon')
+const change1 = document.getElementsByClassName('rotateimg')
+const close = document.getElementById('check_icon');
+const showdata = document.getElementById('close_icon');
+
+const texttoinput = function() {
+    Array.prototype.forEach.call(change1, function(el) {
+        el.addEventListener('click', function() {
+            console.log('click')
+                // Array.prototype.forEach.call(span, function(sp) {
+                //         sp.style.display = 'none'
+                //         element1.value = sp.innerHTML
+                //     })
+            for (i = 0; i < span.length; i++) {
+                span.item[i].style.display = 'none'
+                element1.value = span[i].innerHTML
+            }
+
+            const hide1 = function(element1, element2) {
+                element1.classList.toggle('hide')
+                element2.classList.toggle('hide')
+                el.style.display = 'none'
+
+                element1.style = 'margin-top:30px;margin-left:47px'
+                element2.style = 'margin-top:-35px'
+            }
+            hide1(element1, element2)
+            close.addEventListener('click', function() {
+                const hideone = function(element1, element2) {
+                    Array.prototype.forEach.call(span, function(sp) {
+                        sp.innerHTML = element1.value
+                        sp.style.display = 'inline-block'
+                    })
+
+                    element1.classList.add('hide')
+                    element2.classList.add('hide')
+                    el.style.display = 'block'
+
+                }
+                hideone(element1, element2)
+            })
+            showdata.addEventListener('click', function() {
+                const hideone = function() {
+                    Array.prototype.forEach.call(span, function(sp) {
+                            sp.innerHTML = element1.value
+                            sp.style.display = 'inline-block'
+                        })
+                        // span.innerHTML = element1.value
+                    element1.classList.add('hide')
+                    element2.classList.add('hide')
+                    el.style.display = 'block'
+                        // span.style.display = 'inline-block'
+                }
+                hideone(element1, element2)
+            })
+        })
     })
-    showdata.addEventListener('click', function() {
-        const hideone = function(t1, t2) {
-            document.getElementById(`data${s1}`).innerHTML = document.getElementById(`textbox${t1}`).value
-            document.getElementById(`textbox${t1}`).classList.add('hide')
-            document.getElementById(`textdiv${t2}`).classList.add('hide')
-            document.getElementById(`rotateimg${num}`).style.display = 'block'
-            document.getElementById(`data${s1}`).style.display = 'inline-block'
-        }
-        hideone(1, 1)
-        hideone(2, 2)
 
-    })
-}
-click(0, 1)
-click(1, 2)
-click(2, 3)
+};
 
 
+texttoinput()
 
 
-// close.addEventListener('click', function() {
-
-
-//     const hideone = function(element1, element2) {
-//         element1.classList.toggle('hide')
-//         element2.classList.toggle('hide')
-
-//         change.forEach(i => {
-//             i.style.display = 'block'
-//         })
-
-
-//     }
-//     hideone(element1, element2)
-// })
-
-
-// showdata.addEventListener('click', function() {
-
-
-//     const hideone = function(element1, element2) {
-//         element1.classList.toggle('hide')
-//         element2.classList.toggle('hide')
-//         change.forEach(i => {
-//             i.style.display = 'block'
-//         })
-//         span.innerHTML = element1.value
-
-
-//     }
-//     hideone(element1, element2)
-
-// })
-
-
-document.getElementById('arrow').addEventListener('click', function() {
-    const element = document.getElementById('rectangle1')
+//drawer function
+document.getElementById('top_arrow').addEventListener('click', function() {
+    const element = document.getElementById('main_container')
     const hide = function(element) {
         element.style.display = 'none';
-        document.getElementById('topdiv').style.top = '550px';
+        document.getElementById('top_div').style.top = '581px';
     }
     const show = function(element) {
         element.style.display = 'block';
-        document.getElementById('topdiv').style.top = '142px';
+        document.getElementById('top_div').style.top = '173px';
     }
     const toggle = function(element) {
         if (window.getComputedStyle(element).display !== 'none') {
             hide(element);
             return;
         }
-
-        // show the element
         show(element);
 
     }
@@ -150,6 +116,8 @@ document.getElementById('arrow').addEventListener('click', function() {
 
 });
 
+
+//select all elements
 function checkAll(ele) {
     var checkboxes = document.getElementsByName('check');
     if (ele.checked) {

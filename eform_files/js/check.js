@@ -25,13 +25,13 @@
 
 
 
-const element2 = document.getElementById('textdiv')
-const span = document.getElementById('data')
-const element1 = document.getElementById('textbox')
-const change1 = document.getElementById('rotateimg')
+const element2 = document.getElementById('icon_div')
+const span = document.getElementById('data_label')
+const element1 = document.getElementById('text_input_box')
+const change1 = document.getElementById('change_info_icon')
 
-const close = document.getElementById('wrongimg');
-const showdata = document.getElementById('rightimg');
+const close = document.getElementById('check_icon');
+const showdata = document.getElementById('close_icon');
 // change.forEach(item => {
 // if (span.value = '')
 const texttoinput = function() {
@@ -77,15 +77,15 @@ texttoinput()
 
 
 //drawer function
-document.getElementById('arrow').addEventListener('click', function() {
-    const element = document.getElementById('rectangle1')
+document.getElementById('top_arrow').addEventListener('click', function() {
+    const element = document.getElementById('main_container')
     const hide = function(element) {
         element.style.display = 'none';
-        document.getElementById('topdiv').style.top = '550px';
+        document.getElementById('top_div').style.top = '550px';
     }
     const show = function(element) {
         element.style.display = 'block';
-        document.getElementById('topdiv').style.top = '142px';
+        document.getElementById('top_div').style.top = '142px';
     }
     const toggle = function(element) {
         if (window.getComputedStyle(element).display !== 'none') {
