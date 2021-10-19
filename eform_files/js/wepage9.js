@@ -98,10 +98,10 @@ search.addEventListener('click', function() {
     const element2 = document.getElementById('close_srch_bar')
     const hide1 = function(element1, element2) {
         element1.style.display = 'block'
-        element2.classList.toggle('hide')
+        element2.style.display = 'block'
         element2.addEventListener('click', function() {
             element1.style.display = 'none'
-            element2.classList.add('hide')
+            element2.style.display = 'none'
         })
     }
     hide1(element1, element2)
@@ -237,3 +237,11 @@ const modalfunctions = function() {
         }
     });
 }
+
+
+//Tooltip
+
+var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+var tooltipList = tooltipTriggerList.map(function(tooltipTriggerEl) {
+    return new bootstrap.Tooltip(tooltipTriggerEl)
+})

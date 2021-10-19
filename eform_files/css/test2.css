@@ -394,3 +394,64 @@ hr {
     background-color: #2F73EA;
     transform: scale(1.1);
 }
+
+.bi-person-circle {
+    /* position: absolute; */
+    font-size: 30px;
+    border-radius: 50%;
+}
+
+.bi-person-circle:hover {
+    color: yellow;
+}
+
+#aimg {
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    display: block;
+    margin-top: 7px;
+}
+
+#online_status {
+    margin-top: 30px;
+    margin-left: -2px;
+}
+
+input[type="checkbox"] {
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+input[type="checkbox"] {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    color: #2F73EA;
+    background: #FFFFFF;
+    border: 1.5px solid #2F73EA;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 8px rgba(44, 39, 56, 0.04);
+    border-radius: 4px;
+}
+
+input[type="checkbox"]::before {
+    content: "L";
+    position: absolute;
+    font-size: 0.9em;
+    right: 4px;
+    top: -0.2em;
+    font-weight: 300;
+    visibility: hidden;
+    transform: scaleX(-1) rotate(-47deg);
+}
+
+input[type="checkbox"]:checked::before {
+    visibility: visible;
+}
+
+input[type="checkbox"]:disabled {
+    border-color: black;
+    background: #ddd;
+    color: gray;
+}

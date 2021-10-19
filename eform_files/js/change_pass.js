@@ -1,7 +1,7 @@
 const modalfunc = function() {
     var modal = document.getElementById("ismyModal");
     var btn = document.getElementById("generate_pass_link");
-
+    var cont = document.getElementById('new_pass_input');
     var span = document.getElementsByClassName("close")[0];
     if (modal.style.display = "none") {
         btn.onclick = function() {
@@ -10,16 +10,19 @@ const modalfunc = function() {
     }
 
 
-    span.onclick = function() {
-        modal.style.display = "none";
+    // span.onclick = function() {
+    //     modal.style.display = "none";
+    // }
+    cont.onclick = function() {
+        modal.style.display = 'none';
     }
 
-    $(document).click(function(e) {
-        if ($(e.target).is('#ismyModal')) {
-            $('#ismyModal').fadeOut(500);
-        }
+    // $(document).onclick(function(e) {
+    //     if ($(e.target).is('#ismyModal')) {
+    //         $('#ismyModal').fadeOut(500);
+    //     }
 
-    });
+    // });
 
 
 }
@@ -44,26 +47,40 @@ reptogglePassword.addEventListener('click', function(e) {
 });
 
 
-document.getElementById('top_arrow').addEventListener('click', function() {
+document.getElementById('top_div').addEventListener('click', function() {
     const element = document.getElementById('main_container')
     const hide = function(element) {
         element.style.display = 'none';
-        document.getElementById('top_div').style.top = '550px';
+        document.getElementById('top_div').style.top = '400px';
+        document.getElementById('top_div').innerHTML = '<img id="eformimg" src="assets/eform.png">'
     }
     const show = function(element) {
         element.style.display = 'block';
-        document.getElementById('top_div').style.top = '142px';
+        document.getElementById('top_div').style.top = '0px';
+        document.getElementById('top_div').innerHTML = '<i class="fa fa-chevron-down" id="top_arrow"></i>'
     }
     const toggle = function(element) {
         if (window.getComputedStyle(element).display !== 'none') {
             hide(element);
             return;
         }
-
-        // show the element
         show(element);
-
     }
     toggle(element)
-
 });
+
+
+const modalfunction = function() {
+    var modal = document.getElementById("avatar_modal");
+    var btn = document.getElementById("user_dropdown_arrow");
+    var btn2 = document.getElementById('Current_user_icon')
+    if (modal.style.display = "none") {
+        btn.onclick = function() {
+            modal.style.display = modal.style.display === 'none' ? 'block' : 'none';
+        }
+        btn2.onclick = function() {
+            modal.style.display = modal.style.display === 'none' ? 'block' : 'none';
+        }
+    }
+}
+modalfunction();

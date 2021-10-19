@@ -120,8 +120,7 @@
 
 #copy_icon {
     position: absolute;
-    width: 12.13px;
-    height: 14px;
+    font-size: 15px;
     float: right;
     right: 74px;
     color: #535E76;
@@ -136,12 +135,13 @@
 
 #pause_icon {
     position: absolute;
-    width: 12.13px;
-    height: 14px;
+    font-size: 15px;
     float: right;
     right: 44px;
     color: #535E76;
     opacity: 0.5;
+    /* text-shadow: 0px 2px 2px #535E76; */
+    /* text-shadow: -1px 0 #535E76, 0 1px #535E76, 1px 0 #535E76, 0 -1px #535E76; */
     transition: all .3s ease-in-out;
 }
 
@@ -152,8 +152,7 @@
 
 #pin_icon {
     position: absolute;
-    width: 12.13px;
-    height: 14px;
+    font-size: 15px;
     float: right;
     right: 14px;
     color: #535E76;
@@ -187,6 +186,12 @@
     float: left;
     margin-left: 136.92px;
     margin-top: 12px;
+    transition: all .2s ease-in-out;
+}
+
+#professional_img:hover {
+    color: #2F73EA;
+    transform: scale(1.05);
 }
 
 #inbox_img {
@@ -195,6 +200,12 @@
     float: right;
     margin-right: 25px;
     margin-top: 12px;
+    transition: all .2s ease-in-out;
+}
+
+#inbox_img:hover {
+    color: #2F73EA;
+    transform: scale(1.05);
 }
 
 #Current_user_icon {
@@ -326,7 +337,7 @@
     position: relative;
     height: 70px;
     width: 376px;
-    margin-top: 5.47px;
+    margin-top: 9px;
 }
 
 #json_data_div:hover {
@@ -334,15 +345,19 @@
 }
 
 #icon_div {
-    margin-top: -40px;
+    margin-top: 30px;
     position: relative;
     float: right;
+    margin-top: 7px;
 }
 
 #text {
     width: 186px;
     height: 36px;
+    float: left;
+    margin-top: 7px;
     margin-left: 16px;
+    margin-bottom: 0px;
     font-family: Manrope;
     font-style: normal;
     font-weight: normal;
@@ -793,9 +808,10 @@
 
 #close_srch_bar {
     position: relative;
+    display: none;
     float: right;
-    margin-top: -47px;
-    margin-right: -80px;
+    margin-top: -50px;
+    margin-right: -75px;
     font-size: 30px;
 }
 
@@ -821,4 +837,60 @@
     float: right;
     margin-top: 38px;
     margin-left: 310px;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+a:link::after {
+    text-decoration: none;
+}
+
+#options {
+    width: 178px;
+    height: 25px;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    margin-left: 48px;
+    margin-right: 0px;
+    color: #16243C;
+    /* text-decoration: none; */
+}
+
+#options:hover {
+    background-color: #EBECF0;
+}
+
+#modal_link {
+    color: inherit;
+}
+
+#modal_link:link {
+    font-family: Manrope;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 19px;
+    text-decoration: none;
+}
+
+.tooltip-inner {
+    width: 85px;
+    height: 17px;
+    background-color: #6D798E !important;
+    font-family: Manrope;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 10px;
+    text-align: center;
+    color: #FFFFFF;
+    border-radius: 4px;
+    border-style: none;
+}
+
+.tooltip.bs-tooltip-top .tooltip-arrow::before {
+    border-top-color: #6D798E;
+    transform: matrix(1, 0, 0, 1, 0, 0);
 }

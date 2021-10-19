@@ -7,7 +7,8 @@
     <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
     <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
     <link href='https://fonts.googleapis.com/css?family=Manrope' rel='stylesheet'>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -27,8 +28,8 @@
         <div id="avatar_modal" class="usermodal">
 
             <div class="usermodal-content">
-                <label id="options">Change Password</label>
-                <label id="options">Logout</label>
+                <label id="options"><a href="./change_pass.html" id="modal_link" >Change Password</a></label>
+                <label id="options"><a href="./username.html" id="modal_link">Logout</a></label>
 
             </div>
 
@@ -42,7 +43,7 @@
                     <img src="assets/user1.svg" id="avatar">
                     <img src="assets/user2.svg" id="avatar">
                     <img src="assets/user3.svg" id="avatar">
-                    <img src="assets/user4.svg" id="avatar">
+                    <img src="assets/user4.svg" id="avatar" data-bs-toggle="tooltip" data-bs-placement="top" title="Vikrant Rana">
                     <img src="assets/user5.svg" id="avatar">
                     <img src="assets/user6.svg" id="avatar" class="icon">
                 </div>
@@ -80,7 +81,7 @@
                     </div>
                 </div>
                 <input type="text" id="textInput" />
-                <span class="hide" id="close_srch_bar">&times;</span>
+                <span id="close_srch_bar">&times;</span>
             </div>
 
             <div id="suggestion_div">
@@ -88,7 +89,7 @@
                     <p id="text"> 2972 Westheimer Rd. Santa Ana, Illinois 85486 </p>
                     <div id="icon_div">
                         <i class="far fa-copy" id="copy_icon"></i>
-                        <i class="fas fa-pause" id="pause_icon"></i>
+                        <i class="fas fa-pause" id="pause_icon" data-bs-toggle="tooltip" data-bs-placement="top" title="Pause"></i>
                         <i class="bi bi-pin-angle" id="pin_icon"></i>
                     </div>
                     <div id="rating_div">
@@ -154,7 +155,7 @@
             <label id="suggestion_label">Suggestions</label>
             <img id="professional_img" alt="e-form" src="assets/professional.svg">
             <!-- <i class="bi bi-people" id="proimg"></i> -->
-            <label id="professional_label">professional Support</label>
+            <label id="professional_label"><a href="./appointment.html">professional Support</a></label>
             <img id="inbox_img" alt="e-form" src="assets/inbox.svg">
             <!-- <i class="bi bi-inbox" id="inimg"></i> -->
             <label id="inbox_label">Inbox</label>

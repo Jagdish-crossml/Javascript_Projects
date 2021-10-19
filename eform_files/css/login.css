@@ -1,29 +1,38 @@
+#main {
+    position: absolute;
+    width: 376px;
+    height: 435px;
+    right: 2%;
+    bottom: 2%;
+}
+
 #top_div {
     position: absolute;
     width: 52px;
     height: 24px;
-    left: 1260px;
-    top: 142px;
+    left: 300px;
     background: #FFFFFF;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
     border-radius: 8px 8px 0px 0px;
 }
 
 #top_arrow {
-    width: 15px;
-    height: 8.57px;
+    font-size: 14px;
     margin-left: 20px;
-    margin-top: 6px;
+    margin-top: 8px;
     color: #000000;
-    font-size: 18px;
-    font-weight: 1000;
+    font-weight: 300;
+}
+
+#top_arrow:hover {
+    color: #2F73EA;
 }
 
 #main_container {
     position: absolute;
     width: 376px;
     height: 403px;
-    right: 2%;
+    /* right: 2%; */
     bottom: 2%;
     background: #FFFFFF;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
@@ -52,15 +61,26 @@
     height: 26px;
     float: right;
     margin-top: 15px;
-    margin-right: 33px;
+    margin-right: 29px;
+    transition: all .3s ease-in-out;
+}
+
+#Current_user_icon:hover {
+    border-style: #2F73EA;
+    transform: scale(1.05);
 }
 
 #user_dropdown_arrow {
-    width: 8px;
-    height: 4.94px;
-    float: right;
-    margin-right: -40px;
-    margin-top: 26px;
+    position: absolute;
+    font-size: 10px;
+    margin-left: 327.58px;
+    margin-top: 21px;
+    color: #8190A9;
+    font-weight: 1000;
+}
+
+#user_dropdown_arrow:hover {
+    color: #2F73EA;
 }
 
 #top_label {
@@ -115,16 +135,35 @@
     background: #FFFFFF;
     border: 1px solid #2F73EA;
     box-sizing: border-box;
+    padding: 6.5px 8px;
     box-shadow: 0px 4px 8px rgba(44, 39, 56, 0.04);
     border-radius: 4px;
+    font-family: Manrope;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 19px;
+    color: #2C2738;
 }
 
 input[type="email"]::placeholder {
     padding-left: 10px;
+    font-family: Manrope;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 19px;
+    color: #2C2738;
 }
 
 input[type="password"]::placeholder {
     padding-left: 10px;
+    font-family: Manrope;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 19px;
+    color: #2C2738;
 }
 
 #password_label {
@@ -148,11 +187,24 @@ input[type="password"]::placeholder {
     left: 18px;
     right: 43px;
     top: 162px;
+    padding: 6.5px 8px;
     background: #FFFFFF;
     border: 1px solid #2F73EA;
     box-sizing: border-box;
     box-shadow: 0px 4px 8px rgba(44, 39, 56, 0.04);
     border-radius: 4px;
+}
+
+input:focus {
+    outline: none !important;
+    border-color: #719ECE;
+    box-shadow: 0 0 10px #719ECE;
+}
+
+textarea:focus {
+    outline: none !important;
+    border-color: #719ECE;
+    box-shadow: 0 0 10px #719ECE;
 }
 
 #new_user_label {
@@ -169,17 +221,52 @@ input[type="password"]::placeholder {
     color: #545F77;
 }
 
+input[type="checkbox"] {
+    -webkit-appearance: none;
+    appearance: none;
+}
+
 #check_box {
     position: absolute;
     width: 20px;
     height: 20px;
-    left: 18px;
-    top: 243px;
+    margin-top: 243px;
+    margin-left: 18px;
+    color: #2F73EA;
     background: #FFFFFF;
     border: 1.5px solid #2F73EA;
     box-sizing: border-box;
     box-shadow: 0px 4px 8px rgba(44, 39, 56, 0.04);
     border-radius: 4px;
+}
+
+#check_box::before {
+    content: "L";
+    position: absolute;
+    font-size: 0.9em;
+    right: 4px;
+    top: -0.2em;
+    font-weight: 300;
+    visibility: hidden;
+    transform: scaleX(-1) rotate(-47deg);
+}
+
+#check_box:checked::before {
+    visibility: visible;
+}
+
+#check_box:checked {
+    border: 2px solid #2F73EA;
+}
+
+#check_box::after {
+    font-size: 1.0em;
+}
+
+input[type="checkbox"]:disabled {
+    border-color: black;
+    background: #ddd;
+    color: gray;
 }
 
 #keep_label {
@@ -196,6 +283,10 @@ input[type="password"]::placeholder {
     color: #545F77;
 }
 
+#register_new_link {
+    text-decoration: none;
+}
+
 #forgot_pass_link {
     position: absolute;
     width: 99px;
@@ -209,6 +300,7 @@ input[type="password"]::placeholder {
     line-height: 16px;
     text-align: right;
     color: #2F73EA;
+    text-decoration: none;
 }
 
 #login_btn {
@@ -231,13 +323,13 @@ input[type="password"]::placeholder {
 }
 
 #togglePassword {
+    font-size: 15px;
     position: absolute;
-    margin-top: 175px;
+    margin-top: 174px;
     margin-left: 298px;
     cursor: pointer;
-    width: 20px;
-    height: 13.03px;
     color: #535E76;
+    opacity: 0.5;
 }
 
 .usermodal {
@@ -264,16 +356,11 @@ input[type="password"]::placeholder {
 
 #options {
     width: 178px;
-    height: 19px;
+    height: 25px;
     margin-top: 10px;
     margin-bottom: 0px;
     margin-left: 48px;
     margin-right: 0px;
-    font-family: Manrope;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 19px;
     color: #16243C;
     /* text-decoration: none; */
 }
@@ -282,6 +369,22 @@ input[type="password"]::placeholder {
     background-color: #EBECF0;
 }
 
-a:link {
+#modal_link {
+    color: inherit;
+}
+
+#modal_link:link {
+    font-family: Manrope;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 19px;
     text-decoration: none;
+}
+
+#eformimg {
+    width: 42.81px;
+    height: 15px;
+    margin-left: 5px;
+    margin-top: 4px;
 }
