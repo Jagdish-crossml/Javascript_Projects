@@ -13,12 +13,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="css/test2.css">
     <style>
-
+        .dropdown-toggle::after {
+            content: none;
+        }
+        
+        #dropdownMenuButton {
+            width: 97px;
+            height: 25px;
+            font-family: Manrope;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 16px;
+            color: #FFFFFF;
+        }
+        
+        #up {
+            font-size: 8px;
+            padding: 0px;
+        }
+        
+        #down {
+            font-size: 8px;
+            padding: 0px;
+        }
     </style>
 </head>
 
 <body>
 
+
+    <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="bi bi-chevron-up" id="up" onclick="change(this); return false;"></i>
+                    <i class="bi bi-chevron-down" id="down" onclick="change(this); return false;"></i>
+                    Sort by
+                    <i class="bi bi-chevron-down" id="arrow1"></i></button>
+
+    <!-- <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Dropdown</button>
+    <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="#">Action</a></li>
+        <li><a class="dropdown-item" href="#">Another action</a></li>
+        <li><a class="dropdown-item" href="#">Something else here</a></li>
+        <li>
+            <hr class="dropdown-divider">
+        </li>
+        <li><a class="dropdown-item" href="#">Separated link</a></li>
+    </ul> -->
 
     <!-- <p></p>
     <img id="aimg" src="assets/user1.svg">

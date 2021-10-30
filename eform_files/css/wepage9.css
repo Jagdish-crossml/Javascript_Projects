@@ -1,9 +1,16 @@
+#main {
+    position: absolute;
+    width: 376px;
+    height: 435px;
+    right: 2%;
+    bottom: 2%;
+}
+
 #top_div {
     position: absolute;
     width: 52px;
     height: 24px;
-    left: 1260px;
-    top: 142px;
+    left: 300px;
     background: #FFFFFF;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
     border-radius: 8px 8px 0px 0px;
@@ -27,7 +34,6 @@
     position: absolute;
     width: 376px;
     height: 403px;
-    right: 2%;
     bottom: 2%;
     background: #FFFFFF;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
@@ -122,6 +128,7 @@
     position: absolute;
     font-size: 15px;
     float: right;
+    top: 3px;
     right: 74px;
     color: #535E76;
     opacity: 0.5;
@@ -133,15 +140,13 @@
     transform: scale(1.05);
 }
 
-#pause_icon {
+.material-icons-outlined {
     position: absolute;
-    font-size: 15px;
+    font-size: 20px;
     float: right;
-    right: 44px;
+    right: 40px;
     color: #535E76;
     opacity: 0.5;
-    /* text-shadow: 0px 2px 2px #535E76; */
-    /* text-shadow: -1px 0 #535E76, 0 1px #535E76, 1px 0 #535E76, 0 -1px #535E76; */
     transition: all .3s ease-in-out;
 }
 
@@ -213,15 +218,26 @@
     height: 26px;
     float: right;
     margin-top: 15px;
-    margin-right: 33px;
+    margin-right: 29px;
+    transition: all .3s ease-in-out;
+}
+
+#Current_user_icon:hover {
+    border-style: #2F73EA;
+    transform: scale(1.05);
 }
 
 #user_dropdown_arrow {
-    width: 8px;
-    height: 4.94px;
-    float: right;
-    margin-right: -40px;
-    margin-top: 26px;
+    position: absolute;
+    font-size: 10px;
+    margin-left: 327.58px;
+    margin-top: 21px;
+    color: #8190A9;
+    font-weight: 1000;
+}
+
+#user_dropdown_arrow:hover {
+    color: #2F73EA;
 }
 
 #suggestion_label {
@@ -286,13 +302,6 @@
     height: 6px;
 }
 
-#rating_div {
-    width: 76px;
-    height: 16px;
-    margin-top: 2px;
-    margin-left: 16px;
-}
-
 #textInput {
     position: absolute;
     display: none;
@@ -313,12 +322,13 @@
 
 #load_btn {
     position: absolute;
-    width: 85px;
+    max-width: 100% !important;
     height: 25px;
     background: #2F73EA;
     border-radius: 20px;
     margin-left: 157px;
     bottom: 10px;
+    /* vertical-align: middle; */
     font-family: Manrope;
     font-style: normal;
     font-weight: 600;
@@ -342,6 +352,18 @@
 
 #json_data_div:hover {
     background: #E9E9E9;
+}
+
+#json_data_div:hover #copy_icon {
+    color: #2F73EA;
+}
+
+#json_data_div:hover #pause_icon {
+    color: #2F73EA;
+}
+
+#json_data_div:hover #pin_icon {
+    color: #2F73EA;
 }
 
 #icon_div {
@@ -522,6 +544,7 @@
     line-height: 14px;
     color: #2F73EA;
     text-decoration: none;
+    cursor: pointer;
 }
 
 #info {
@@ -554,18 +577,6 @@
     width: 186px;
     height: 38px;
     float: left;
-}
-
-#rate_number {
-    margin-left: 8px;
-    width: 18px;
-    height: 16px;
-    font-family: Manrope;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 12px;
-    line-height: 16px;
-    color: #0C788B;
 }
 
 #eformimg {
@@ -648,8 +659,10 @@
 }
 
 #scroll_to_top_btn {
+    display: none;
     width: 26px;
     height: 26px;
+    /* position: fixed; */
     background: #4C9AFF;
     box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.15);
     position: absolute;
@@ -876,8 +889,7 @@ a:link::after {
 }
 
 .tooltip-inner {
-    width: 85px;
-    height: 17px;
+    max-width: 100% !important;
     background-color: #6D798E !important;
     font-family: Manrope;
     font-style: normal;
@@ -893,4 +905,48 @@ a:link::after {
 .tooltip.bs-tooltip-top .tooltip-arrow::before {
     border-top-color: #6D798E;
     transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+#rating_div {
+    position: absolute;
+    width: 72px;
+    height: 16px;
+    margin-top: 47px;
+    margin-left: 16px;
+}
+
+#rating_bar {
+    position: relative;
+    display: flex;
+    width: 46px;
+    height: 6px;
+    float: left;
+    margin-top: 6px;
+}
+
+#rate_number {
+    margin-left: 8px;
+    font-size: 12px;
+    float: right;
+    margin-bottom: 0px;
+    font-family: Manrope;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+    color: #0C788B;
+}
+
+.bi-circle {
+    font-size: 6px;
+    border-radius: 100%;
+    margin-left: 3px;
+    background-color: #E5D437;
+    color: #E5D437;
+    vertical-align: 0em;
+    line-height: 0.5;
+}
+
+.bi-circle:hover {
+    color: #E5D437;
 }

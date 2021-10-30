@@ -1,54 +1,55 @@
-const modalfunc = function() {
-    var modal = document.getElementById("ismyModal");
-    var btn = document.getElementById("image");
-    var modalimg = document.getElementById('modalimg')
+const modalfunc = function () {
+  var modal = document.getElementById("ismyModal");
+  var btn = document.getElementsByClassName("opac");
+  var modalimg = document.getElementById("modalimg");
 
-    var span = document.getElementsByClassName("close")[0];
-    if (modal.style.display = "none") {
-        btn.onclick = function() {
-            modal.style.display = "block";
-            modalimg.src = image.src
-        }
-    }
-    span.onclick = function() {
-        modal.style.display = "none";
-    }
-    $(document).click(function(e) {
-        if ($(e.target).is('#ismyModal')) {
-            $('#ismyModal').fadeOut(500);
-        }
+  var span = document.getElementsByClassName("close")[0];
+  if ((modal.style.display = "none")) {
+    Array.prototype.forEach.call(btn, function (el) {
+      el.onclick = function () {
+        modal.style.display = "block";
+        modalimg.src = el.src;
+      };
     });
-}
+  }
+  span.onclick = function () {
+    modal.style.display = "none";
+  };
+  $(document).click(function (e) {
+    if ($(e.target).is("#ismyModal")) {
+      $("#ismyModal").fadeOut(500);
+    }
+  });
+};
 modalfunc();
 
-const image = document.getElementById('image')
-    // var copy = document.getElementById('copy')
-const modalfunction = function() {
-    var modal1 = document.getElementById("thisModal");
-    var copy = document.getElementById('copy_url')
+// const image = document.getElementById("image");
+// var copy = document.getElementById('copy')
+const modalfunction = function () {
+  var modal1 = document.getElementById("thisModal");
+  var copy = document.getElementById("copy_url");
 
-    var span1 = document.getElementsByClassName("close1")[0];
-    if (modal1.style.display = "none") {
-        copy.onclick = function() {
-            modal1.style.display = "block";
-        }
+  var span1 = document.getElementsByClassName("close1")[0];
+  if ((modal1.style.display = "none")) {
+    copy.onclick = function () {
+      modal1.style.display = "block";
+    };
+  }
+  span1.onclick = function () {
+    modal1.style.display = "none";
+  };
+  $(document).click(function (e) {
+    if ($(e.target).is("#thisModal")) {
+      $("#thisModal").fadeOut(500);
     }
-    span1.onclick = function() {
-        modal1.style.display = "none";
-    }
-    $(document).click(function(e) {
-        if ($(e.target).is('#thisModal')) {
-            $('#thisModal').fadeOut(500);
-        }
-    });
-}
+  });
+};
 modalfunction();
 // const image = document.getElementById('picture');
 // const image1 = document.getElementById('picture1');
 // const image2 = document.getElementById('picture2');
 // const image3 = document.getElementById('picture3');
 // const image4 = document.getElementById('picture4');
-
 
 // var html = '';
 // const jsondata = async function() {
@@ -83,7 +84,6 @@ modalfunction();
 
 //         // console.log(ele.src)
 
-
 //         // function fillforms(data) {
 //         //     fillField(image, data[i]);
 //         //     fillField(image1, data[i]);
@@ -107,40 +107,44 @@ modalfunction();
 // }
 // jsondata()
 
-
-
-
-
-document.getElementById('top_arrow').addEventListener('click', function() {
-    const element = document.getElementById('main_container')
-    const hide = function(element) {
-        element.style.display = 'none';
-        document.getElementById('top_div').style.top = '550px';
+document.getElementById("top_div").addEventListener("click", function () {
+  const element = document.getElementById("main_container");
+  const hide = function (element) {
+    element.style.display = "none";
+    document.getElementById("top_div").style.top = "400px";
+    document.getElementById("top_div").innerHTML =
+      '<img id="eformimg" src="assets/eform.png">';
+  };
+  const show = function (element) {
+    element.style.display = "block";
+    document.getElementById("top_div").style.top = "0px";
+    document.getElementById("top_div").innerHTML =
+      '<i class="fa fa-chevron-down" id="top_arrow"></i>';
+  };
+  const toggle = function (element) {
+    if (window.getComputedStyle(element).display !== "none") {
+      hide(element);
+      return;
     }
-    const show = function(element) {
-        element.style.display = 'block';
-        document.getElementById('top_div').style.top = '142px';
-    }
-    const toggle = function(element) {
-        if (window.getComputedStyle(element).display !== 'none') {
-            hide(element);
-            return;
-        }
-
-        // show the element
-        show(element);
-
-    }
-    toggle(element)
-
+    show(element);
+  };
+  toggle(element);
 });
-const doclable = document.getElementById('top_label')
-const search = document.getElementById('search_img')
-search.addEventListener('click', function() {
-
-    const element1 = document.getElementById('textInput')
-    const hide1 = function(element1) {
-        element1.classList.toggle('hide')
-    }
-    hide1(element1)
+const toplabel = document.getElementById("top_label");
+const search = document.getElementById("search_img");
+const closeicon = document.getElementById("closeicon");
+search.addEventListener("click", function () {
+  const element1 = document.getElementById("textInput");
+  const hide1 = function (element1) {
+    element1.style.display = "block";
+    closeicon.style.display = "block";
+    toplabel.style.display =
+      toplabel.style.display === "none" ? "block" : "none";
+    closeicon.addEventListener("click", function () {
+      element1.style.display = "none";
+      closeicon.style.display = "none";
+      toplabel.style.display = "block";
+    });
+  };
+  hide1(element1);
 });

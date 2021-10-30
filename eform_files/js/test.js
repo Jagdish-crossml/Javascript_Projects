@@ -21,117 +21,125 @@
 // }
 // rect.appendChild(toAdd)
 
+const span = document.getElementsByClassName("data");
+const element1 = document.getElementById("text_input_box");
+const element2 = document.getElementById("icon_div");
+// const change1 = document.getElementById('change_info_icon')
+const change1 = document.getElementsByClassName("rotateimg");
+const check = document.getElementsByClassName("bi-check-circle");
+const close = document.getElementsByClassName("bi-x-circle");
 
+const saveInfo = function () {
+  Array.prototype.forEach.call(check, function (ch) {
+    ch.addEventListener("click", function () {
+      console.log("click");
+      // debugger;
+      ch.parentElement.previousSibling.previousElementSibling.previousElementSibling.previousElementSibling.innerHTML =
+        ch.parentElement.previousSibling.previousElementSibling.value;
 
-
-
-const element2 = document.getElementById('icon_div')
-    // const span = document.getElementById('data_label')
-const span = document.getElementsByClassName('data')
-const element1 = document.getElementById('text_input_box')
-    // const change1 = document.getElementById('change_info_icon')
-const change1 = document.getElementsByClassName('rotateimg')
-const close = document.getElementById('check_icon');
-const showdata = document.getElementById('close_icon');
-
-const texttoinput = function() {
-    Array.prototype.forEach.call(change1, function(el) {
-        el.addEventListener('click', function() {
-            console.log('click')
-                // Array.prototype.forEach.call(span, function(sp) {
-                //         sp.style.display = 'none'
-                //         element1.value = sp.innerHTML
-                //     })
-            for (i = 0; i < span.length; i++) {
-                span.item[i].style.display = 'none'
-                element1.value = span[i].innerHTML
-            }
-
-            const hide1 = function(element1, element2) {
-                element1.classList.toggle('hide')
-                element2.classList.toggle('hide')
-                el.style.display = 'none'
-
-                element1.style = 'margin-top:30px;margin-left:47px'
-                element2.style = 'margin-top:-35px'
-            }
-            hide1(element1, element2)
-            close.addEventListener('click', function() {
-                const hideone = function(element1, element2) {
-                    Array.prototype.forEach.call(span, function(sp) {
-                        sp.innerHTML = element1.value
-                        sp.style.display = 'inline-block'
-                    })
-
-                    element1.classList.add('hide')
-                    element2.classList.add('hide')
-                    el.style.display = 'block'
-
-                }
-                hideone(element1, element2)
-            })
-            showdata.addEventListener('click', function() {
-                const hideone = function() {
-                    Array.prototype.forEach.call(span, function(sp) {
-                            sp.innerHTML = element1.value
-                            sp.style.display = 'inline-block'
-                        })
-                        // span.innerHTML = element1.value
-                    element1.classList.add('hide')
-                    element2.classList.add('hide')
-                    el.style.display = 'block'
-                        // span.style.display = 'inline-block'
-                }
-                hideone(element1, element2)
-            })
-        })
-    })
-
+      ch.parentElement.previousSibling.previousElementSibling.previousElementSibling.previousElementSibling.style.display =
+        "inline-block";
+      ch.parentElement.previousSibling.previousElementSibling.style.display =
+        "none";
+      ch.parentElement.style.display = "none";
+      ch.parentElement.previousSibling.previousElementSibling.previousElementSibling.style.display =
+        "block";
+    });
+  });
 };
 
+const close_input = function () {
+  Array.prototype.forEach.call(close, function (cl) {
+    cl.addEventListener("click", function () {
+      console.log("click");
 
-texttoinput()
+      cl.parentElement.previousSibling.previousElementSibling.previousElementSibling.previousElementSibling.style.display =
+        "inline-block";
+      cl.parentElement.previousSibling.previousElementSibling.style.display =
+        "none";
+      cl.parentElement.style.display = "none";
+      cl.parentElement.previousSibling.previousElementSibling.previousElementSibling.style.display =
+        "block";
+    });
+  });
+};
 
+const texttoinput = function () {
+  Array.prototype.forEach.call(change1, function (el) {
+    el.addEventListener("click", function () {
+      console.log("click");
+      el.parentElement.children[2].style.display = "none";
+
+      el.parentElement.children[4].value =
+        el.parentElement.children[2].innerHTML;
+
+      el.style.display = "none";
+
+      el.parentElement.children[4].style = "margin-top:30px;margin-left:47px";
+      el.parentElement.children[4].style.display = "block";
+
+      el.parentElement.children[5].style.display = "block";
+    });
+  });
+  saveInfo();
+  close_input();
+};
+texttoinput();
+
+// showdata.addEventListener("click", function () {
+//   const hideone = function () {
+//     Array.prototype.forEach.call(span, function (sp) {
+//       sp.innerHTML = element1.value;
+//       sp.style.display = "inline-block";
+//     });
+//     // span.innerHTML = element1.value
+//     element1.classList.add("hide");
+//     element2.classList.add("hide");
+//     el.style.display = "block";
+//     // span.style.display = 'inline-block'
+//   };
+//   hideone(element1, element2);
+// });
 
 //drawer function
-document.getElementById('top_arrow').addEventListener('click', function() {
-    const element = document.getElementById('main_container')
-    const hide = function(element) {
-        element.style.display = 'none';
-        document.getElementById('top_div').style.top = '581px';
+document.getElementById("top_div").addEventListener("click", function () {
+  const element = document.getElementById("main_container");
+  const hide = function (element) {
+    element.style.display = "none";
+    document.getElementById("top_div").style.top = "400px";
+    document.getElementById("top_div").innerHTML =
+      '<img id="eformimg" src="assets/eform.png">';
+  };
+  const show = function (element) {
+    element.style.display = "block";
+    document.getElementById("top_div").style.top = "0px";
+    document.getElementById("top_div").innerHTML =
+      '<i class="fa fa-chevron-down" id="top_arrow"></i>';
+  };
+  const toggle = function (element) {
+    if (window.getComputedStyle(element).display !== "none") {
+      hide(element);
+      return;
     }
-    const show = function(element) {
-        element.style.display = 'block';
-        document.getElementById('top_div').style.top = '173px';
-    }
-    const toggle = function(element) {
-        if (window.getComputedStyle(element).display !== 'none') {
-            hide(element);
-            return;
-        }
-        show(element);
-
-    }
-    toggle(element)
-
+    show(element);
+  };
+  toggle(element);
 });
-
 
 //select all elements
 function checkAll(ele) {
-    var checkboxes = document.getElementsByName('check');
-    if (ele.checked) {
-        for (var i = 0; i < checkboxes.length; i++) {
-            if (checkboxes[i].type == 'checkbox') {
-                checkboxes[i].checked = true;
-            }
-        }
-    } else {
-        for (var i = 0; i < checkboxes.length; i++) {
-
-            if (checkboxes[i].type == 'checkbox') {
-                checkboxes[i].checked = false;
-            }
-        }
+  var checkboxes = document.getElementsByName("check");
+  if (ele.checked) {
+    for (var i = 0; i < checkboxes.length; i++) {
+      if (checkboxes[i].type == "checkbox") {
+        checkboxes[i].checked = true;
+      }
     }
+  } else {
+    for (var i = 0; i < checkboxes.length; i++) {
+      if (checkboxes[i].type == "checkbox") {
+        checkboxes[i].checked = false;
+      }
+    }
+  }
 }

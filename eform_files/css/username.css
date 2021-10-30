@@ -1,33 +1,48 @@
+#main {
+    position: absolute;
+    width: 376px;
+    height: 435px;
+    right: 2%;
+    bottom: 2%;
+}
+
 #top_div {
     position: absolute;
     width: 52px;
     height: 24px;
-    left: 1260px;
-    top: 142px;
+    left: 300px;
     background: #FFFFFF;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
     border-radius: 8px 8px 0px 0px;
 }
 
 #top_arrow {
-    width: 15px;
-    height: 8.57px;
+    font-size: 14px;
     margin-left: 20px;
-    margin-top: 6px;
+    margin-top: 8px;
     color: #000000;
-    font-size: 18px;
-    font-weight: 1000;
+    font-weight: 300;
+}
+
+#top_arrow:hover {
+    color: #2F73EA;
 }
 
 #main_container {
     position: absolute;
     width: 376px;
     height: 403px;
-    right: 2%;
     bottom: 2%;
     background: #FFFFFF;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
     border-radius: 10px 10px 0px 0px;
+}
+
+#eformimg {
+    width: 42.81px;
+    height: 15px;
+    margin-left: 5px;
+    margin-top: 4px;
 }
 
 #inner_container {
@@ -52,15 +67,26 @@
     height: 26px;
     float: right;
     margin-top: 15px;
-    margin-right: 33px;
+    margin-right: 29px;
+    transition: all .3s ease-in-out;
+}
+
+#Current_user_icon:hover {
+    border-style: #2F73EA;
+    transform: scale(1.05);
 }
 
 #user_dropdown_arrow {
-    width: 8px;
-    height: 4.94px;
-    float: right;
-    margin-right: -40px;
-    margin-top: 26px;
+    position: absolute;
+    font-size: 10px;
+    margin-left: 327.58px;
+    margin-top: 21px;
+    color: #8190A9;
+    font-weight: 1000;
+}
+
+#user_dropdown_arrow:hover {
+    color: #2F73EA;
 }
 
 #top_label {
@@ -112,6 +138,7 @@
     left: 18px;
     right: 43px;
     top: 79px;
+    padding: 6.5px 8px;
     background: #FFFFFF;
     border: 1px solid #2F73EA;
     box-sizing: border-box;
@@ -121,6 +148,24 @@
 
 input[type="text"]::placeholder {
     padding-left: 10px;
+    font-family: Manrope;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 19px;
+    color: #2C2738;
+}
+
+input:focus {
+    outline: none !important;
+    border-color: #719ECE;
+    box-shadow: 0 0 10px #719ECE;
+}
+
+textarea:focus {
+    outline: none !important;
+    border-color: #719ECE;
+    box-shadow: 0 0 10px #719ECE;
 }
 
 #next_btn {
