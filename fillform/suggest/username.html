@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link href='https://fonts.googleapis.com/css?family=Manrope' rel='stylesheet'>
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/username.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
+    <title>
+        Username page
+    </title>
+</head>
+
+<body>
+    <div id="main">
+        <div id="top_div"><i class="fa fa-chevron-down" id="top_arrow"></i></div>
+        <div id="main_container">
+            <img id="eform_logo" alt="e-form-logo" src="assets/logo.svg">
+            <i class="bi bi-chevron-down" id="user_dropdown_arrow"></i>
+            <img id="Current_user_icon" alt="Current user avatar" src="assets/Oval.png">
+            <label id="top_label">Login to eForm</label>
+            <div id="inner_container">
+                <label id="login_label">To Login enter your credentials
+                        below</label>
+                <form action="./suggestion.html" method="get" id="username_form">
+                    <label id="username_label">Username</label>
+                    <input type="text" id="username_input" class="username" placeholder="johndoe2876">
+                    <button type="submit" id="next_btn" class="btn
+                            btn-primary">Next</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.getElementById('top_div').addEventListener('click', function() {
+            const element = document.getElementById('main_container')
+            const hide = function(element) {
+                element.style.display = 'none';
+                document.getElementById('top_div').style.top = '400px';
+                document.getElementById('top_div').innerHTML = '<img id="eformimg" src="assets/eform.png">'
+            }
+            const show = function(element) {
+                element.style.display = 'block';
+                document.getElementById('top_div').style.top = '0px';
+                document.getElementById('top_div').innerHTML = '<i class="fa fa-chevron-down" id="top_arrow"></i>'
+            }
+            const toggle = function(element) {
+                if (window.getComputedStyle(element).display !== 'none') {
+                    hide(element);
+                    return;
+                }
+                show(element);
+            }
+            toggle(element)
+        });
+    </script>
+</body>
+
+</html>

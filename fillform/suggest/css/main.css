@@ -1,0 +1,79 @@
+#top_div {
+    position: absolute;
+    width: 52px;
+    height: 24px;
+    left: 1260px;
+    top: 173px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
+    border-radius: 8px 8px 0px 0px;
+}
+
+#top_arrow {
+    width: 15px;
+    height: 8.57px;
+    margin-left: 20px;
+    margin-top: 6px;
+    color: #000000;
+    font-size: 18px;
+    font-weight: 1000;
+}
+
+#main_container {
+    position: absolute;
+    width: 376px;
+    height: 403px;
+    right: 2%;
+    bottom: 2%;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
+    border-radius: 10px 10px 0px 0px;
+}
+
+#inner_container {
+    position: absolute;
+    width: 376px;
+    height: 346px;
+    margin-top: 55px;
+    background: #F5F5F5;
+    border-radius: 0px;
+}
+
+#eform_logo {
+    width: 15px;
+    height: 14.99px;
+    float: left;
+    margin-left: 11px;
+    margin-top: 21px;
+}
+
+#Current_user_icon {
+    width: 26px;
+    height: 26px;
+    float: right;
+    margin-top: 15px;
+    margin-right: 33px;
+}
+
+#user_dropdown_arrow {
+    width: 8px;
+    height: 4.94px;
+    float: right;
+    margin-right: -40px;
+    margin-top: 26px;
+}
+
+#top_label {
+    position: absolute;
+    width: 232px;
+    height: 25px;
+    left: 35px;
+    top: 16px;
+    font-family: Manrope;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 25px;
+    /* identical to box height */
+    color: #16243C;
+}

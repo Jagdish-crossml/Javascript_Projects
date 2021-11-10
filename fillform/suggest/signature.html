@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+    <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Manrope' rel='stylesheet'>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/signature.css">
+</head>
+
+<body>
+
+    <div id="top_div"><i class="fa fa-angle-down" id="top_arrow"></i></div>
+    <div id="main_container">
+        <i class="bi bi-search" id="search_img"></i>
+        <div id="avatar_modal" class="usermodal">
+
+            <div class="usermodal-content">
+                <label id="options">Change Password</label>
+                <label id="options">Logout</label>
+
+            </div>
+
+        </div>
+        <label id="top_label">Please sign the application</label>
+        <div id="inner_container">
+            <div id="search_div">
+
+                <label id="suggest_label">Suggestions</label>
+                <div id="avatar_div">
+                    <img src="assets/user1.svg" id="avatar">
+                    <span class="position-absolute mt-4 mx-0 translate-middle p-1 bg-success border border-light rounded-circle"></span>
+                    <img src="assets/user2.svg" id="avatar">
+                    <img src="assets/user3.svg" id="avatar">
+                    <img src="assets/user4.svg" id="avatar">
+                    <img src="assets/user5.svg" id="avatar">
+                    <img src="assets/user6.svg" id="avatar" class="icon">
+                </div>
+                <div id="iconModal" class="iconmodal">
+                    <div class="iconmodal-content">
+
+                        <div id="icondiv">
+                            <img src="assets/user5.svg" id="moreicon"><label id="userlabel">Brooklyn Simmons</label>
+                        </div>
+                        <div id="icondiv">
+                            <img src="assets/user2.svg" id="moreicon"><label id="userlabel">Leslie Alexander</label>
+                        </div>
+                        <a id="network">Show More From Network<i id="info" class="bi bi-info-circle"></i></a>
+                    </div>
+                </div>
+
+                <div id="ismyModal" class="ismodal">
+                    <div class="ismodal-content">
+                    </div>
+                </div>
+                <div id="search_reslt_modal" class="thismodal">
+                    <div class="thismodal-content">
+                        <span class="closeone">&times;</span>
+                        <div id="uprdiv"><label id="srchreslt">Search results..</label>
+                            <div id="icon_btn_cont">
+                                <img src="assets/user1.svg" id="searched_user_icon">
+                                <button id="userbtn">In this user<span><i id="close" class="bi bi-x-lg"></i></span></button>
+
+                            </div>
+
+                        </div>
+                        <div id="reslt"><label id="select"></label><i class="far fa-copy" id="copy_img"></i></div>
+                    </div>
+                </div>
+                <input type="text" id="textInput" />
+                <span class="hide" id="close_srch_bar">&times;</span>
+            </div>
+
+            <div id="suggestion_div">
+                <div id="json_data_div">
+                    <p id="text">Uploaded Signature</p>
+                    <img alt="signature_img" src="assets/sign1.png" id="signature_img">
+                    <div id="icon_div">
+                        <i class="far fa-copy" id="copy_icon"></i>
+                        <i class="fas fa-pause" id="pause_icon"></i>
+                        <i class="bi bi-pin-angle" id="pin_icon"></i>
+                    </div>
+                    <div id="rating_div">
+                        <img id="rating_img" src="assets/rating.png">
+                        <label id="rate_number"> 8.5 </label>
+                    </div>
+                </div>
+                <div id="json_data_div">
+                    <p id="text">Typed Signature</p>
+                    <p id="text2">Esther Howard</p>
+                    <div id="icon_div">
+                        <i class="far fa-copy" id="copy_icon"></i>
+                        <i class="fas fa-pause" id="pause_icon"></i>
+                        <i class="bi bi-pin-angle" id="pin_icon"></i>
+                    </div>
+                    <div id="rating_div">
+                        <img id="rating_img" src="assets/rating.png">
+                        <label id="rate_number">6.2</label>
+                    </div>
+                </div>
+                <div id="json_data_div">
+                    <p id="text">Drawn Signature</p>
+                    <!-- <img alt="drawn_signature_img" src="assets/sign2.png" id="drawn_signature_img"> -->
+                    <div id="drawn_signature_img"></div>
+                    <div id="icon_div">
+                        <i class="far fa-copy" id="copy_icon"></i>
+                        <i class="fas fa-pause" id="pause_icon"></i>
+                        <i class="bi bi-pin-angle" id="pin_icon"></i>
+                    </div>
+                    <div id="rating_div">
+                        <img id="rating_img" src="assets/rating.png">
+                        <label id="rate_number">2.3</label>
+                    </div>
+                </div>
+
+                <button onclick="topFunction()" id="scroll_to_top_btn" class="hide" title="Go to top"><i class="fas fa-arrow-up"></i></button>
+            </div>
+            <button id="load_btn" type="button" class="btn btn-primary">Load more</button>
+        </div>
+        <div id="lower_div">
+            <img id="suggest_img" alt="e-form" src="assets/suggestion.svg">
+
+            <label id="suggestion_label"><a href="./wepage9.html"> Suggestions</a></label>
+            <img id="professional_img" alt="e-form" src="assets/professional.svg">
+            <!-- <i class="bi bi-people" id="proimg"></i> -->
+            <label id="professional_label">professional Support</label>
+            <img id="inbox_img" alt="e-form" src="assets/inbox.svg">
+            <!-- <i class="bi bi-inbox" id="inimg"></i> -->
+            <label id="inbox_label">Inbox</label>
+        </div>
+    </div>
+    <script src="js/signature.js">
+    </script>
+    <script>
+        $('#load_btn').on('click', function() {
+            $('.hide').removeClass('hide');
+        })
+    </script>
+</body>
+
+</html>

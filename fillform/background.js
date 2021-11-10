@@ -10,27 +10,28 @@
 //     name: "Jagdish"
 //   });
 // });
-document.getElementById('submitbtn').addEventListener('click', function () {
+document.getElementById("submitbtn").addEventListener("click", function () {
   // chrome.tabs.executeScript({file:'./content.js'});
 
-  var username = document.getElementById('username').value;
-
-  chrome.storage.local.get('data', function (result) {
-    const api = JSON.stringify(result.data[0].fields.fname);
-    // executes script if entered username matches with stored username
-    if (username == JSON.parse(api)) {
+  var username = document.getElementById("username").value;
+  const func = function () {
+    chrome.storage.local.get("data", function (result) {
+      // const api = JSON.stringify(result.data[0].fields.fname);
+      // executes script if entered username matches with stored username
+      // if (username == JSON.parse(api)) {
+      debugger;
       chrome.tabs.executeScript({
-
-        file: './content.js'
-      })
-        .then(() => {
-          console.log("INJECTED THE FOREGROUND SCRIPT.");
-        })
-        .catch(err => console.log(err));
-    }
-  })
+        file: "./content.js",
+      });
+      // .then(() => {
+      // console.log("INJECTED THE FOREGROUND SCRIPT.");
+      // })
+      // .catch((err) => console.log(err));
+      // }
+    });
+  };
+  func();
 });
-
 
 // chrome.runtime.onMessage.addListener(function (response, sender, sendResponse) {
 //   // alert(JSON.stringify(response.data[0].fields.fname)),

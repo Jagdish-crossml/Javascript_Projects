@@ -13,6 +13,8 @@
     position: absolute;
     border: solid 1px;
     border-color: rgb(121, 120, 120);
+    /* margin-top: 250px;
+    margin-left: 1000px; */
 
 }
 .secondiv{
@@ -30,7 +32,7 @@
     border-radius: 10%;
     /* padding: 20px; */
 }
-.loginbtn{
+.submitbtn{
       margin-left:120px ;
 }
 .email{
@@ -56,7 +58,7 @@
   </head>
   <body>
     <div class="firstdiv">
-      <div class="secondiv"><h4>Login to eform</h4></div>
+      <div class="secondiv"><h4>Enter your address</h4></div>
       <div class="thirddiv">
         <label style="margin-left: 30px;">To login enter your credential
           below</label><br><br>
@@ -69,13 +71,10 @@
         <label>New user</label><a href="#">Register Now!</a><a style="float:
           right;" href="#" id="forgot">Forgot Password? </a><br><br>
         <input type="checkbox"><label>Keep me logged in for 14 days</label>
-        <button type="button" id="loginbtn" class="loginbtn">Login</button>
+        <button type="submit" id="submitbtn" class="submitbtn">Login</button>
       </div>
     </div>
     <script>
-   document.getElementById('forgot').addEventListener('click',function(){
-            $('#first').load('http://127.0.0.1:5500/password.html')
-        })
         </script>
   </body>
 </html>

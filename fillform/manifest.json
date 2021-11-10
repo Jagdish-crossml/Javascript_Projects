@@ -2,7 +2,7 @@
     "manifest_version": 2,
     "name": "fill Form extension",
     "description": "automatically fill forms of a user",
-    "homepage_url": "http://127.0.0.1:5501/ext_form.html",
+    "homepage_url": "http://127.0.0.1:5503/ext_form.html",
     "version": "1.0",
     "browser_action": {
         "default_title": "Click here to load form data!",
@@ -14,12 +14,16 @@
         ]
     },
     "content_scripts": [
-        {   "matches":["http://127.0.0.1:5501/ext_form.html"],
-            "js": ["jquery-3.6.0.js"]
+        {   "matches":["http://127.0.0.1:5503/ext_form.html","http://127.0.0.1:5503/testing_form.html"],
+            "js": ["jquery-3.6.0.js","content.js"],
+            "css":["suggest/css/login.css","suggest/css/wepage9.css"]
         }
     ],
     "web_accessible_resources": [
-        "index.html"
+        "index.html",
+        "suggest/suggestion.html",
+        "suggest/wepage9.html"
+       
     ],
     "permissions": [
         "storage",

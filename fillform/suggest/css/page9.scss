@@ -1,0 +1,50 @@
+@mixin dimension($width, $height, $right, $left, $bottom, $top) {
+    width: $width;
+    height: $height;
+    right: $right;
+    left: $left;
+    bottom: $bottom;
+    top: $top;
+}
+
+@mixin margin_prop($top, $left, $bottom, $right) {
+    margin-top: $top;
+    margin-left: $left;
+    margin-bottom: $bottom;
+    margin-right: $right;
+}
+
+@mixin padding_prop($top, $left, $bottom, $right) {
+    padding-top: $top;
+    padding-left: $left;
+    padding-bottom: $bottom;
+    padding-right: $right;
+}
+
+@mixin font_prop($size, $weight, $color, $height) {
+    font-size: $size;
+    font-weight: $weight;
+    color: $color;
+    line-height: $height;
+}
+
+#main {
+    position: absolute;
+    @include dimension(376px, 435px, 2%, unset, 2%, unset);
+}
+
+#top_div {
+    position: absolute;
+    @include dimension(52px, 24px, 300px, unset, unset, unset);
+    background: #FFFFFF;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
+    border-radius: 8px 8px 0px 0px;
+}
+
+#top_arrow {
+    @include dimension(15px, 8.57px, unset, unset, unset, unset);
+    @include margin_prop(6px, 20px, unset, unset);
+    color: #000000;
+    font-size: 18px;
+    font-weight: 1000;
+}

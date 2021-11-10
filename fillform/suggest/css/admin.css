@@ -1,0 +1,157 @@
+#topdiv {
+    position: absolute;
+    width: 52px;
+    height: 24px;
+    left: 1260px;
+    top: 142px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
+    border-radius: 8px 8px 0px 0px;
+}
+
+#arrow {
+    width: 15px;
+    height: 8.57px;
+    margin-left: 20px;
+    margin-top: 6px;
+    color: #000000;
+    font-size: 18px;
+    font-weight: 1000;
+}
+
+#arrow:hover {
+    color: #2F73EA;
+}
+
+#rectangle1 {
+    position: absolute;
+    width: 1129px;
+    height: 921px;
+    right: 2%;
+    bottom: 2%;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
+    border-radius: 10px 10px 0px 0px;
+}
+
+#rectangle2 {
+    position: absolute;
+    width: 376px;
+    height: 284px;
+    margin-top: 55px;
+    background: #F5F5F5;
+    border-radius: 0px;
+    /* overflow-x: hidden;
+    overflow-y: auto; */
+}
+
+#toplabel {
+    position: absolute;
+    width: 232px;
+    height: 25px;
+    left: 35px;
+    top: 16px;
+    font-family: Manrope;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 25px;
+    color: #16243C;
+}
+
+#eimg {
+    width: 15px;
+    height: 14.99px;
+    float: left;
+    margin-left: 11px;
+    margin-top: 21px;
+}
+
+#sdiv {
+    width: 376px;
+    height: 35px;
+}
+
+#srchimg {
+    width: 13.5px;
+    height: 13.5px;
+    margin-left: 9.8px;
+    margin-top: 18.8px;
+    color: #96A0B5;
+    transition: all .3s ease-in-out;
+    /* border: 0.2px solid #96A0B5; */
+}
+
+#srchimg:hover {
+    color: #2F73EA;
+    transform: scale(1.1);
+}
+
+#two {
+    float: right;
+    margin-right: 8px;
+    margin-top: 13px;
+    width: 88px;
+    height: 25.06px;
+}
+
+#icon {
+    width: 26px;
+    height: 26px;
+    margin-left: -16px;
+    border-radius: 50%;
+    transition: all .3s ease-in-out;
+}
+
+#icon:hover {
+    background-color: #2F73EA;
+    transform: scale(1.1);
+}
+
+#sugimg {
+    width: 17.08px;
+    height: 18px;
+    float: left;
+    margin-left: 47px;
+    margin-top: 12px;
+    color: #535E76;
+    transition: all .2s ease-in-out;
+}
+
+#sugimg:hover {
+    color: #2F73EA;
+    transform: scale(1.05);
+}
+
+#proimg {
+    width: 18px;
+    height: 18px;
+    float: left;
+    margin-left: 136.92px;
+    margin-top: 12px;
+}
+
+#inimg {
+    width: 18px;
+    height: 18px;
+    float: right;
+    /* margin-left: 333px; */
+    margin-right: 25px;
+    margin-top: 12px;
+}
+
+#uimg {
+    width: 26px;
+    height: 26px;
+    float: right;
+    margin-top: 15px;
+    margin-right: 33px;
+}
+
+#dimg {
+    width: 8px;
+    height: 4.94px;
+    float: right;
+    margin-right: -40px;
+    margin-top: 26px;
+}
