@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <link rel="stylesheet"
+            href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+            integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+            crossorigin="anonymous" />
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+            crossorigin="anonymous">
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"></script>
+        <link href='https://fonts.googleapis.com/css?family=Bebas Neue'
+            rel='stylesheet'>
+        <link rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+        <link
+            href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css"
+            rel="stylesheet">
+        <link href='https://fonts.googleapis.com/css?family=Manrope'
+            rel='stylesheet'>
+        <script
+            src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+
+    <body>
+        <div id="main">
+            <div id="top_div"><i class="fa fa-chevron-down" id="top_arrow"></i></div>
+            <div id="main_container">
+                <i class="bi bi-search" id="search_img"></i>
+                <input type="text" id="textInput" /><span id="closeicon">&times;</span>
+                <label id="top_label">List of Service Providers</label>
+                <div id="suggestion_div">
+                    <label id="suggest_label">Setup an appointment</label>
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle"
+                            type="button" id="dropdownMenuButton"
+                            data-bs-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="false">
+                            <i class="bi bi-chevron-up" id="up"
+                                onclick="change(this); return false;"></i>
+                            <i class="bi bi-chevron-down" id="down"
+                                onclick="change(this); return false;"></i>
+                            Sort by
+                            <i class="bi bi-chevron-down" id="arrow1"></i></button>
+                        <div class="dropdown-menu" id="dropdown_menu"
+                            aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="#">None</a>
+                            <a class="dropdown-item" href="#">Country</a>
+                            <a class="dropdown-item" href="#">Pincode</a>
+                            <a class="dropdown-item" href="#">Availability</a>
+                            <a class="dropdown-item" href="#">Ratings</a>
+                            <a class="dropdown-item" href="#">Price</a>
+                        </div>
+                    </div>
+                </div>
+                <div id="inner_container">
+                    <div id="container">
+                        <div id="img_container1">
+                            <div id="avatar_status_div">
+                                <img src="assets/pro1.svg" id="icon">
+                                <span class="position-absolute translate-middle
+                                    p-1 bg-success border border-light
+                                    rounded-circle" id="online_status"></span>
+                            </div>
+                            <div id="provider_detail_div">
+                                <label id="text_label">Sridhar Raghu</label>
+                                <p id="address">2972 Westheimer Rd. Santa Ana,
+                                    Illinois 85486 </p>
+                                <div id="rating_div">
+                                    <div id="rating_bar">
+                                        <span class="fas fa-star"></span>
+                                        <span class="fas fa-star"></span>
+                                        <span class="fas fa-star"></span>
+                                        <span class="fas fa-star"></span>
+                                        <span class="fas fa-star"></span>
+                                    </div>
+                                    <div><span id="rate_number"> 8.5 </span></div>
+                                </div>
+                            </div>
+
+                            <div id="calendar_div">
+                                <i class="far fa-calendar-alt" id="calendar"></i><label
+                                    id="appointment_label"><a href="./cal.html"
+                                        id="calendar_link">Appointment</a></label>
+                            </div>
+                            <div id="price_tag_div">
+                                <label id="amount">$35</label>
+                                <label id="time">per hour</label>
+                            </div>
+                        </div>
+                        <div id="cont2">
+                            <div id="avatar_status_div">
+                                <img src="assets/pro2.svg" id="icon">
+                                <span class="position-absolute translate-middle
+                                    p-1 bg-primary border border-light
+                                    rounded-circle" id="online_status"
+                                    data-bs-toggle="tooltip"
+                                    data-bs-placement="right" title="Limited
+                                    availability today"></span>
+                            </div>
+                            <div id="provider_detail_div">
+                                <label id="text_label">Albert Flores</label>
+                                <p id="address">8502 Preston Rd. Inglewood,
+                                    Maine 98380</p>
+                                <div id="rating_div">
+                                    <div id="rating_bar">
+                                        <span class="fas fa-star"></span>
+                                        <span class="fas fa-star"></span>
+                                        <span class="fas fa-star"></span>
+                                        <span class="fas fa-star"></span>
+                                        <span class="fas fa-star"></span>
+                                    </div>
+                                    <div><span id="rate_number"> 8.5 </span></div>
+                                </div>
+                            </div>
+                            <div id="calendar_div">
+                                <i class="far fa-calendar-alt" id="calendar"></i><label
+                                    id="appointment_label"><a href="./cal.html"
+                                        id="calendar_link">Appointment</a></label>
+                            </div>
+                            <div id="price_tag_div">
+                                <label id="amount">$40</label>
+                                <label id="time">per hour</label>
+                            </div>
+                        </div>
+                        <div id="cont3">
+                            <div id="avatar_status_div">
+                                <img src="assets/pro3.svg" id="icon">
+                                <span class="position-absolute translate-middle
+                                    p-1 bg-success border border-light
+                                    rounded-circle" id="online_status"
+                                    data-bs-toggle="tooltip"
+                                    data-bs-placement="right" title="Available
+                                    today"></span>
+                            </div>
+                            <div id="provider_detail_div">
+                                <label id="text_label">Jacob Jones</label>
+                                <p id="address">2715 Ash Dr. San Jose, South
+                                    Dakota 83475</p>
+                                <div id="rating_div">
+                                    <div id="rating_bar">
+                                        <span class="fas fa-star"></span>
+                                        <span class="fas fa-star"></span>
+                                        <span class="fas fa-star"></span>
+                                        <span class="fas fa-star"></span>
+                                        <span class="fas fa-star"></span>
+                                    </div>
+                                    <div><span id="rate_number"> 8.5 </span></div>
+                                </div>
+                            </div>
+
+                            <div id="calendar_div">
+                                <i class="far fa-calendar-alt" id="calendar"></i><label
+                                    id="appointment_label"><a href="./cal.html"
+                                        id="calendar_link">Appointment</a></label>
+                            </div>
+                            <div id="price_tag_div">
+                                <label id="amount">$25</label>
+                                <label id="time">per hour</label>
+                            </div>
+                        </div>
+                        <div id="cont4">
+                            <div id="avatar_status_div">
+                                <img src="assets/pro4.svg" id="icon">
+                                <span class="position-absolute translate-middle
+                                    p-1 bg-danger border border-light
+                                    rounded-circle" id="online_status"
+                                    data-bs-toggle="tooltip"
+                                    data-bs-placement="right" title="Not
+                                    available today"></span>
+                            </div>
+                            <div id="provider_detail_div">
+                                <label id="text_label">Esther Howard</label>
+                                <p id="address">3891 Ranchview Dr. Richardson,
+                                    CA 62639</p>
+                                <div id="rating_div">
+                                    <div id="rating_bar">
+                                        <span class="fas fa-star"></span>
+                                        <span class="fas fa-star"></span>
+                                        <span class="fas fa-star"></span>
+                                        <span class="fas fa-star"></span>
+                                        <span class="fas fa-star"></span>
+                                    </div>
+                                    <div><span id="rate_number"> 8.5 </span></div>
+                                </div>
+                            </div>
+
+                            <div id="calendar_div">
+                                <i class="far fa-calendar-alt" id="calendar"></i><label
+                                    id="appointment_label"><a href="./cal.html"
+                                        id="calendar_link">Appointment</a></label>
+                            </div>
+                            <div id="price_tag_div">
+                                <label id="amount">$28</label>
+                                <label id="time">per hour</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="lower_div" class="container mx-0">
+                    <div class="row">
+                        <div class="col-sm align-self-start mx-3">
+                            <div id="sgst_div">
+                                <i class="bi bi-chat-square" id="suggest_icon"><img
+                                        src="assets/sug_star.svg" alt="star"
+                                        id="star_img"></i>
+                                <label id="suggestion_label"><a
+                                        href="./wepage9.html"
+                                        id="link_to_suggestions">Suggestions</a></label>
+                            </div>
+                        </div>
+                        <div class="col-sm align-self-center mx-2 active">
+                            <div id="pro_div">
+                                <i class="bi bi-people" id="proimg"></i>
+                                <label id="professional_label"><a
+                                        href="./appointment.html"
+                                        id="link_to_suggestions">professional
+                                        Support</a></label>
+                            </div>
+                        </div>
+                        <div class="col-sm align-self-end">
+                            <div id="inbox_div">
+                                <i class="bi bi-inbox" id="inimg"></i>
+                                <label id="inbox_label">Inbox</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="js/appointment.js">
+    </script>
+    </body>
+
+</html>

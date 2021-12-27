@@ -1,4 +1,4 @@
-export function getElementByXpath(path) {
+function getElementByXpath(path) {
   return document.evaluate(
     path,
     document,
@@ -8,7 +8,7 @@ export function getElementByXpath(path) {
   ).singleNodeValue;
 }
 var ele;
-export async function process_forms() {
+async function process_forms() {
   const response = await fetch("http://localhost:8011/fields");
   const data = await response.json();
   // debugger;

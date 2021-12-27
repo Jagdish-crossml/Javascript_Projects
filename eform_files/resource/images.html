@@ -1,0 +1,990 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="./bootstrap-5.1.3-dist/css/bootstrap.css">
+        <link
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+            rel="stylesheet">
+        <link rel="stylesheet" type="text/css"
+            href="./bootstrap-5.1.3-dist/css/custom.css">
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+            crossorigin="anonymous">
+        <link href='https://fonts.googleapis.com/css?family=Manrope'
+            rel='stylesheet'>
+        <link rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap-avatar@latest/dist/avatar.min.css"
+            rel="stylesheet">
+        <script
+            src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="login_page.css">
+        <link
+            href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined"
+            rel="stylesheet">
+    </head>
+    <style>
+        
+        
+    </style>
+    <body onload="drawer();text_box();modalfunc();copy_url_modal();">
+
+        <div class="container-sm gx-0">
+            <div class="row row-top gx-0" id="top_row">
+                <div class="col-sm-1 box_shadow col-sm-1-arrow gx-0 bg-white
+                    offset-sm-9" id="top_div">
+                    <svg class="arrow" width="17" height="11" viewBox="0 0 17
+                        11"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3.31963 0.823223L3.19222 0.69581L3.03105
+                            0.776393L0.888197 1.84782L0.577959 2.00294L0.823223
+                            2.24821L8.32322 9.74821L8.5 9.92498L8.67678
+                            9.74821L16.1768 2.24821L16.422 2.00294L16.1118
+                            1.84782L13.9689 0.776393L13.8078 0.69581L13.6804
+                            0.823223L8.5 6.00359L3.31963 0.823223Z" fill="black"
+                            stroke="black" stroke-width="0.5" />
+                        </svg>
+                    </div>
+                </div>
+                <div class="row row-secondary box_shadow bg-white
+                    gx-0"
+                    id="main_container">
+                    <div class="col-sm-12 col-sm-12-column">
+                        <div class="row row-heading gx-0">
+                            <div class="input-group position-absolute">
+                                <input type="text"
+                                    class="form-control mx-1 my-1 shadow-none
+                                    text_box
+                                    p-0"
+                                    id="input_grp"
+                                    />
+                                <span><svg class="close_text_box my-4"
+                                        id="closeicon"
+                                        width="14"
+                                        height="14"
+                                        viewBox="0 0 14 14" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M8.40994 7L12.7099 2.71C12.8982
+                                            2.5217
+                                            13.004 2.2663 13.004 2C13.004 1.7337
+                                            12.8982
+                                            1.4783 12.7099 1.29C12.5216 1.1017
+                                            12.2662
+                                            0.995909 11.9999 0.995909C11.7336
+                                            0.995909
+                                            11.4782 1.1017 11.2899 1.29L6.99994
+                                            5.59L2.70994 1.29C2.52164 1.1017
+                                            2.26624
+                                            0.995909 1.99994 0.995909C1.73364
+                                            0.995909
+                                            1.47824 1.1017 1.28994 1.29C1.10164
+                                            1.4783
+                                            0.995847 1.7337 0.995847 2C0.995847
+                                            2.2663
+                                            1.10164 2.5217 1.28994 2.71L5.58994
+                                            7L1.28994 11.29C1.19621 11.383
+                                            1.12182
+                                            11.4936 1.07105 11.6154C1.02028
+                                            11.7373
+                                            0.994141 11.868 0.994141 12C0.994141
+                                            12.132
+                                            1.02028 12.2627 1.07105
+                                            12.3846C1.12182
+                                            12.5064 1.19621 12.617 1.28994
+                                            12.71C1.3829
+                                            12.8037 1.4935 12.8781 1.61536
+                                            12.9289C1.73722 12.9797 1.86793
+                                            13.0058
+                                            1.99994 13.0058C2.13195 13.0058
+                                            2.26266
+                                            12.9797 2.38452 12.9289C2.50638
+                                            12.8781
+                                            2.61698 12.8037 2.70994
+                                            12.71L6.99994
+                                            8.41L11.2899 12.71C11.3829 12.8037
+                                            11.4935
+                                            12.8781 11.6154 12.9289C11.7372
+                                            12.9797
+                                            11.8679 13.0058 11.9999
+                                            13.0058C12.132
+                                            13.0058 12.2627 12.9797 12.3845
+                                            12.9289C12.5064 12.8781 12.617
+                                            12.8037
+                                            12.7099 12.71C12.8037 12.617 12.8781
+                                            12.5064
+                                            12.9288 12.3846C12.9796 12.2627
+                                            13.0057
+                                            12.132 13.0057 12C13.0057 11.868
+                                            12.9796
+                                            11.7373 12.9288 11.6154C12.8781
+                                            11.4936
+                                            12.8037 11.383 12.7099 11.29L8.40994
+                                            7Z"
+                                            fill="#96A0B5" />
+                                        </svg></span>
+                                </div>
+
+                                <div class="col-md-6 col-sm-8 col-sm-6-secondary
+                                    gx-0">
+                                    <div class="row gx-0">
+
+                                        <div class="col-sm-12">
+                                            <p class="title
+                                                title-login
+                                                my-3 mx-3" id="label">Documents</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-sm-4
+                                    col-sm-6-secondary
+                                    gx-0">
+                                    <div class="col-sm-2 offset-md-9 my-3"><i
+                                            class="bi
+                                            bi-search
+                                            mx-2"
+                                            id="search_img"></i></div>
+                                </div>
+                            </div>
+                            <div class="col-sm-12 col-sm-12-main
+                                suggestions_main
+                                gx-0">
+                                <div class="row gx-0">
+                                    <div class="col-sm-6">
+                                        <div class="row my-2">
+
+                                            <div class="col-sm-12"><label
+                                                    class="title mx-3">Suggestions</label></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                    </div>
+                                </div>
+                                <div class="row row-main-cont gx-0">
+                                    <div class="row gx-0
+                                        img_main_container">
+                                        <div class="col-sm-6
+                                            img_container">
+                                            <img
+                                                src="assets/img1.png"
+                                                id="image"
+                                                class="opac">
+                                            <div class="row gx-0
+                                                row_images_title"><label
+                                                    class="title
+                                                    images_title text-white"
+                                                    id="text_label">Passport</label></div>
+                                            <div class="row gx-0
+                                                row_img_rating"><div
+                                                    id="rating_div"
+                                                    class="row
+                                                    rating_div
+                                                    images_rating_div">
+                                                    <div
+                                                        class="col-sm-10
+                                                        rating_bar"
+                                                        id="rating_bar">
+                                                        <span class="bi
+                                                            bi-circle"></span>
+                                                        <span class="bi
+                                                            bi-circle"></span>
+                                                        <span class="bi
+                                                            bi-circle"></span>
+                                                        <span class="bi
+                                                            bi-circle"></span>
+                                                        <span class="bi
+                                                            bi-circle"></span>
+                                                    </div>
+                                                    <div class="col-sm-2
+                                                        rate_number font_size_12
+                                                        title"><span
+                                                            class="suggest_rate_num
+                                                            text-white">
+                                                            8.5 </span></div>
+                                                </div></div>
+                                        </div>
+                                        <div class="col-sm-6
+                                            img_container">
+                                            <img
+                                                src="assets/img2.png"
+                                                id="image"
+                                                class="opac">
+                                            <div class="row gx-0
+                                                row_images_title"><label
+                                                    class="title
+                                                    images_title text-white"
+                                                    id="text_label">Social
+                                                    Security Number</label></div>
+                                            <div class="row gx-0
+                                                row_img_rating"><div
+                                                    id="rating_div"
+                                                    class="row
+                                                    rating_div
+                                                    images_rating_div">
+                                                    <div
+                                                        class="col-sm-10
+                                                        rating_bar"
+                                                        id="rating_bar">
+                                                        <span class="bi
+                                                            bi-circle"></span>
+                                                        <span class="bi
+                                                            bi-circle"></span>
+                                                        <span class="bi
+                                                            bi-circle"></span>
+                                                        <span class="bi
+                                                            bi-circle"></span>
+                                                        <span class="bi
+                                                            bi-circle"></span>
+                                                    </div>
+                                                    <div class="col-sm-2
+                                                        rate_number font_size_12
+                                                        title"><span
+                                                            class="suggest_rate_num
+                                                            text-white">
+                                                            8.5 </span></div>
+                                                </div></div>
+                                        </div>
+                                        <div class="col-sm-6
+                                            img_container">
+                                            <img
+                                                src="assets/img3.png"
+                                                id="image"
+                                                class="opac">
+                                            <div class="row gx-0
+                                                row_images_title"><label
+                                                    class="title
+                                                    images_title text-white"
+                                                    id="text_label">Driver’s
+                                                    License</label></div>
+                                            <div class="row gx-0
+                                                row_img_rating"><div
+                                                    id="rating_div"
+                                                    class="row
+                                                    rating_div
+                                                    images_rating_div">
+                                                    <div
+                                                        class="col-sm-10
+                                                        rating_bar"
+                                                        id="rating_bar">
+                                                        <span class="bi
+                                                            bi-circle"></span>
+                                                        <span class="bi
+                                                            bi-circle"></span>
+                                                        <span class="bi
+                                                            bi-circle"></span>
+                                                        <span class="bi
+                                                            bi-circle"></span>
+                                                        <span class="bi
+                                                            bi-circle"></span>
+                                                    </div>
+                                                    <div class="col-sm-2
+                                                        rate_number font_size_12
+                                                        title"><span
+                                                            class="suggest_rate_num
+                                                            text-white">
+                                                            8.5 </span></div>
+                                                </div></div>
+                                        </div>
+                                        <div class="col-sm-6
+                                            img_container">
+                                            <img
+                                                src="assets/img4.png"
+                                                id="image"
+                                                class="opac">
+                                            <div class="row gx-0
+                                                row_images_title"><label
+                                                    class="title
+                                                    images_title text-white"
+                                                    id="text_label">State
+                                                    Bank of India -
+                                                    Bank Pass...</label></div>
+                                            <div class="row gx-0
+                                                row_img_rating"><div
+                                                    id="rating_div"
+                                                    class="row
+                                                    rating_div
+                                                    images_rating_div">
+                                                    <div
+                                                        class="col-sm-10
+                                                        rating_bar"
+                                                        id="rating_bar">
+                                                        <span class="bi
+                                                            bi-circle"></span>
+                                                        <span class="bi
+                                                            bi-circle"></span>
+                                                        <span class="bi
+                                                            bi-circle"></span>
+                                                        <span class="bi
+                                                            bi-circle"></span>
+                                                        <span class="bi
+                                                            bi-circle"></span>
+                                                    </div>
+                                                    <div class="col-sm-2
+                                                        rate_number font_size_12
+                                                        title"><span
+                                                            class="suggest_rate_num
+                                                            text-white">
+                                                            8.5 </span></div>
+                                                </div></div>
+                                        </div>
+
+
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="modal enlarge_img_modal"
+                                id="en_img_modal">
+                                <div class="modal-body p-0">
+                                    <div class="container">
+                                        <div class="row gx-0">
+                                            <div class="col-sm-12">
+                                                <div class="row gx-0
+                                                    img_modal_title_row my-1">
+                                                    <div class="col-md-11
+                                                        col-sm-8"><p
+                                                            class="title
+                                                            mx-3"
+                                                            id="image_label">Passport</p></div>
+                                                    <div class="col-md-1
+                                                        col-sm-4">
+                                                        <svg class="close mx-1"
+                                                            width="14"
+                                                            height="14"
+                                                            viewBox="0 0 14 14"
+                                                            fill="none"
+                                                            xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M8.40994
+                                                                7L12.7099
+                                                                2.71C12.8982
+                                                                2.5217 13.004
+                                                                2.2663 13.004
+                                                                2C13.004 1.7337
+                                                                12.8982 1.4783
+                                                                12.7099
+                                                                1.29C12.5216
+                                                                1.1017 12.2662
+                                                                0.995909 11.9999
+                                                                0.995909C11.7336
+                                                                0.995909 11.4782
+                                                                1.1017 11.2899
+                                                                1.29L6.99994
+                                                                5.59L2.70994
+                                                                1.29C2.52164
+                                                                1.1017 2.26624
+                                                                0.995909 1.99994
+                                                                0.995909C1.73364
+                                                                0.995909 1.47824
+                                                                1.1017 1.28994
+                                                                1.29C1.10164
+                                                                1.4783 0.995847
+                                                                1.7337 0.995847
+                                                                2C0.995847
+                                                                2.2663 1.10164
+                                                                2.5217 1.28994
+                                                                2.71L5.58994
+                                                                7L1.28994
+                                                                11.29C1.19621
+                                                                11.383 1.12182
+                                                                11.4936 1.07105
+                                                                11.6154C1.02028
+                                                                11.7373 0.994141
+                                                                11.868 0.994141
+                                                                12C0.994141
+                                                                12.132 1.02028
+                                                                12.2627 1.07105
+                                                                12.3846C1.12182
+                                                                12.5064 1.19621
+                                                                12.617 1.28994
+                                                                12.71C1.3829
+                                                                12.8037 1.4935
+                                                                12.8781 1.61536
+                                                                12.9289C1.73722
+                                                                12.9797 1.86793
+                                                                13.0058 1.99994
+                                                                13.0058C2.13195
+                                                                13.0058 2.26266
+                                                                12.9797 2.38452
+                                                                12.9289C2.50638
+                                                                12.8781 2.61698
+                                                                12.8037 2.70994
+                                                                12.71L6.99994
+                                                                8.41L11.2899
+                                                                12.71C11.3829
+                                                                12.8037 11.4935
+                                                                12.8781 11.6154
+                                                                12.9289C11.7372
+                                                                12.9797 11.8679
+                                                                13.0058 11.9999
+                                                                13.0058C12.132
+                                                                13.0058 12.2627
+                                                                12.9797 12.3845
+                                                                12.9289C12.5064
+                                                                12.8781 12.617
+                                                                12.8037 12.7099
+                                                                12.71C12.8037
+                                                                12.617 12.8781
+                                                                12.5064 12.9288
+                                                                12.3846C12.9796
+                                                                12.2627 13.0057
+                                                                12.132 13.0057
+                                                                12C13.0057
+                                                                11.868 12.9796
+                                                                11.7373 12.9288
+                                                                11.6154C12.8781
+                                                                11.4936 12.8037
+                                                                11.383 12.7099
+                                                                11.29L8.40994
+                                                                7Z"
+                                                                fill="#96A0B5"
+                                                                />
+                                                            </svg>
+
+                                                        </div></div>
+                                                    <div class="row gx-0">
+                                                        <img
+                                                            class="img_in_modal
+                                                            mx-3"
+                                                            id="modalimg"
+                                                            alt="modalimg">
+                                                    </div>
+                                                    <div class="row gx-0
+                                                        position-absolute
+                                                        copy_modal_row mx-1">
+                                                        <div class="col-sm-11">
+                                                            <div
+                                                                class="copy_modal
+                                                                modal_shadow
+                                                                bg-white"
+                                                                id="copy_url_modal">
+                                                                <div class="row
+                                                                    gx-0">
+                                                                    <div
+                                                                        class="col-sm-10
+                                                                        p-1">
+                                                                        <p
+                                                                            class="title
+                                                                            font_style
+                                                                            font_size_12
+                                                                            title"
+                                                                            id="copycontent">
+                                                                            URL
+                                                                            is
+                                                                            copied
+                                                                            in
+                                                                            Clipboard,
+                                                                            please
+                                                                            paste
+                                                                            it
+                                                                            in
+                                                                            the
+                                                                            respective
+                                                                            place
+                                                                        </p></div>
+                                                                    <div
+                                                                        class="col-sm-2"><label
+                                                                            class="close1
+                                                                            font_size_12
+                                                                            title
+                                                                            my-2
+                                                                            mx-1
+                                                                            text-primary"
+                                                                            id="close_copy_url_modal">close</label></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-1">
+                                                            <div
+                                                                class="copy_icon_div
+                                                                position-absolute
+                                                                bg-white mx-2
+                                                                my-1"
+                                                                id="copy_url">
+                                                                <svg
+                                                                    class="position-absolute
+                                                                    copy_icon_one"
+                                                                    width="10"
+                                                                    height="12"
+                                                                    viewBox="0 0
+                                                                    10 12"
+                                                                    fill="none"
+                                                                    xmlns="http://www.w3.org/2000/svg">
+                                                                    <path
+                                                                        d="M9.56667
+                                                                        10.1333H8.63333V11.0667H0.933333V1.49998H1.86667V0.56665H0V12H9.56667V10.1333Z"
+                                                                        fill="#2F73EA"
+                                                                        />
+                                                                    </svg>
+                                                                    <svg
+                                                                        class="position-relative
+                                                                        copy_icon_two"
+                                                                        width="11"
+                                                                        height="12"
+                                                                        viewBox="0
+                                                                        0 11 12"
+                                                                        fill="none"
+                                                                        xmlns="http://www.w3.org/2000/svg">
+                                                                        <path
+                                                                            d="M0.800781
+                                                                            0V11.2H10.1341V4.00671L6.1274
+                                                                            0H0.800781ZM9.20078
+                                                                            10.2667H1.73411V0.933333H4.76745V5.36667H9.20078V10.2667ZM9.20078
+                                                                            4.43333H5.70078V0.933333H5.7408L9.20078
+                                                                            4.39329V4.43333Z"
+                                                                            fill="#2F73EA"
+                                                                            />
+                                                                        </svg>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <div class="row gx-0">
+                                            <div class="col-sm-4 active">
+                                                <svg class="spi_img" width="19"
+                                                    height="20"
+                                                    viewBox="0 0 19
+                                                    20" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M1 1.56917C1
+                                                        1.41822 1.05997
+                                                        1.27345 1.16671
+                                                        1.16671C1.27345
+                                                        1.05997 1.41822 1
+                                                        1.56917
+                                                        1H17.506C17.657 1
+                                                        17.8018 1.05997
+                                                        17.9085 1.16671C18.0153
+                                                        1.27345
+                                                        18.0752 1.41822 18.0752
+                                                        1.56917V14.6602C18.0752
+                                                        14.7349
+                                                        18.0605 14.8089 18.0319
+                                                        14.878C18.0033 14.947
+                                                        17.9614
+                                                        15.0098 17.9085
+                                                        15.0626C17.8557
+                                                        15.1155 17.7929 15.1574
+                                                        17.7239
+                                                        15.186C17.6548 15.2146
+                                                        17.5808
+                                                        15.2293 17.506
+                                                        15.2293H13.5787C13.5009
+                                                        15.2292
+                                                        13.4239 15.2451 13.3524
+                                                        15.2759C13.2809 15.3068
+                                                        13.2166
+                                                        15.3519 13.1632
+                                                        15.4086L9.95216
+                                                        18.8208C9.89894 18.8774
+                                                        9.83471
+                                                        18.9225 9.76341
+                                                        18.9533C9.69212
+                                                        18.9841 9.61528 19
+                                                        9.53761
+                                                        19C9.45994 19 9.3831
+                                                        18.9841 9.31181
+                                                        18.9533C9.24051 18.9225
+                                                        9.17628
+                                                        18.8774 9.12306
+                                                        18.8208L5.91197
+                                                        15.4086C5.85865 15.3519
+                                                        5.79427
+                                                        15.3068 5.72281
+                                                        15.2759C5.65134
+                                                        15.2451 5.57431 15.2292
+                                                        5.49647
+                                                        15.2293H1.56917C1.41822
+                                                        15.2293
+                                                        1.27345 15.1694 1.16671
+                                                        15.0626C1.05997 14.9559
+                                                        1 14.8111 1
+                                                        14.6602V1.56917Z"
+                                                        stroke="#535E76"
+                                                        />
+                                                        <path d="M9.53668
+                                                            4.79449L10.8885
+                                                            7.2372L13.3312
+                                                            8.58899L10.8885
+                                                            9.94078L9.53668
+                                                            12.3835L8.18489
+                                                            9.94078L5.74219
+                                                            8.58899L8.18489
+                                                            7.2372L9.53668
+                                                            4.79449Z"
+                                                            stroke="#535E76"
+                                                            stroke-linecap="round"
+                                                            stroke-linejoin="round"
+                                                            />
+                                                            <defs>
+                                                                <filter
+                                                                    id="colorFilter">
+                                                                    <feColorMatrix
+                                                                        color-interpolation-filters="sRGB"
+                                                                        type="matrix"
+                                                                        values="0.18
+                                                                        0 0 0 0
+                                                                        0 0.45 0
+                                                                        0 0
+                                                                        0 0 0.92
+                                                                        0 0
+                                                                        0 0 0 1
+                                                                        0" />
+                                                                    </filter>
+                                                                </defs>
+                                                            </svg>
+                                                            <label class="title
+                                                                spi_label
+                                                                font_size_12">Suggestions</label>
+                                                        </div>
+                                                        <div class="col-sm-4">
+                                                            <svg class="spi_img"
+                                                                width="18"
+                                                                height="18"
+                                                                viewBox="0 0 18
+                                                                18"
+                                                                fill="none"
+                                                                xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M18
+                                                                    18H16.7143V14.7857C16.7133
+                                                                    13.9335
+                                                                    16.3743
+                                                                    13.1166
+                                                                    15.7717
+                                                                    12.514C15.1691
+                                                                    11.9114
+                                                                    14.3522
+                                                                    11.5724
+                                                                    13.5
+                                                                    11.5714V10.2857C14.6931
+                                                                    10.2871
+                                                                    15.8369
+                                                                    10.7616
+                                                                    16.6805
+                                                                    11.6052C17.5241
+                                                                    12.4488
+                                                                    17.9986
+                                                                    13.5926
+                                                                    18
+                                                                    14.7857V18Z"
+                                                                    fill="#535E76"
+                                                                    />
+                                                                    <path
+                                                                        d="M12.8571
+                                                                        18H11.5714V14.7857C11.5704
+                                                                        13.9335
+                                                                        11.2314
+                                                                        13.1166
+                                                                        10.6289
+                                                                        12.514C10.0263
+                                                                        11.9114
+                                                                        9.20931
+                                                                        11.5724
+                                                                        8.35714
+                                                                        11.5714H4.5C3.64783
+                                                                        11.5724
+                                                                        2.83086
+                                                                        11.9114
+                                                                        2.22828
+                                                                        12.514C1.62571
+                                                                        13.1166
+                                                                        1.28674
+                                                                        13.9335
+                                                                        1.28571
+                                                                        14.7857V18H0V14.7857C0.00136116
+                                                                        13.5926
+                                                                        0.475904
+                                                                        12.4488
+                                                                        1.31952
+                                                                        11.6052C2.16314
+                                                                        10.7616
+                                                                        3.30694
+                                                                        10.2871
+                                                                        4.5
+                                                                        10.2857H8.35714C9.5502
+                                                                        10.2871
+                                                                        10.694
+                                                                        10.7616
+                                                                        11.5376
+                                                                        11.6052C12.3812
+                                                                        12.4488
+                                                                        12.8558
+                                                                        13.5926
+                                                                        12.8571
+                                                                        14.7857V18Z"
+                                                                        fill="#535E76"
+                                                                        />
+                                                                        <path
+                                                                            d="M11.5713
+                                                                            0V1.28571C12.4238
+                                                                            1.28571
+                                                                            13.2413
+                                                                            1.62436
+                                                                            13.8441
+                                                                            2.22716C14.4469
+                                                                            2.82995
+                                                                            14.7856
+                                                                            3.64752
+                                                                            14.7856
+                                                                            4.5C14.7856
+                                                                            5.35248
+                                                                            14.4469
+                                                                            6.17005
+                                                                            13.8441
+                                                                            6.77284C13.2413
+                                                                            7.37564
+                                                                            12.4238
+                                                                            7.71429
+                                                                            11.5713
+                                                                            7.71429V9C12.7648
+                                                                            9
+                                                                            13.9094
+                                                                            8.52589
+                                                                            14.7533
+                                                                            7.68198C15.5972
+                                                                            6.83807
+                                                                            16.0713
+                                                                            5.69347
+                                                                            16.0713
+                                                                            4.5C16.0713
+                                                                            3.30653
+                                                                            15.5972
+                                                                            2.16193
+                                                                            14.7533
+                                                                            1.31802C13.9094
+                                                                            0.474106
+                                                                            12.7648
+                                                                            0
+                                                                            11.5713
+                                                                            0Z"
+                                                                            fill="#535E76"
+                                                                            />
+                                                                            <path
+                                                                                d="M6.42871
+                                                                                1.28571C7.06444
+                                                                                1.28571
+                                                                                7.68589
+                                                                                1.47423
+                                                                                8.21447
+                                                                                1.82742C8.74306
+                                                                                2.18061
+                                                                                9.15504
+                                                                                2.68261
+                                                                                9.39833
+                                                                                3.26995C9.64161
+                                                                                3.85728
+                                                                                9.70526
+                                                                                4.50357
+                                                                                9.58124
+                                                                                5.12708C9.45721
+                                                                                5.75059
+                                                                                9.15108
+                                                                                6.32332
+                                                                                8.70156
+                                                                                6.77284C8.25203
+                                                                                7.22237
+                                                                                7.6793
+                                                                                7.5285
+                                                                                7.05579
+                                                                                7.65252C6.43228
+                                                                                7.77655
+                                                                                5.78599
+                                                                                7.71289
+                                                                                5.19866
+                                                                                7.46961C4.61133
+                                                                                7.22633
+                                                                                4.10932
+                                                                                6.81435
+                                                                                3.75613
+                                                                                6.28576C3.40294
+                                                                                5.75717
+                                                                                3.21443
+                                                                                5.13573
+                                                                                3.21443
+                                                                                4.5C3.21443
+                                                                                3.64752
+                                                                                3.55307
+                                                                                2.82995
+                                                                                4.15587
+                                                                                2.22716C4.75867
+                                                                                1.62436
+                                                                                5.57623
+                                                                                1.28571
+                                                                                6.42871
+                                                                                1.28571ZM6.42871
+                                                                                0C5.5387
+                                                                                0
+                                                                                4.66867
+                                                                                0.26392
+                                                                                3.92865
+                                                                                0.758387C3.18863
+                                                                                1.25285
+                                                                                2.61185
+                                                                                1.95566
+                                                                                2.27126
+                                                                                2.77792C1.93066
+                                                                                3.60019
+                                                                                1.84155
+                                                                                4.50499
+                                                                                2.01518
+                                                                                5.37791C2.18881
+                                                                                6.25082
+                                                                                2.6174
+                                                                                7.05264
+                                                                                3.24673
+                                                                                7.68198C3.87607
+                                                                                8.31132
+                                                                                4.67789
+                                                                                8.7399
+                                                                                5.55081
+                                                                                8.91353C6.42372
+                                                                                9.08717
+                                                                                7.32852
+                                                                                8.99805
+                                                                                8.15079
+                                                                                8.65746C8.97306
+                                                                                8.31686
+                                                                                9.67586
+                                                                                7.74009
+                                                                                10.1703
+                                                                                7.00007C10.6648
+                                                                                6.26004
+                                                                                10.9287
+                                                                                5.39002
+                                                                                10.9287
+                                                                                4.5C10.9287
+                                                                                3.30653
+                                                                                10.4546
+                                                                                2.16193
+                                                                                9.61069
+                                                                                1.31802C8.76678
+                                                                                0.474106
+                                                                                7.62219
+                                                                                0
+                                                                                6.42871
+                                                                                0Z"
+                                                                                fill="#535E76"
+                                                                                />
+                                                                            </svg>
+                                                                            <label
+                                                                                class="title
+                                                                                spi_label
+                                                                                font_size_12">Professional
+                                                                                support</label>
+                                                                        </div>
+                                                                        <div
+                                                                            class="col-sm-4">
+                                                                            <svg
+                                                                                class="spi_img"
+                                                                                width="20"
+                                                                                height="20"
+                                                                                viewBox="0
+                                                                                0
+                                                                                20
+                                                                                20"
+                                                                                fill="none"
+                                                                                xmlns="http://www.w3.org/2000/svg">
+                                                                                <path
+                                                                                    d="M19
+                                                                                    11.125H16.0907C15.7924
+                                                                                    11.1251
+                                                                                    15.5063
+                                                                                    11.2436
+                                                                                    15.2954
+                                                                                    11.4546L12.5796
+                                                                                    14.1704C12.3687
+                                                                                    14.3814
+                                                                                    12.0826
+                                                                                    14.4999
+                                                                                    11.7843
+                                                                                    14.5H8.21575C7.91741
+                                                                                    14.4999
+                                                                                    7.6313
+                                                                                    14.3814
+                                                                                    7.42037
+                                                                                    14.1704L4.70463
+                                                                                    11.4546C4.4937
+                                                                                    11.2436
+                                                                                    4.20759
+                                                                                    11.1251
+                                                                                    3.90925
+                                                                                    11.125H1M19
+                                                                                    11.125V3.25C19
+                                                                                    2.65326
+                                                                                    18.7629
+                                                                                    2.08097
+                                                                                    18.341
+                                                                                    1.65901C17.919
+                                                                                    1.23705
+                                                                                    17.3467
+                                                                                    1
+                                                                                    16.75
+                                                                                    1H3.25C2.65326
+                                                                                    1
+                                                                                    2.08097
+                                                                                    1.23705
+                                                                                    1.65901
+                                                                                    1.65901C1.23705
+                                                                                    2.08097
+                                                                                    1
+                                                                                    2.65326
+                                                                                    1
+                                                                                    3.25V11.125H19ZM19
+                                                                                    11.125V16.75C19
+                                                                                    17.3467
+                                                                                    18.7629
+                                                                                    17.919
+                                                                                    18.341
+                                                                                    18.341C17.919
+                                                                                    18.7629
+                                                                                    17.3467
+                                                                                    19
+                                                                                    16.75
+                                                                                    19H3.25C2.65326
+                                                                                    19
+                                                                                    2.08097
+                                                                                    18.7629
+                                                                                    1.65901
+                                                                                    18.341C1.23705
+                                                                                    17.919
+                                                                                    1
+                                                                                    17.3467
+                                                                                    1
+                                                                                    16.75V11.125H19Z"
+                                                                                    stroke="#535E76"
+                                                                                    stroke-linecap="round"
+                                                                                    stroke-linejoin="round"
+                                                                                    />
+                                                                                </svg>
+                                                                                <label
+                                                                                    class="title
+                                                                                    spi_label
+                                                                                    font_size_12">Inbox</label>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                        </div>
+                                                        <script
+                                                            src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+                                                            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+                                                            crossorigin="anonymous"></script>
+                                                        <script src="./main.js"></script>
+                                                    </body>
+                                                </html>

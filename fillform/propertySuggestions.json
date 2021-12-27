@@ -1,0 +1,183 @@
+{"fields":
+[
+    {
+      "userId": "8960dc31-09c4-4ed7-9bad-39fec671ab74",
+      "property": "country",
+      "suggestions": [
+        {
+          "value": "Georgia",
+          "formattedValue": "Georgia",
+          "score": 10,
+          "summary": "4511 Heath Islands Apt. 916 \n  South Carlo , New Mexico  \n <b>Georgia</b>"
+        },
+        {
+          "value": "Cocos (Keeling) Islands",
+          "formattedValue": "Cocos (Keeling) Islands",
+          "score": 5,
+          "summary": "76948 Hintz Lodge Apt. 001 \n  Abshireside , Arizona  \n <b>Cocos (Keeling) Islands</b>"
+        },
+        {
+          "value": "Andorra",
+          "formattedValue": "Andorra",
+          "score": 8,
+          "summary": "0200 Braxton Fall Suite 729 \n  Yuma , Nebraska  \n <b>Andorra</b>"
+        },
+        {
+          "value": "Congo",
+          "formattedValue": "Congo",
+          "score": 10,
+          "summary": "22752 Schimmel Lock Suite 608 \n  Broomfield , Connecticut  \n <b>Congo</b>"
+        },
+        {
+          "value": "Falkland Islands (Malvinas)",
+          "formattedValue": "Falkland Islands (Malvinas)",
+          "score": 4,
+          "summary": "9567 Bernadette Circles Apt. 918 \n  Cristobalhaven , Michigan  \n <b>Falkland Islands (Malvinas)</b>"
+        }
+      ]
+    },
+    {
+        "userId": "8960dc31-09c4-4ed7-9bad-39fec671ab74",
+      "property": "streetAddress",
+      "suggestions": [
+        {
+          "value": "274 Heaney Row",
+          "formattedValue": "274 Heaney Row",
+          "score": 7,
+          "summary": "<b>274 Heaney Row</b> Apt. 477 \n  Karleeview , Iowa  \n Botswana"
+        },
+        {
+          "value": "4187 Casey Isle",
+          "formattedValue": "4187 Casey Isle",
+          "score": 8,
+          "summary": "<b>4187 Casey Isle</b> Suite 485 \n  Wymanview , Mississippi  \n Bangladesh"
+        },
+        {
+          "value": "02425 Libby Station",
+          "formattedValue": "02425 Libby Station",
+          "score": 9,
+          "summary": "<b>02425 Libby Station</b> Apt. 821 \n  Port Henderson , New York  \n Singapore"
+        },
+        {
+          "value": "587 Kutch Island",
+          "formattedValue": "587 Kutch Island",
+          "score": 7,
+          "summary": "<b>587 Kutch Island</b> Apt. 040 \n  South Velvamouth , Wisconsin  \n Australia"
+        },
+        {
+          "value": "37985 Mohr Locks",
+          "formattedValue": "37985 Mohr Locks",
+          "score": 4,
+          "summary": "<b>37985 Mohr Locks</b> Apt. 942 \n  Iowa City , Arizona  \n Belgium"
+        }
+      ]
+    },
+    {
+        "userId": "8960dc31-09c4-4ed7-9bad-39fec671ab74",
+      "property": "secondaryAddress",
+      "suggestions": [
+        {
+          "value": "Apt. 129",
+          "formattedValue": "Apt. 129",
+          "score": 5,
+          "summary": "8144 Mohr Expressway <b>Apt. 129</b> \n  Reannaborough , Nebraska  \n Republic of Korea"
+        },
+        {
+          "value": "Suite 185",
+          "formattedValue": "Suite 185",
+          "score": 6,
+          "summary": "0035 Elsie Hollow <b>Suite 185</b> \n  Ellsworthport , Tennessee  \n Finland"
+        },
+        {
+          "value": "Apt. 882",
+          "formattedValue": "Apt. 882",
+          "score": 3,
+          "summary": "64760 McDermott Mountain <b>Apt. 882</b> \n  Waltham , New Jersey  \n Norway"
+        },
+        {
+          "value": "Suite 649",
+          "formattedValue": "Suite 649",
+          "score": 3,
+          "summary": "061 Trace Divide <b>Suite 649</b> \n  Brettville , Oregon  \n Norway"
+        },
+        {
+          "value": "Apt. 499",
+          "formattedValue": "Apt. 499",
+          "score": 10,
+          "summary": "92308 Kuhlman Rue <b>Apt. 499</b> \n  Mariliechester , New York  \n Kuwait"
+        }
+      ]
+    },
+    {
+        "userId": "8960dc31-09c4-4ed7-9bad-39fec671ab74",
+      "property": "state",
+      "suggestions": [
+        {
+          "value": "Oregon",
+          "formattedValue": "Oregon",
+          "score": 7,
+          "summary": "860 Giuseppe Union Apt. 269 \n  Chapel Hill ,<b>Oregon</b>  \n Vanuatu"
+        },
+        {
+          "value": "South Carolina",
+          "formattedValue": "South Carolina",
+          "score": 7,
+          "summary": "1185 Mikayla Plaza Apt. 765 \n  North Quinnview ,<b>South Carolina</b>  \n Tajikistan"
+        },
+        {
+          "value": "Washington",
+          "formattedValue": "Washington",
+          "score": 7,
+          "summary": "03557 Nyasia Rue Apt. 670 \n  Schmitttown ,<b>Washington</b> \n Tuvalu"
+        },
+        {
+          "value": "South Carolina",
+          "formattedValue": "South Carolina",
+          "score": 9,
+          "summary": "50231 Stephanie Well Suite 309 \n  New Ladarius ,<b>South Carolina</b> \n Egypt"
+        },
+        {
+          "value": "Massachusetts",
+          "formattedValue": "Massachusetts",
+          "score": 10,
+          "summary": "831 Donato Harbors Apt. 189 \n  Estrellaborough ,<b>Massachusetts</b>  \n Hungary"
+        }
+      ]
+    },
+    {
+        "userId": "8960dc31-09c4-4ed7-9bad-39fec671ab74",
+      "property": "city",
+      "suggestions": [
+        {
+          "value": "South Daija",
+          "formattedValue": "South Daija",
+          "score": 4,
+          "summary": "294 Maeve Course Apt. 001 \n  <b>South Daija</b> , Mississippi  \n Tokelau"
+        },
+        {
+          "value": "Auburn",
+          "formattedValue": "Auburn",
+          "score": 4,
+          "summary": "64565 Christian Plaza Suite 782 \n  <b>Auburn</b> , Kansas  \n Singapore"
+        },
+        {
+          "value": "Wavatown",
+          "formattedValue": "Wavatown",
+          "score": 9,
+          "summary": "718 Santa Shoals Suite 714 \n  <b>Wavatown</b> , North Carolina  \n Guinea-Bissau"
+        },
+        {
+          "value": "Placentia",
+          "formattedValue": "Placentia",
+          "score": 4,
+          "summary": "913 Hildegard Light Suite 518 \n  <b>Placentia</b> , Kentucky  \n Solomon Islands"
+        },
+        {
+          "value": "Mullerbury",
+          "formattedValue": "Mullerbury",
+          "score": 10,
+          "summary": "341 Brenden River Suite 696 \n  <b>Mullerbury</b> , Arizona  \n Belarus"
+        }
+      ]
+    }
+  ]}

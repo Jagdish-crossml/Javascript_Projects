@@ -1,81 +1,522 @@
 <!DOCTYPE html>
 <html lang="en">
+
   <head>
-    <script
-      src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Manrope'
+      rel='stylesheet'>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous">
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-.firstdiv{
-    width: 350px;
-    height:300px;
-    position: absolute;
-    border: solid 1px;
-    border-color: rgb(121, 120, 120);
-
-}
-.secondiv{
-    height: 40px;
-    width:100%;
-    background-color:white;
-    margin-top: -22px;
-}
-.thirddiv{
-    background-color: lightgrey;
-    height: 260px;
-}
-.username{
-    margin-left: 30px;
-    border-radius: 10%;
-    /* padding: 20px; */
-}
-.loginbtn{
-      margin-left:120px ;
-}
-.email{
-  border-radius: 15%;
-  border-style: hidden;
-  margin-left: 40px;
-  border-color: lightblue;
-  padding: 5px;
-}
-.password{
-  border-radius: 15%;
-  border-style: hidden;
-  margin-left: 40px;
-  border-color: lightblue;
-  padding: 5px;
-}
-
-
-    </style>
+    <!-- <link rel="stylesheet" href="css/login.css"> -->
+    <!-- <link rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
+      /> -->
     <title>
-      popup window
+      Login page
     </title>
+    <style>
+          #main {
+    /* position: absolute; */
+    width: 376px;
+    height: 435px;
+    /* right: 2%;
+    bottom: 2%; */
+}
+
+#top_div {
+    /* position: absolute; */
+    width: 52px;
+    height: 24px;
+    margin-left: 300px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
+    border-radius: 8px 8px 0px 0px;
+}
+
+#top_arrow {
+    font-size: 14px;
+    margin-left: 20px;
+    margin-top: 8px;
+    color: #000000;
+    font-weight: 300;
+}
+
+#top_arrow:hover {
+    color: #2F73EA;
+}
+
+#main_container {
+    position: absolute;
+    width: 376px;
+    height: 403px;
+    /* bottom: 2%; */
+    background: #FFFFFF;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
+    border-radius: 10px 10px 0px 0px;
+}
+
+#inner_container {
+    position: absolute;
+    width: 376px;
+    height: 346px;
+    margin-top: 55px;
+    background: #F5F5F5;
+    border-radius: 0px;
+}
+
+#eform_logo {
+    width: 15px;
+    height: 14.99px;
+    float: left;
+    margin-left: 11px;
+    margin-top: 21px;
+}
+
+#Current_user_icon {
+    width: 26px;
+    height: 26px;
+    float: right;
+    margin-top: 15px;
+    margin-right: 29px;
+    transition: all .3s ease-in-out;
+}
+
+#Current_user_icon:hover {
+    border-style: #2F73EA;
+    transform: scale(1.05);
+}
+
+#user_dropdown_arrow {
+    position: absolute;
+    font-size: 10px;
+    margin-left: 327.58px;
+    margin-top: 21px;
+    color: #8190A9;
+    font-weight: 1000;
+}
+
+#user_dropdown_arrow:hover {
+    color: #2F73EA;
+}
+
+#top_label {
+    position: absolute;
+    width: 127px;
+    height: 25px;
+    left: 35px;
+    top: 16px;
+    font-family: Manrope;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 25px;
+    color: #16243C;
+}
+
+#login_label {
+    position: absolute;
+    width: 262px;
+    height: 20px;
+    left: 18px;
+    top: 15px;
+    font-family: Manrope;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 20px;
+    color: #16243C;
+}
+
+#email_label {
+    position: absolute;
+    width: 92px;
+    height: 19px;
+    left: 18px;
+    top: 51px;
+    font-family: Manrope;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 19px;
+    color: #545F77;
+}
+
+#email_input {
+    position: absolute;
+    width: 315px;
+    height: 45px;
+    left: 18px;
+    right: 43px;
+    top: 79px;
+    background: #FFFFFF;
+    border: 1px solid #2F73EA;
+    box-sizing: border-box;
+    padding: 6.5px 8px;
+    box-shadow: 0px 4px 8px rgba(44, 39, 56, 0.04);
+    border-radius: 4px;
+    font-family: Manrope;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 19px;
+    color: #2C2738;
+}
+
+input[type="email"]::placeholder {
+    padding-left: 10px;
+    font-family: Manrope;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 19px;
+    color: #2C2738;
+}
+
+input[type="password"]::placeholder {
+    padding-left: 10px;
+    font-family: Manrope;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 19px;
+    color: #2C2738;
+}
+
+#password_label {
+    position: absolute;
+    width: 92px;
+    height: 19px;
+    left: 18px;
+    top: 134px;
+    font-family: Manrope;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 19px;
+    color: #545F77;
+}
+
+#password_input {
+    position: absolute;
+    width: 315px;
+    height: 45px;
+    left: 18px;
+    right: 43px;
+    top: 162px;
+    padding: 6.5px 8px;
+    background: #FFFFFF;
+    border: 1px solid #2F73EA;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 8px rgba(44, 39, 56, 0.04);
+    border-radius: 4px;
+}
+
+input:focus {
+    outline: none !important;
+    border-color: #719ECE;
+    box-shadow: 0 0 10px #719ECE;
+}
+
+textarea:focus {
+    outline: none !important;
+    border-color: #719ECE;
+    box-shadow: 0 0 10px #719ECE;
+}
+
+#new_user_label {
+    position: absolute;
+    width: 139px;
+    height: 16px;
+    left: 18px;
+    top: 212px;
+    font-family: Manrope;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 16px;
+    color: #545F77;
+}
+
+input[type="checkbox"] {
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+#check_box {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    margin-top: 243px;
+    margin-left: 18px;
+    color: #2F73EA;
+    background: #FFFFFF;
+    border: 1.5px solid #2F73EA;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 8px rgba(44, 39, 56, 0.04);
+    border-radius: 4px;
+}
+
+#check_box::before {
+    content: "L";
+    position: absolute;
+    font-size: 0.9em;
+    right: 4px;
+    top: -0.2em;
+    font-weight: 300;
+    visibility: hidden;
+    transform: scaleX(-1) rotate(-47deg);
+}
+
+#check_box:checked::before {
+    visibility: visible;
+}
+
+#check_box:checked {
+    border: 2px solid #2F73EA;
+}
+
+#check_box::after {
+    font-size: 1.0em;
+}
+
+input[type="checkbox"]:disabled {
+    border-color: black;
+    background: #ddd;
+    color: gray;
+}
+
+#keep_label {
+    position: absolute;
+    width: 188px;
+    height: 19px;
+    left: 48px;
+    top: 244px;
+    font-family: Manrope;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 19px;
+    color: #545F77;
+}
+
+#register_new_link {
+    text-decoration: none;
+}
+
+#forgot_pass_link {
+    position: absolute;
+    width: 99px;
+    height: 16px;
+    left: 234px;
+    top: 212px;
+    font-family: Manrope;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 16px;
+    text-align: right;
+    color: #2F73EA;
+    text-decoration: none;
+}
+
+#login_btn {
+    position: absolute;
+    width: 116px;
+    height: 36px;
+    left: 130px;
+    top: 289px;
+    background: #2F73EA;
+    border-radius: 6px;
+    font-family: Manrope;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 22px;
+    /* identical to box height */
+    align-items: center;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+#togglePassword {
+    font-size: 15px;
+    position: absolute;
+    margin-top: 174px;
+    margin-left: 298px;
+    cursor: pointer;
+    color: #535E76;
+    opacity: 0.5;
+}
+
+.usermodal {
+    display: none;
+    position: absolute;
+    z-index: 1;
+    left: 195px;
+    top: 55px;
+    width: 178px;
+    height: 80px;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    background-color: white;
+    box-shadow: 0px 2px 4px rgba(44, 39, 56, 0.1), 0px 4px 10px rgba(44, 39, 56, 0.1);
+    border-radius: 0px 0px 4px 4px;
+}
+
+.usermodal-content {
+    background-color: #fefefe;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+}
+
+#options {
+    width: 178px;
+    height: 25px;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    margin-left: 48px;
+    margin-right: 0px;
+    color: #16243C;
+}
+
+#options:hover {
+    background-color: #EBECF0;
+}
+
+#modal_link {
+    color: inherit;
+}
+
+#modal_link:link {
+    font-family: Manrope;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 19px;
+    text-decoration: none;
+}
+
+#eformimg {
+    width: 42.81px;
+    height: 15px;
+    margin-left: 5px;
+    margin-top: 4px;
+}
+        </style>
   </head>
+
   <body>
-    <div class="firstdiv">
-      <div class="secondiv"><h4>Login to eform</h4></div>
-      <div class="thirddiv">
-        <label style="margin-left: 30px;">To login enter your credential
-          below</label><br><br>
-        <label style="margin-left: 30px;">Email</label><br>
-        <input type="email" id="email" class="email"
-          placeholder="Enter Email Address"><br><br>
-        <label style="margin-left: 30px;">Password</label><br><br>
-        <input type="password" id="password" class="password"
-          placeholder="Enter your Password"><br><br>
-        <label>New user</label><a href="#">Register Now!</a><a style="float:
-          right;" href="#" id="forgot">Forgot Password? </a><br><br>
-        <input type="checkbox"><label>Keep me logged in for 14 days</label>
-        <button type="button" id="loginbtn" class="loginbtn">Login</button>
-      </div>
-    </div>
-    <script>
-   document.getElementById('forgot').addEventListener('click',function(){
-            $('#first').load('http://127.0.0.1:5500/password.html')
-        })
-        </script>
-  </body>
-</html>
+    <div id="main">
+      <div id="top_div"><i class="fa fa-chevron-down" id="top_arrow"></i></div>
+      <div id="main_container">
+        <svg id="eform_logo" width="15" height="15" viewBox="0 0 15 15"
+          fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M15 7.49273C15 9.30355 14.3436 11.0531 13.1522
+            12.4178C11.9607 13.7825 10.3149 14.6699 8.51916
+            14.916C6.7234 15.162 4.89919 14.7501 3.38397
+            13.7563C1.86874 12.7625 0.765032 11.2541 0.276987
+            9.51019C-0.211056 7.76624 -0.0504074 5.90472 0.729216
+            4.26996C1.50884 2.6352 2.85469 1.33782 4.51781
+            0.617789C6.18094 -0.10224 8.0488 -0.196182 9.77591
+            0.353318C11.503 0.902817 12.9725 2.05858 13.9125
+            3.60683L7.50001 7.49273H15Z" fill="#DC0000" />
+            <path d="M11.2993 4.54965C12.1125 5.51281 12.5092
+              6.75024 12.4047 7.99704C12.3002 9.24383 11.7026
+              10.4009 10.74 11.2205C9.77744 12.0402 8.52627
+              12.4572 7.25438 12.3824C5.9825 12.3076 4.79098
+              11.7469 3.93492 10.8203C3.07886 9.89369 2.62629
+              8.67488 2.67409 7.42475C2.72189 6.17462 3.26627
+              4.99254 4.19068 4.13157C5.1151 3.27062 6.34609
+              2.7992 7.62011 2.81825C8.89413 2.8373 10.1099
+              3.34529 11.0072 4.23349L7.5459 7.60436L11.2993
+              4.54965Z" fill="white" />
+              <path d="M11.851 1.94509L2.65695 8.88454C2.54169
+                8.97154 2.51295 9.14029 2.59277 9.26145L3.66865
+                10.8945C3.74847 11.0157 3.90662 11.0434 4.02189
+                10.9564L13.2159 4.01692C13.3312 3.92992 13.3599
+                3.76117 13.2801 3.64001L12.2042 2.00694C12.1244
+                1.88578 11.9662 1.85809 11.851 1.94509Z"
+                fill="#DC0000" />
+              </svg>
+              <!-- <i class="bi bi-chevron-down" id="user_dropdown_arrow"></i> -->
+              <svg id="user_dropdown_arrow" width="8" height="5" viewBox="0 0 8
+                5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M0.944 0L4
+                  3.072L7.056 0L8 0.944L4 4.944L0 0.944L0.944 0Z" fill="#8190A9"
+                  />
+                </svg>
+                <svg id="Current_user_icon" width="100%"
+                  height="100%" viewBox="0 0 26 26" fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink">
+                  <circle cx="12.7647" cy="12.7647" r="11.7647"
+                    fill="url(#pattern0)" stroke="white" />
+                    <defs>
+                      <pattern id="pattern0"
+                        patternContentUnits="objectBoundingBox"
+                        width="1" height="1">
+                        <use xlink:href="#image0"
+                          transform="scale(0.005)" />
+                        </pattern>
+                        <image id="image0" width="200"
+                          height="200"
+                          xlink:href="data:image/jpeg;base64,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"/>
+                        </defs>
+                      </svg>
+
+                      <div id="avatar_modal" class="usermodal">
+
+                        <div class="usermodal-content">
+                          <label id="options"><a href="./change_pass.html"
+                              id="modal_link">Change Password</a></label>
+                          <label id="options"><a href="./username.html"
+                              id="modal_link">Logout</a></label>
+                        </div>
+
+                      </div>
+                      <label id="top_label">Login to eForm</label>
+                      <div id="inner_container">
+                        <label id="login_label">To Login enter your credentials
+                          below</label>
+                        <form action="./wepage9.html" method="get"
+                          id="login_form">
+                          <label id="email_label">Email Address</label>
+                          <input type="email" id="email_input" class="email"
+                            placeholder="anthony.p@hotmail.com">
+                          <label id="password_label">Password</label>
+                          <input type="password" id="password_input"
+                            class="password" placeholder="************">
+                          <i class="bi bi-eye-slash" id="togglePassword"></i>
+                          <label id="new_user_label">New User? <a href="#"
+                              id="register_new_link">Register Now!</a></label><a
+                            style="float:
+                            right;" href="./forgotp.html" id="forgot_pass_link">Forgot
+                            Password? </a>
+                          <input id="check_box" type="checkbox"><label
+                            id="keep_label">Keep me logged
+                            in for 14 days</label>
+                          <button type="button" id="login_btn" class="btn
+                            btn-primary">Login</button>
+                        </form>
+                      </div>
+
+                    </div>
+                  </div>
+
+
+                  <script type="module" src="popup.js">
+    </script>
+
+                </body>
+
+              </html>

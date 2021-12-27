@@ -4,6 +4,7 @@
   height: 435px;
   right: 2%;
   bottom: 2%;
+  z-index: 999999;
 }
 
 #top_div {
@@ -367,14 +368,16 @@
 }
 
 #icon_div {
-  margin-top: 30px;
-  position: relative;
+  /* margin-top: 30px; */
+  width: 60px;
+  position: absolute;
   float: right;
   margin-top: 7px;
+  margin-left: 320px;
 }
 
 #text {
-  width: 220px;
+  width: 250px;
   height: 36px;
   float: left;
   margin-top: 7px;
@@ -387,7 +390,9 @@
   line-height: 18px;
   color: #16243c;
 }
-
+#text:hover {
+  cursor: pointer;
+}
 #suggestion_div {
   width: 376px;
   height: 244px;
